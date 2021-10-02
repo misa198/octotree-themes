@@ -103,7 +103,7 @@ const replaceOctotreeIcon = ({
 
   if (className && !isDirectory) {
     const icon = document.createElement('span');
-    icon.className = `icon octicon-file misa198-octotree-icon ${className} ${darkClassName}`;
+    icon.className = `icon octicon-file misa198-octotree-icon ${iconDom?.classList.value} ${className} ${darkClassName}`;
 
     if (iconDom) {
       iconDom.parentNode!.replaceChild(icon, iconDom as HTMLElement);

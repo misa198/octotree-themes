@@ -1,8 +1,8 @@
 {
   "name": "octotree-icon-theme",
-  "description": "",
+  "description": "A Chrome Extension which gives different filetypes different icons to GitHub and Octotree for free.",
   "license": "MIT",
-  "author": "misa198",
+  "author": "Thanh Vu <misa198>",
   "homepage": "https://github.com/misa198/octotree-icon-theme#readme",
   "repository": {
     "type": "git",
@@ -64,6 +64,7 @@
   },
   "keywords": [
     "Chrome Extension",
+    "Octotree",
     "GitHub",
     "icon"
   ],
