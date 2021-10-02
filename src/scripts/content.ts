@@ -89,8 +89,8 @@ const replaceOctotreeIcon = ({
   let isDirectory = false;
   if (iconDom) {
     if (
-      iconDom.parentElement!.classList.contains('jstree-closed') ||
-      iconDom.parentElement!.classList.contains('jstree-open')
+      iconDom.parentElement!.getAttribute('aria-expanded') === 'false' ||
+      iconDom.parentElement!.getAttribute('aria-expanded') === 'true'
     ) {
       isDirectory = true;
     }
