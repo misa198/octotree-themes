@@ -6,8 +6,7 @@ import { observe } from 'selector-observer';
 import '../styles/icons.css';
 import '../styles/text.css';
 
-let colorsDisabled = false;
-let darkMode = false;
+const darkMode = Boolean(select("html[data-color-mode='dark']"));
 
 const fonts = [
   { name: 'FontAwesome', path: 'fonts/fontawesome.woff2' },
@@ -58,9 +57,7 @@ const replaceIcon = ({
     isDirectory = iconDom.classList.contains('octicon-file-directory');
   }
 
-  const className: string | null = colorsDisabled
-    ? fileIcons.getClass(filename)
-    : fileIcons.getClassWithColor(filename);
+  const className: string | null = fileIcons.getClassWithColor(filename);
 
   const darkClassName = darkMode ? 'dark' : '';
 
@@ -94,9 +91,7 @@ const replaceOctotreeIcon = ({
     }
   }
 
-  const className: string | null = colorsDisabled
-    ? fileIcons.getClass(filename)
-    : fileIcons.getClassWithColor(filename);
+  const className: string | null = fileIcons.getClassWithColor(filename);
 
   const darkClassName = darkMode ? 'dark' : '';
 
@@ -160,5 +155,4 @@ const init = async () => {
   });
 };
 
-darkMode = Boolean(select("html[data-color-mode='dark']"));
 init();
