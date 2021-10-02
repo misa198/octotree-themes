@@ -11,7 +11,7 @@
   "bugs": {
     "url": "https://github.com/misa198/octotree-icon-theme/issues"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "pre-commit": "lint-staged",
     "build": "rm -rf build && cross-env NODE_ENV=production webpack --config webpack.config.js --display-error-details --progress --colors",
