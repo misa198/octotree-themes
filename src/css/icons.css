@@ -1,0 +1,26 @@
+@import '../../node_modules/file-icons-js/css/style.css';
+
+.database-icon::before {
+  left: 2px;
+}
+
+.dark {
+  filter: brightness(125%) contrast(150%) drop-shadow(0 0 0 #fff)
+    drop-shadow(1px 1px 1px #444);
+}
+
+.misa198-octotree-icon {
+  margin-right: 3px;
+}
+
+.misa198-octotree-icon::before {
+  font-size: 14px;
+}
+
+.octotree-sidebar.octotree-github-sidebar
+  .octotree-views
+  .octotree-view.octotree-tree-view
+  .jstree-anchor
+  div {
+  color: #c9d1d9 !important;
+}
