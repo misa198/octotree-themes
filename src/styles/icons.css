@@ -16,11 +16,3 @@
 .misa198-octotree-icon::before {
   font-size: 14px;
 }
-
-.octotree-sidebar.octotree-github-sidebar
-  .octotree-views
-  .octotree-view.octotree-tree-view
-  .jstree-anchor
-  div.misa198-dark-text {
-  color: #c9d1d9 !important;
-}

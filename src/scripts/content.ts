@@ -5,7 +5,8 @@ import mobile from 'is-mobile';
 import { observe } from 'selector-observer';
 
 import { StorageKey } from './background';
-import '../css/icons.css';
+import '../styles/icons.css';
+import '../styles/text.css';
 
 let colorsDisabled = false;
 let darkMode = false;
