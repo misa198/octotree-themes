@@ -103,8 +103,10 @@ const replaceOctotreeIcon = ({
   const darkClassName = darkMode ? 'dark' : '';
 
   if (className && !isDirectory) {
-    const icon = document.createElement('span');
+    const icon = document.createElement('i');
     icon.className = `icon octicon-file misa198-octotree-icon ${iconDom?.classList.value} ${className} ${darkClassName}`;
+    icon.setAttribute('role', 'presentation');
+    icon.setAttribute('rel', 'blob octotree-default-icon octotree-icon-file');
 
     if (iconDom) {
       iconDom.parentNode!.replaceChild(icon, iconDom as HTMLElement);
