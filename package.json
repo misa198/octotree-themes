@@ -18,7 +18,7 @@
     "lint": "eslint src/**/*.ts",
     "lint:fix": "npm run lint -- --fix",
     "start": "cross-env NODE_ENV=development webpack --config ./webpack.config.js --watch",
-    "zip": "npm run build && zip -r build/octotree-icon-theme$npm_package_version.zip build"
+    "zip": "npm run build && zip -r build/octotree-icon-theme_$npm_package_version.zip build"
   },
   "dependencies": {
     "dom-loaded": "^2.0.0",
