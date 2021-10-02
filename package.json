@@ -14,7 +14,7 @@
   "version": "1.0.0",
   "scripts": {
     "pre-commit": "lint-staged",
-    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js --display-error-details --progress --colors",
+    "build": "rm -rf build && cross-env NODE_ENV=production webpack --config webpack.config.js --display-error-details --progress --colors",
     "lint": "eslint src/**/*.ts",
     "lint:fix": "npm run lint -- --fix",
     "start": "cross-env NODE_ENV=development webpack --config ./webpack.config.js --watch",
