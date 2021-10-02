@@ -1,15 +1,15 @@
 {
-  "name": "octotree-theme",
+  "name": "octotree-icon-theme",
   "description": "",
   "license": "MIT",
   "author": "misa198",
-  "homepage": "https://github.com/misa198/octotree-theme#readme",
+  "homepage": "https://github.com/misa198/octotree-icon-theme#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/misa198/octotree-theme/tree/master"
+    "url": "https://github.com/misa198/octotree-icon-theme/tree/master"
   },
   "bugs": {
-    "url": "https://github.com/misa198/octotree-theme/issues"
+    "url": "https://github.com/misa198/octotree-icon-theme/issues"
   },
   "version": "1.0.0",
   "scripts": {
@@ -18,7 +18,7 @@
     "lint": "eslint src/**/*.ts",
     "lint:fix": "npm run lint -- --fix",
     "start": "cross-env NODE_ENV=development webpack --config ./webpack.config.js --watch",
-    "zip": "npm run build && zip -r build/octotree-theme$npm_package_version.zip build"
+    "zip": "npm run build && zip -r build/octotree-icon-theme$npm_package_version.zip build"
   },
   "dependencies": {
     "dom-loaded": "^2.0.0",

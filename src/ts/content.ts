@@ -87,9 +87,12 @@ const replaceOctotreeIcon = ({
 
   let isDirectory = false;
   if (iconDom) {
-    isDirectory = iconDom.classList.contains('octotree-icon-file-directory');
-    isDirectory = iconDom.classList.contains('jstree-closed');
-    isDirectory = iconDom.classList.contains('jstree-open');
+    if (
+      iconDom.parentElement!.classList.contains('jstree-closed') ||
+      iconDom.parentElement!.classList.contains('jstree-open')
+    ) {
+      isDirectory = true;
+    }
   }
 
   const className: string | null = colorsDisabled
@@ -129,6 +132,16 @@ const init = async () => {
 
   observe('.jstree-node', {
     add(element) {
+      if (darkMode) {
+        document
+          .querySelectorAll(
+            '.octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-view.octotree-tree-view .jstree-anchor div'
+          )
+          .forEach((e) => {
+            e.classList.add('misa198-dark-text');
+          });
+      }
+
       const filenameDom = select('.jstree-anchor > div', element);
 
       if (!filenameDom) {
@@ -154,7 +167,7 @@ chrome.storage.sync.get(
         ? colorsDisabled
         : result.colorsDisabled;
 
-    darkMode = result.darkMode === undefined ? darkMode : result.darkMode;
+    darkMode = Boolean(select("html[data-color-mode='dark']"));
 
     init();
   }

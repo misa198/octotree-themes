@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Octotree Theme",
+  "name": "Octotree Icon Theme",
   "author": "misa198",
-  "homepage_url": "https://github.com/misa198/octotree-theme",
+  "homepage_url": "https://github.com/misa198/octotree-icon-theme",
   "background": {
     "scripts": ["background.bundle.js"],
     "persistent": false
