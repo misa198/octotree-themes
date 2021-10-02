@@ -6,8 +6,8 @@ Octotree Icon Theme
 </h1>
 <p align="center">
   <a href="https://github.com/misa198/octotree-icon-theme/releases">
-      <img src="https://img.shields.io/github/v/release/misa198/octotree-icon-theme?label=Download&color=<COLOR>" />
-    </a>
+    <img src="https://img.shields.io/github/v/release/misa198/octotree-icon-theme" />
+  </a>
 </p>
 
 ## Overview
