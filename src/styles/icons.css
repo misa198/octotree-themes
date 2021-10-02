@@ -1,7 +1,16 @@
 @import '../../node_modules/file-icons-js/css/style.css';
 
+.jstree-container-ul .text-icon {
+  color: #c9d2d9;
+}
+
+.text-icon::before,
 .database-icon::before {
   left: 2px;
+}
+
+.jstree-icon.jstree-themeicon.jstree-themeicon-custom.blob.octotree-default-icon.octotree-icon-file {
+  color: #8b949e;
 }
 
 .dark {
@@ -15,8 +24,4 @@
 
 .misa198-octotree-icon {
   margin-right: 3px;
-}
-
-.misa198-octotree-icon::before {
-  font-size: 14px;
 }
