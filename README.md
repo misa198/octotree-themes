@@ -8,6 +8,9 @@ Octotree Icon Theme
   <a href="https://github.com/misa198/octotree-icon-theme/releases">
     <img src="https://img.shields.io/github/v/release/misa198/octotree-icon-theme" />
   </a>
+  <a href="https://www.octotree.io/download">
+    <img src="https://img.shields.io/badge/install-Octotree-orange" />
+  </a>
 </p>
 
 ## Overview
