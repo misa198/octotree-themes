@@ -1,0 +1,19 @@
+/* Octotree text dark theme color  */
+.octotree-sidebar.octotree-github-sidebar
+  .octotree-views
+  .octotree-view.octotree-tree-view
+  .octotree-view-header {
+  background: var(--color-header-bg) !important;
+}
+
+.misa198-octotree-sidebar {
+  background-color: var(--color-canvas-default) !important;
+}
+
+.octotree-sidebar.octotree-github-sidebar
+  .octotree-views
+  .octotree-view.octotree-tree-view
+  .jstree-anchor
+  div {
+  color: var(--color-fg-default) !important;
+}

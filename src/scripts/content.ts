@@ -4,9 +4,7 @@ import mobile from 'is-mobile';
 import select from 'select-dom';
 import { observe } from 'selector-observer';
 import '../styles/icons.css';
-import '../styles/text.css';
-
-const darkMode = Boolean(select("html[data-color-mode='dark']"));
+import '../styles/octotree.css';
 
 const fonts = [
   { name: 'FontAwesome', path: 'fonts/fontawesome.woff2' },
@@ -59,11 +57,9 @@ const replaceIcon = ({
 
   const className: string | null = fileIcons.getClassWithColor(filename);
 
-  const darkClassName = darkMode ? 'dark' : '';
-
   if (className && !isDirectory) {
     const icon = document.createElement('span');
-    icon.className = `icon octicon-file ${className} ${darkClassName}`;
+    icon.className = `icon octicon-file ${className}`;
     if (iconDom) {
       iconDom.parentNode!.replaceChild(icon, iconDom as HTMLElement);
     }
@@ -93,11 +89,9 @@ const replaceOctotreeIcon = ({
 
   const className: string | null = fileIcons.getClassWithColor(filename);
 
-  const darkClassName = darkMode ? 'dark' : '';
-
   if (className && !isDirectory) {
     const icon = document.createElement('i');
-    icon.className = `icon octicon-file misa198-octotree-icon ${iconDom?.classList.value} ${className} ${darkClassName}`;
+    icon.className = `icon octicon-file misa198-octotree-icon ${iconDom?.classList.value} ${className}`;
     icon.setAttribute('role', 'presentation');
     icon.setAttribute('rel', 'blob octotree-default-icon octotree-icon-file');
 
@@ -110,6 +104,16 @@ const replaceOctotreeIcon = ({
 const init = async () => {
   loadFonts();
   await domLoaded;
+
+  observe('.octotree-sidebar', {
+    add(element) {
+      if (element) {
+        select(
+          '.octotree-sidebar.octotree-github-sidebar.ui-resizable'
+        )?.classList.add('misa198-octotree-sidebar');
+      }
+    },
+  });
 
   observe('.js-navigation-container > .js-navigation-item', {
     add(element) {
@@ -128,16 +132,6 @@ const init = async () => {
 
   observe('.jstree-node', {
     add(element) {
-      if (darkMode) {
-        document
-          .querySelectorAll(
-            '.octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-view.octotree-tree-view .jstree-anchor div'
-          )
-          .forEach((e) => {
-            e.classList.add('misa198-dark-text');
-          });
-      }
-
       const filenameDom = select('.jstree-anchor > div', element);
 
       if (!filenameDom) {
