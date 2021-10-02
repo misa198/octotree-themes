@@ -1,10 +1,8 @@
-import * as fileIcons from 'file-icons-js';
 import * as domLoaded from 'dom-loaded';
-import select from 'select-dom';
+import * as fileIcons from 'file-icons-js';
 import mobile from 'is-mobile';
+import select from 'select-dom';
 import { observe } from 'selector-observer';
-
-import { StorageKey } from './background';
 import '../styles/icons.css';
 import '../styles/text.css';
 
@@ -162,16 +160,5 @@ const init = async () => {
   });
 };
 
-chrome.storage.sync.get(
-  [StorageKey.ColorsDisabled, StorageKey.DarkMode],
-  (result) => {
-    colorsDisabled =
-      result.colorsDisabled === undefined
-        ? colorsDisabled
-        : result.colorsDisabled;
-
-    darkMode = Boolean(select("html[data-color-mode='dark']"));
-
-    init();
-  }
-);
+darkMode = Boolean(select("html[data-color-mode='dark']"));
+init();
