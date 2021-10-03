@@ -17,7 +17,7 @@ Octotree Icon Theme
 
 A Chrome Extension which gives different filetypes different icons to GitHub and Octotree for free.
 
-<p>
+<p align="center">
   <img src="./docs/screenshot-main.png" />
 </p>
 
