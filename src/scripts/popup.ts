@@ -22,19 +22,8 @@ const refreshButton = document.getElementById(
 chrome.storage.sync.get(
   [KEYS.MISA198_GITHUB, KEYS.MISA198_OCTOTREE],
   (result) => {
-    if (result[KEYS.MISA198_GITHUB] === undefined) {
-      chrome.storage.sync.set({ [KEYS.MISA198_GITHUB]: true });
-      githubCheckbox.checked = true;
-    } else {
-      githubCheckbox.checked = Boolean(result.misa198Github);
-    }
-
-    if (result[KEYS.MISA198_OCTOTREE] === undefined) {
-      chrome.storage.sync.set({ [KEYS.MISA198_OCTOTREE]: true });
-      octotreeCheckbox.checked = true;
-    } else {
-      octotreeCheckbox.checked = Boolean(result.misa198Octotree);
-    }
+    githubCheckbox.checked = Boolean(result.misa198Github);
+    octotreeCheckbox.checked = Boolean(result.misa198Octotree);
   }
 );
 
