@@ -3,6 +3,9 @@
   "name": "Octotree Icon Theme",
   "author": "misa198",
   "homepage_url": "https://github.com/misa198/octotree-icon-theme",
+  "background": {
+    "scripts": ["background.bundle.js"]
+  },
   "content_scripts": [
     {
       "matches": ["https://github.com/*"],

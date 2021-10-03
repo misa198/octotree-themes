@@ -22,6 +22,7 @@ const fileExtensions = [
 
 const options = {
   entry: {
+    background: path.join(__dirname, 'src', 'scripts', 'background.ts'),
     popup: path.join(__dirname, 'src', 'scripts', 'popup.ts'),
     content: path.join(__dirname, 'src', 'scripts', 'content.ts'),
   },
@@ -70,6 +71,10 @@ const options = {
         },
         {
           from: 'src/popup.html',
+          to: '',
+        },
+        {
+          from: 'src/popup-disabled.html',
           to: '',
         },
       ],
