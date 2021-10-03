@@ -22,8 +22,8 @@ const fileExtensions = [
 
 const options = {
   entry: {
-    content: path.join(__dirname, 'src', 'scripts', 'content.ts'),
     popup: path.join(__dirname, 'src', 'scripts', 'popup.ts'),
+    content: path.join(__dirname, 'src', 'scripts', 'content.ts'),
   },
   output: {
     path: path.join(__dirname, 'build'),

@@ -1,6 +1,6 @@
 import '../styles/popup.css';
 
-const KEYS = {
+export const KEYS = {
   MISA198_OCTOTREE: 'misa198Octotree',
   MISA198_GITHUB: 'misa198Github',
   MISA198_RELOAD: 'misa198Reload',
@@ -22,8 +22,19 @@ const refreshButton = document.getElementById(
 chrome.storage.sync.get(
   [KEYS.MISA198_GITHUB, KEYS.MISA198_OCTOTREE],
   (result) => {
-    githubCheckbox.checked = Boolean(result.misa198Github);
-    octotreeCheckbox.checked = Boolean(result.misa198Octotree);
+    if (result[KEYS.MISA198_GITHUB] === undefined) {
+      chrome.storage.sync.set({ [KEYS.MISA198_GITHUB]: true });
+      githubCheckbox.checked = true;
+    } else {
+      githubCheckbox.checked = Boolean(result.misa198Github);
+    }
+
+    if (result[KEYS.MISA198_OCTOTREE] === undefined) {
+      chrome.storage.sync.set({ [KEYS.MISA198_OCTOTREE]: true });
+      octotreeCheckbox.checked = true;
+    } else {
+      octotreeCheckbox.checked = Boolean(result.misa198Octotree);
+    }
   }
 );
 

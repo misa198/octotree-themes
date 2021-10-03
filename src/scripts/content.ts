@@ -6,6 +6,11 @@ import { observe } from 'selector-observer';
 import '../styles/icons.css';
 import '../styles/octotree.css';
 
+export const KEYS = {
+  MISA198_OCTOTREE: 'misa198Octotree',
+  MISA198_GITHUB: 'misa198Github',
+};
+
 const fonts = [
   { name: 'FontAwesome', path: 'fonts/fontawesome.woff2' },
   { name: 'Mfizz', path: 'fonts/mfixx.woff2' },
@@ -13,6 +18,9 @@ const fonts = [
   { name: 'file-icons', path: 'fonts/file-icons.woff2' },
   { name: 'octicons', path: 'fonts/octicons.woff2' },
 ];
+
+let octotree = false;
+let github = false;
 
 const loadFonts = () => {
   fonts.forEach((font) => {
@@ -105,48 +113,61 @@ const init = async () => {
   loadFonts();
   await domLoaded;
 
-  observe('.octotree-sidebar', {
-    add(element) {
-      if (element) {
-        select(
-          '.octotree-sidebar.octotree-github-sidebar.ui-resizable'
-        )?.classList.add('misa198-octotree-sidebar');
-      }
-    },
-  });
+  if (github) {
+    observe('.js-navigation-container > .js-navigation-item', {
+      add(element) {
+        const filenameDom = select('div[role="rowheader"] > span', element);
 
-  observe('.js-navigation-container > .js-navigation-item', {
-    add(element) {
-      const filenameDom = select('div[role="rowheader"] > span', element);
+        if (!filenameDom) {
+          return;
+        }
 
-      if (!filenameDom) {
-        return;
-      }
+        replaceIcon({
+          iconDom: select('.octicon-file', element) as HTMLElement,
+          filenameDom,
+        });
+      },
+    });
+  }
 
-      replaceIcon({
-        iconDom: select('.octicon-file', element) as HTMLElement,
-        filenameDom,
-      });
-    },
-  });
+  if (octotree) {
+    observe('.octotree-sidebar', {
+      add(element) {
+        if (element) {
+          select(
+            '.octotree-sidebar.octotree-github-sidebar.ui-resizable'
+          )?.classList.add('misa198-octotree-sidebar');
+        }
+      },
+    });
 
-  observe('.jstree-node', {
-    add(element) {
-      const filenameDom = select('.jstree-anchor > div', element);
+    observe('.jstree-node', {
+      add(element) {
+        const filenameDom = select('.jstree-anchor > div', element);
 
-      if (!filenameDom) {
-        return;
-      }
+        if (!filenameDom) {
+          return;
+        }
 
-      replaceOctotreeIcon({
-        iconDom: select(
-          '.jstree-anchor > .jstree-icon',
-          element
-        ) as HTMLElement,
-        filenameDom,
-      });
-    },
-  });
+        replaceOctotreeIcon({
+          iconDom: select(
+            '.jstree-anchor > .jstree-icon',
+            element
+          ) as HTMLElement,
+          filenameDom,
+        });
+      },
+    });
+  }
 };
 
-init();
+(() => {
+  chrome.storage.sync.get(
+    [KEYS.MISA198_GITHUB, KEYS.MISA198_OCTOTREE],
+    (result) => {
+      github = result[KEYS.MISA198_GITHUB] === true;
+      octotree = result[KEYS.MISA198_OCTOTREE] === true;
+    }
+  );
+  init();
+})();
