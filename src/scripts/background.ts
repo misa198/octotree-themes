@@ -1,4 +1,4 @@
-const urlRegex = new RegExp(/^https:\/\/(www.)?github.com\/(.)+$/);
+const urlRegex = new RegExp(/^https:\/\/github.com\/(.)+$/);
 
 chrome.tabs.onActivated.addListener(function (info) {
   chrome.tabs.get(info.tabId, function (change) {
