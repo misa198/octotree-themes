@@ -5,7 +5,9 @@
 }
 
 .text-icon::before,
-.database-icon::before {
+.database-icon::before,
+.binary-icon::before,
+.image-icon::before {
   left: 2px;
 }
 
