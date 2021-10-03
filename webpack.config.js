@@ -23,6 +23,7 @@ const fileExtensions = [
 const options = {
   entry: {
     content: path.join(__dirname, 'src', 'scripts', 'content.ts'),
+    popup: path.join(__dirname, 'src', 'scripts', 'popup.ts'),
   },
   output: {
     path: path.join(__dirname, 'build'),
@@ -66,6 +67,10 @@ const options = {
         {
           from: 'src/icons',
           to: 'icons',
+        },
+        {
+          from: 'src/popup.html',
+          to: '',
         },
       ],
     }),

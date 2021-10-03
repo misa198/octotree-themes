@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./popup.css" />
+    <!-- <link rel="stylesheet" href="./styles/popup.css" /> -->
+  </head>
+  <body>
+    <a
+      href="https://github.com/misa198/octotree-icon-theme"
+      rel="noreferrer"
+      target="__blank"
+    >
+      <header class="header">
+        <img class="header__icon" src="./icons/icon64.png" alt="" />
+        <h3 class="header__title">Octotree Icon Theme</h3>
+      </header>
+    </a>
+    <main class="main">
+      <div class="session">
+        <h3 class="session__label">Octotree</h3>
+        <label class="form-switch">
+          <input id="misa198Github" type="checkbox" />
+          <i></i>
+        </label>
+      </div>
+      <div class="session">
+        <h3 class="session_label">Github</h3>
+        <label class="form-switch">
+          <input id="misa198Octotree" type="checkbox" />
+          <i></i>
+        </label>
+      </div>
+      <div id="misa198Reload" class="session hide">
+        <div class="button-wrapper">
+          <button class="refresh-button" id="refreshButton">
+            <span>Refresh page</span>
+          </button>
+        </div>
+      </div>
+    </main>
+    <script src="./popup.bundle.js"></script>
+  </body>
+</html>
