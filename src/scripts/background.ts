@@ -1,5 +1,5 @@
 const urlRegex = new RegExp(
-  /^https:\/\/github.com\/[(a-z)(A-Z)(0-9)_-]+\/[(a-z)(A-Z)(0-9)_-]+\/?$/
+  /^https:\/\/github.com\/[(a-z)(A-Z)(0-9)_-]+\/[(a-z)(A-Z)(0-9)_-]+\/?(\?(.+))?$/
 );
 export const KEYS = {
   MISA198_OCTOTREE: 'misa198Octotree',
