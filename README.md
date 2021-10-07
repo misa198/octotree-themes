@@ -23,9 +23,13 @@ A Chrome Extension which gives different filetypes different icons to GitHub and
 
 ## Installation
 
-Download from <a href="https://github.com/misa198/octotree-icon-theme/releases">
-here
-</a> and follow the instructions [here](https://www.quora.com/How-do-I-install-a-chrome-extension-from-a-zip-file).
+[ <img src="./docs/microsoft-edge.svg" /> ](https://microsoftedge.microsoft.com/addons/detail/octotree-icon-theme/cajppifioefokdcmnbehbkiddjnpmadb)
+
+- For other Chromium browser:
+  <br>
+  Download from <a href="https://github.com/misa198/octotree-icon-theme/releases">
+  here
+  </a> and follow the instructions [here](https://www.quora.com/How-do-I-install-a-chrome-extension-from-a-zip-file).
 
 ## License
 
