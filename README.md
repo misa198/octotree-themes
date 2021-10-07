@@ -5,6 +5,9 @@
 Octotree Icon Theme
 </h1>
 <p align="center">
+  <a href="https://microsoftedge.microsoft.com/addons/detail/octotree-icon-theme/cajppifioefokdcmnbehbkiddjnpmadb">
+    <img src="https://img.shields.io/badge/Microsoft%20Edge%20Store-Download-blue" />
+  </a>
   <a href="https://github.com/misa198/octotree-icon-theme/releases">
     <img src="https://img.shields.io/github/v/release/misa198/octotree-icon-theme" />
   </a>
