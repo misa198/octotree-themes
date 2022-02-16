@@ -3,13 +3,12 @@ import * as fileIcons from 'file-icons-js';
 import mobile from 'is-mobile';
 import select from 'select-dom';
 import { observe } from 'selector-observer';
+import { detectBrowser } from './detectBrowser';
+import { get } from './storage';
+import { KEYS } from './keys';
 import '../styles/icons.css';
 import '../styles/octotree.css';
-
-export const KEYS = {
-  MISA198_OCTOTREE: 'misa198Octotree',
-  MISA198_GITHUB: 'misa198Github',
-};
+import '../styles/file-icon.css';
 
 const fonts = [
   { name: 'FontAwesome', path: 'fonts/fontawesome.woff2' },
@@ -21,12 +20,15 @@ const fonts = [
 
 let octotree = false;
 let github = false;
+const browserName = detectBrowser();
 
 const loadFonts = () => {
-  fonts.forEach((font) => {
+  for (const font of fonts) {
     const fontFace = new FontFace(
       font.name,
-      `url("${chrome.extension.getURL(font.path)}") format("woff2")`,
+      `url("${(browserName === 'chrome' ? chrome : browser).extension.getURL(
+        font.path
+      )}") format("woff2")`,
       {
         style: 'normal',
         weight: 'normal',
@@ -36,7 +38,7 @@ const loadFonts = () => {
     fontFace
       .load()
       .then((loadedFontFace) => document.fonts.add(loadedFontFace));
-  });
+  }
 };
 
 const getGitHubMobileFilename = (filenameDom: HTMLElement) =>
@@ -131,43 +133,47 @@ const init = async () => {
   }
 
   if (octotree) {
-    observe('.octotree-sidebar', {
-      add(element) {
-        if (element) {
-          select(
-            '.octotree-sidebar.octotree-github-sidebar.ui-resizable'
-          )?.classList.add('misa198-octotree-sidebar');
-        }
-      },
-    });
+    observe(
+      '.jstree-container-ul.jstree-children.jstree-wholerow-ul.jstree-no-dots',
+      {
+        add() {
+          observe('.octotree-sidebar', {
+            add(element) {
+              if (element) {
+                select(
+                  '.octotree-sidebar.octotree-github-sidebar.ui-resizable'
+                )?.classList.add('misa198-octotree-sidebar');
+              }
+            },
+          });
 
-    observe('.jstree-node', {
-      add(element) {
-        const filenameDom = select('.jstree-anchor > div', element);
+          observe('.jstree-node', {
+            add(element) {
+              const filenameDom = select('.jstree-anchor > div', element);
 
-        if (!filenameDom) {
-          return;
-        }
+              if (!filenameDom) {
+                return;
+              }
 
-        replaceOctotreeIcon({
-          iconDom: select(
-            '.jstree-anchor > .jstree-icon',
-            element
-          ) as HTMLElement,
-          filenameDom,
-        });
-      },
-    });
+              replaceOctotreeIcon({
+                iconDom: select(
+                  '.jstree-anchor > .jstree-icon',
+                  element
+                ) as HTMLElement,
+                filenameDom,
+              });
+            },
+          });
+        },
+      }
+    );
   }
 };
 
 (() => {
-  chrome.storage.sync.get(
-    [KEYS.MISA198_GITHUB, KEYS.MISA198_OCTOTREE],
-    (result) => {
-      github = result[KEYS.MISA198_GITHUB] === true;
-      octotree = result[KEYS.MISA198_OCTOTREE] === true;
-    }
-  );
+  get([KEYS.MISA198_GITHUB, KEYS.MISA198_OCTOTREE], (result) => {
+    github = result[KEYS.MISA198_GITHUB] === true;
+    octotree = result[KEYS.MISA198_OCTOTREE] === true;
+  });
   init();
 })();

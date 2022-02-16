@@ -4,12 +4,12 @@
   "author": "misa198",
   "homepage_url": "https://github.com/misa198/octotree-icon-theme",
   "background": {
-    "scripts": ["background.bundle.js"]
+    "scripts": ["background.js"]
   },
   "content_scripts": [
     {
       "matches": ["https://github.com/*"],
-      "js": ["content.bundle.js"],
+      "js": ["content.js"],
       "css": ["content.css"],
       "run_at": "document_start"
     }
@@ -20,7 +20,7 @@
     "128": "icons/icon128.png"
   },
   "browser_action": {
-    "default_icon": "icons/icon64-disabled.png",
+    "default_icon": "icons/icon64.png",
     "default_popup": "popup.html"
   },
   "content_security_policy": "script-src 'self'; object-src 'self'",
@@ -32,5 +32,10 @@
     "https://github.com/*",
     "tabs"
   ],
-  "optional_permissions": ["http://*/*", "https://*/*"]
+  "optional_permissions": ["http://*/*", "https://*/*"],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "octotree-theme-icon@misa198.com"
+    }
+  }
 }

@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "name": "Octotree Icon Theme",
+  "author": "misa198",
+  "homepage_url": "https://github.com/misa198/octotree-icon-theme",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "64": "icons/icon64.png",
+    "128": "icons/icon128.png"
+  },
+  "browser_action": {
+    "default_icon": "icons/icon64.png",
+    "default_popup": "popup.html"
+  },
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "web_accessible_resources": ["*.woff2"],
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "activeTab",
+    "https://github.com/*",
+    "tabs"
+  ],
+  "optional_permissions": ["http://*/*", "https://*/*"]
+}

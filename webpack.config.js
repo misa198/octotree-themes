@@ -1,11 +1,9 @@
 const webpack = require('webpack');
 const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WriteFilePlugin = require('write-file-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const ExtensionReloader = require('webpack-extension-reloader');
 
 const fileExtensions = [
   'jpg',
@@ -27,8 +25,11 @@ const options = {
     content: path.join(__dirname, 'src', 'scripts', 'content.ts'),
   },
   output: {
-    path: path.join(__dirname, 'build'),
-    filename: '[name].bundle.js',
+    path: path.join(__dirname, 'build', process.env.NODE_ENV),
+    filename: '[name].js',
+  },
+  resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
   module: {
     rules: [
@@ -55,7 +56,8 @@ const options = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: 'src/manifest.json',
+          from: `src/platforms/manifest.${process.env.NODE_ENV}.json`,
+          to: 'manifest.json',
           transform: (content) =>
             Buffer.from(
               JSON.stringify({
@@ -84,24 +86,20 @@ const options = {
   ],
 };
 
-if (process.env.NODE_ENV === 'development') {
-  options.mode = 'development';
-  options.devtool = 'cheap-module-source-map';
-  options.plugins.push(
-    new ExtensionReloader({
-      manifest: 'src/manifest.json',
-      port: 9090,
-      reloadPage: true,
-      entries: {
-        contentScript: 'content',
-        background: 'background',
-      },
-    })
-  );
-} else if (process.env.NODE_ENV === 'production') {
+const env = process.env.NODE_ENV;
+
+if (env === 'chromium') {
   options.mode = 'production';
   options.plugins.push(
-    new CleanWebpackPlugin({ cleanOnceBeforeBuildPatterns: 'build' }),
+    new webpack.LoaderOptionsPlugin({
+      minimize: true,
+      debug: false,
+    }),
+    new TerserPlugin()
+  );
+} else if (env !== 'firefox') {
+  options.mode = 'production';
+  options.plugins.push(
     new webpack.LoaderOptionsPlugin({
       minimize: true,
       debug: false,
