@@ -18,7 +18,8 @@ Octotree Icon Theme
 
 ## Overview
 
-A Chrome Extension which gives different filetypes different icons to GitHub and Octotree for free.
+A Browser Extension which gives different filetypes different icons to GitHub and Octotree for free.
+Support Chromium Browsers and Firefox.
 
 <p align="center">
   <img src="./docs/screenshot-main.png" />
@@ -26,7 +27,11 @@ A Chrome Extension which gives different filetypes different icons to GitHub and
 
 ## Installation
 
-[ <img src="./docs/microsoft-edge.svg" /> ](https://microsoftedge.microsoft.com/addons/detail/octotree-icon-theme/cajppifioefokdcmnbehbkiddjnpmadb)
+- For Microsoft Edge Chromium
+
+  [ <img src="./docs/microsoft-edge.svg" /> ](https://microsoftedge.microsoft.com/addons/detail/octotree-icon-theme/cajppifioefokdcmnbehbkiddjnpmadb)
+
+- For Firefox
 
 - For other Chromium browser:
   <br>

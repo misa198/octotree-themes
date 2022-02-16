@@ -1,25 +1,15 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "lib": [
-      "es6",
-      "dom"
-    ],
+    "lib": ["es6", "dom"],
+    "skipLibCheck": true,
     "target": "es5",
     "allowJs": true,
     "moduleResolution": "node",
-    "types": [
-      "chrome",
-      "css-font-loading-module"
-    ],
+    "types": ["chrome", "firefox-webext-browser", "css-font-loading-module"],
     "strict": true,
     "sourceMap": false
   },
-  "include": [
-    "src/scripts/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "build"
-  ]
+  "include": ["src/scripts/*.ts"],
+  "exclude": ["node_modules", "build"]
 }

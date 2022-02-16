@@ -27,3 +27,8 @@
 .misa198-octotree-icon {
   margin-right: 3px;
 }
+
+.misa198-octotree-icon-font::before {
+  margin-right: 3px;
+  font-family: file-icons !important;
+}

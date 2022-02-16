@@ -1,0 +1,3175 @@
+/*
+ | File Icons
+ | @link https://github.com/file-icons
+ | @author Daniel Brooker https://github.com/DanBrooker
+ */
+
+/* ----------------------------[ Colors ]---------------------------------- */
+
+/*============================================================================*
+	PALETTE
+	Base16 colours from https://github.com/chriskempson/base16
+/*============================================================================*/
+.light-red:before {
+  color: #c97071 !important;
+}
+.medium-red:before {
+  color: #ac4142 !important;
+}
+.dark-red:before {
+  color: #742c2d !important;
+}
+.light-green:before {
+  color: #a6ba7b !important;
+}
+.medium-green:before {
+  color: #90a959 !important;
+}
+.dark-green:before {
+  color: #66783e !important;
+}
+.light-yellow:before {
+  color: #fae0bc !important;
+}
+.medium-yellow:before {
+  color: #ee9e2e !important;
+}
+.dark-yellow:before {
+  color: #d88511 !important;
+}
+.light-blue:before {
+  color: #6098b0 !important;
+}
+.medium-blue:before {
+  color: #6a9fb5 !important;
+}
+.dark-blue:before {
+  color: #46788d !important;
+}
+.light-maroon:before {
+  color: #be7953 !important;
+}
+.medium-maroon:before {
+  color: #8f5536 !important;
+}
+.dark-maroon:before {
+  color: #573421 !important;
+}
+.light-purple:before {
+  color: #c7a4c0 !important;
+}
+.medium-purple:before {
+  color: #aa759f !important;
+}
+.dark-purple:before {
+  color: #825078 !important;
+}
+.light-orange:before {
+  color: #d99762 !important;
+}
+.medium-orange:before {
+  color: #d28445 !important;
+}
+.dark-orange:before {
+  color: #a35f27 !important;
+}
+.light-cyan:before {
+  color: #6bb0a4 !important;
+}
+.medium-cyan:before {
+  color: #75b5aa !important;
+}
+.dark-cyan:before {
+  color: #4d9085 !important;
+}
+.light-pink:before {
+  color: #ff4ddb !important;
+}
+.medium-pink:before {
+  color: #ff00cc !important;
+}
+.dark-pink:before {
+  color: #b3008f !important;
+}
+.theme-colour-check {
+  background: #ffffff !important;
+}
+
+/* ----------------------------[ Icons ]---------------------------------- */
+
+.icon:before {
+  font-weight: normal !important;
+  font-style: normal !important;
+  text-align: center !important;
+  width: 16px !important;
+  line-height: 1 !important;
+  position: relative !important;
+  display: inline-block !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+/*============================================================================*
+  Octicons
+  https://github.com/github/octicons
+/*============================================================================*/
+
+.binary-icon:before {
+  font-family: octicons !important;
+  font-size: 16px !important;
+  top: 1px !important;
+  content: '\f094' !important;
+}
+.book-icon:before {
+  font-family: octicons !important;
+  font-size: 16px !important;
+  top: 1px !important;
+  content: '\f007' !important;
+}
+.brew-icon:before {
+  font-family: octicons !important;
+  font-size: 16px !important;
+  top: 1px !important;
+  content: '\f069' !important;
+  font-size: 15px !important;
+  left: 1px !important;
+}
+.checklist-icon:before {
+  font-family: octicons !important;
+  font-size: 16px !important;
+  top: 1px !important;
+  content: '\f076' !important;
+  font-size: 17px !important;
+  left: 1px !important;
+}
+.code-icon:before {
+  font-family: octicons !important;
+  font-size: 16px !important;
+  top: 1px !important;
+  content: '\f05f' !important;
+}
+.database-icon:before {
+  font-family: octicons !important;
+  font-size: 16px !important;
+  top: 1px !important;
+  content: '\f096' !important;
+}
+.gear-icon:before {
+  font-family: octicons !important;
+  font-size: 16px !important;
+  top: 1px !important;
+  content: '\f02f' !important;
+}
+.git-commit-icon:before {
+  font-family: octicons !important;
+  font-size: 16px !important;
+  top: 1px !important;
+  content: '\f01f' !important;
+}
+.git-merge-icon:before {
+  font-family: octicons !important;
+  font-size: 16px !important;
+  top: 1px !important;
+  content: '\f023' !important;
+}
+.github-icon:before {
+  font-family: octicons !important;
+  font-size: 16px !important;
+  top: 1px !important;
+  content: '\f00a' !important;
+}
+.graph-icon:before {
+  font-family: octicons !important;
+  font-size: 16px !important;
+  top: 1px !important;
+  content: '\f043' !important;
+}
+.image-icon:before {
+  font-family: octicons !important;
+  font-size: 16px !important;
+  top: 1px !important;
+  content: '\f012' !important;
+}
+.key-icon:before {
+  font-family: octicons !important;
+  font-size: 16px !important;
+  top: 1px !important;
+  content: '\f049' !important;
+}
+.link-icon:before {
+  font-family: octicons !important;
+  font-size: 16px !important;
+  top: 1px !important;
+  content: '\f0b0' !important;
+}
+.markdown-icon:before {
+  font-family: octicons !important;
+  font-size: 16px !important;
+  top: 1px !important;
+  content: '\f0c9' !important;
+}
+.package-icon:before {
+  font-family: octicons !important;
+  font-size: 16px !important;
+  top: 1px !important;
+  content: '\f0c4' !important;
+}
+.ruby-icon:before {
+  font-family: octicons !important;
+  font-size: 16px !important;
+  top: 1px !important;
+  content: '\f047' !important;
+}
+.secret-icon:before {
+  font-family: octicons !important;
+  font-size: 16px !important;
+  top: 1px !important;
+  content: '\f08c' !important;
+}
+.squirrel-icon:before {
+  font-family: octicons !important;
+  font-size: 16px !important;
+  top: 1px !important;
+  content: '\f0b2' !important;
+  font-size: 15px !important;
+}
+.text-icon:before {
+  font-family: octicons !important;
+  font-size: 16px !important;
+  top: 1px !important;
+  content: '\f011' !important;
+}
+.zip-icon:before {
+  font-family: octicons !important;
+  font-size: 16px !important;
+  top: 1px !important;
+  content: '\f013' !important;
+}
+
+/*============================================================================*
+  FontAwesome
+  http://fortawesome.github.io/Font-Awesome/cheatsheet
+/*============================================================================*/
+
+.android-icon:before {
+  font-family: FontAwesome !important;
+  font-size: 13px !important;
+  content: '\f17b' !important;
+  font-size: 16px !important;
+  top: 1px !important;
+}
+.at-icon:before {
+  font-family: FontAwesome !important;
+  font-size: 13px !important;
+  content: '\f1fa' !important;
+  font-size: 15px !important;
+  top: 1px !important;
+}
+.audio-icon:before {
+  font-family: FontAwesome !important;
+  font-size: 13px !important;
+  content: '\f028' !important;
+  font-size: 15px !important;
+  top: 1px !important;
+}
+.bullhorn-icon:before {
+  font-family: FontAwesome !important;
+  font-size: 13px !important;
+  content: '\f0a1' !important;
+  font-size: 16px !important;
+  top: 2px !important;
+}
+.calc-icon:before {
+  font-family: FontAwesome !important;
+  font-size: 13px !important;
+  content: '\f1ec' !important;
+  font-size: 14px !important;
+}
+.coffee-icon:before {
+  font-family: FontAwesome !important;
+  font-size: 13px !important;
+  content: '\f0f4' !important;
+  font-size: 14px !important;
+  top: 1px !important;
+}
+.css3-icon:before {
+  font-family: FontAwesome !important;
+  font-size: 13px !important;
+  content: '\f13c' !important;
+  top: 0 !important;
+}
+.circle-icon:before {
+  font-family: FontAwesome !important;
+  font-size: 13px !important;
+  content: '\f111' !important;
+  font-size: 16px !important;
+  top: 1px !important;
+}
+.earth-icon:before {
+  font-family: FontAwesome !important;
+  font-size: 13px !important;
+  content: '\f0ac' !important;
+  font-size: 15px !important;
+}
+.gears-icon:before {
+  font-family: FontAwesome !important;
+  font-size: 13px !important;
+  content: '\f085' !important;
+  font-size: 15px !important;
+}
+.html5-icon:before {
+  font-family: FontAwesome !important;
+  font-size: 13px !important;
+  content: '\f13b' !important;
+  font-size: 15px !important;
+  top: 1px !important;
+}
+.mobile-icon:before {
+  font-family: FontAwesome !important;
+  font-size: 13px !important;
+  content: '\f10b' !important;
+  font-size: 20px !important;
+  top: 2px !important;
+}
+.moon-icon:before {
+  font-family: FontAwesome !important;
+  font-size: 13px !important;
+  content: '\f186' !important;
+  font-size: 16px !important;
+  top: 1px !important;
+}
+.music-icon:before {
+  font-family: FontAwesome !important;
+  font-size: 13px !important;
+  content: '\f001' !important;
+  font-size: 15px !important;
+}
+.print-icon:before {
+  font-family: FontAwesome !important;
+  font-size: 13px !important;
+  content: '\f02f' !important;
+  font-size: 15px !important;
+  top: 2px !important;
+}
+.recycle-icon:before {
+  font-family: FontAwesome !important;
+  font-size: 13px !important;
+  content: '\f1b8' !important;
+  font-size: 15px !important;
+  top: 2px !important;
+}
+.rss-icon:before {
+  font-family: FontAwesome !important;
+  font-size: 13px !important;
+  content: '\f143' !important;
+  font-size: 16px !important;
+  top: 2px !important;
+}
+.smarty-icon:before {
+  font-family: FontAwesome !important;
+  font-size: 13px !important;
+  content: '\f0eb' !important;
+  font-size: 15px !important;
+}
+.sourcemap-icon:before {
+  font-family: FontAwesome !important;
+  font-size: 13px !important;
+  content: '\f279' !important;
+  font-size: 14px !important;
+}
+.sun-icon:before {
+  font-family: FontAwesome !important;
+  font-size: 13px !important;
+  content: '\f185' !important;
+  font-size: 14px !important;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+}
+.toc-icon:before {
+  font-family: FontAwesome !important;
+  font-size: 13px !important;
+  content: '\f03a' !important;
+  font-size: 15px !important;
+  top: 2px !important;
+}
+.twig-icon:before {
+  font-family: FontAwesome !important;
+  font-size: 13px !important;
+  content: '\f1bb' !important;
+  font-size: 14px !important;
+}
+.pdf-icon:before {
+  font-family: FontAwesome !important;
+  font-size: 13px !important;
+  content: '\f1c1' !important;
+  font-size: 14px !important;
+}
+
+/*============================================================================*
+  Mfizz
+  http://mfizz.com/oss/font-mfizz
+/*============================================================================*/
+
+.apache-icon:before {
+  font-family: Mfizz !important;
+  font-size: 14px !important;
+  content: '\f102' !important;
+  top: 3px !important;
+  font-size: 15px !important;
+}
+.archlinux-icon:before {
+  font-family: Mfizz !important;
+  font-size: 14px !important;
+  content: 'A' !important;
+  top: 1px !important;
+  font-size: 15px !important;
+}
+.c-icon:before {
+  font-family: Mfizz !important;
+  font-size: 14px !important;
+  content: '\f106' !important;
+  top: 1px !important;
+  font-size: 13px !important;
+}
+.cpp-icon:before {
+  font-family: Mfizz !important;
+  font-size: 14px !important;
+  content: '\f10b' !important;
+  top: 1px !important;
+}
+.csharp-icon:before {
+  font-family: Mfizz !important;
+  font-size: 14px !important;
+  content: '\f10c' !important;
+  top: 1px !important;
+}
+.debian-icon:before {
+  font-family: Mfizz !important;
+  font-size: 14px !important;
+  content: '\f111' !important;
+  top: 1px !important;
+}
+.elixir-icon:before {
+  font-family: Mfizz !important;
+  font-size: 14px !important;
+  content: '\f113' !important;
+  top: 1px !important;
+}
+.gnome-icon:before {
+  font-family: Mfizz !important;
+  font-size: 14px !important;
+  content: '\f119' !important;
+  top: 1px !important;
+}
+.haskell-icon:before {
+  font-family: Mfizz !important;
+  font-size: 14px !important;
+  content: '\f121' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+}
+.java-icon:before {
+  font-family: Mfizz !important;
+  font-size: 14px !important;
+  content: '\f126' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+}
+.js-icon:before {
+  font-family: Mfizz !important;
+  font-size: 14px !important;
+  content: '\f129' !important;
+  top: 1px !important;
+  font-size: 14px !important;
+}
+.msql-icon:before {
+  font-family: Mfizz !important;
+  font-size: 14px !important;
+  content: '\f136' !important;
+  top: 2px !important;
+  font-size: 15px !important;
+  text-shadow: 0 0 0 !important;
+}
+.objc-icon:before {
+  font-family: Mfizz !important;
+  font-size: 14px !important;
+  content: '\f13e' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+}
+.osx-icon:before {
+  font-family: Mfizz !important;
+  font-size: 14px !important;
+  content: '\f141' !important;
+  top: 1px !important;
+}
+.perl-icon:before {
+  font-family: Mfizz !important;
+  font-size: 14px !important;
+  content: '\f142' !important;
+  top: 1px !important;
+}
+.python-icon:before {
+  font-family: Mfizz !important;
+  font-size: 14px !important;
+  content: '\f14c' !important;
+  top: 1px !important;
+}
+.red-hat-icon:before {
+  font-family: Mfizz !important;
+  font-size: 14px !important;
+  content: '\f14e' !important;
+  top: 2px !important;
+}
+.scala-icon:before {
+  font-family: Mfizz !important;
+  font-size: 14px !important;
+  content: '\f154' !important;
+  top: 1px !important;
+}
+.sql-icon:before {
+  font-family: Mfizz !important;
+  font-size: 14px !important;
+  content: '\f10e' !important;
+  top: 1px !important;
+}
+.svg-icon:before {
+  font-family: Mfizz !important;
+  font-size: 14px !important;
+  content: '\f15c' !important;
+  top: 1px !important;
+}
+.tt-icon:before {
+  font-family: Mfizz !important;
+  font-size: 14px !important;
+  content: 'TT' !important;
+}
+.x11-icon:before {
+  font-family: Mfizz !important;
+  font-size: 14px !important;
+  content: '\f16e' !important;
+  top: 1px !important;
+  font-size: 13px !important;
+}
+
+/*============================================================================*
+  Devicons
+  http://vorillaz.github.io/devicons
+/*============================================================================*/
+
+.angular-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e653' !important;
+}
+.appcelerator-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e6ab' !important;
+}
+.appstore-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e613' !important;
+}
+.asp-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e67f' !important;
+}
+.atom-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e664' !important;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+}
+.backbone-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e652' !important;
+}
+.bootstrap-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e647' !important;
+  font-size: 15px !important;
+  top: 2px !important;
+}
+.bower-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e64d' !important;
+  text-shadow: 0 0 0 !important;
+}
+.chrome-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e643' !important;
+}
+.clojure-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e668' !important;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+}
+.compass-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e661' !important;
+  font-size: 14px !important;
+  top: 2px !important;
+}
+.dart-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e698' !important;
+  font-size: 15px !important;
+  top: 2px !important;
+}
+.dlang-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e6af' !important;
+}
+.dojo-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e61c' !important;
+  font-size: 16px !important;
+  top: 4px !important;
+  transform: scale(1.2) !important;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+}
+.dropbox-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e607' !important;
+}
+.eclipse-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e69e' !important;
+}
+.erlang-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e6b1' !important;
+}
+.extjs-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e68e' !important;
+}
+.fsharp-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e6a7' !important;
+  left: 1px !important;
+  top: 2px !important;
+}
+.git-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e602' !important;
+  font-size: 15px !important;
+  top: 2px !important;
+}
+.heroku-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e67b' !important;
+}
+.jquery-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e650' !important;
+  font-size: 15px !important;
+  top: 2px !important;
+}
+.jqueryui-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e654' !important;
+  font-size: 15px !important;
+  top: 2px !important;
+}
+.laravel-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e63f' !important;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+}
+.materialize-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e6b6' !important;
+  transform: scale(1.2) !important;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+}
+.modernizr-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e620' !important;
+}
+.mootools-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e68f' !important;
+  text-shadow: 0 0 0 !important;
+}
+.node-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e618' !important;
+}
+.pod-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e669' !important;
+  font-size: 15px !important;
+  top: 2px !important;
+}
+.prolog-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e6a1' !important;
+}
+.rails-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e63b' !important;
+}
+.raphael-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e65f' !important;
+  font-size: 15px !important;
+}
+.requirejs-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e670' !important;
+}
+.rust-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e6a8' !important;
+}
+.sass-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e64b' !important;
+}
+.sencha-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e68c' !important;
+}
+.snapsvg-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e65e' !important;
+}
+.swift-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e655' !important;
+  left: -1px !important;
+}
+.travis-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e67e' !important;
+  font-size: 15px !important;
+  top: 2px !important;
+}
+.uikit-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e673' !important;
+  font-size: 15px !important;
+  top: 2px !important;
+}
+.unity3d-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e621' !important;
+}
+.vim-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e6c5' !important;
+}
+.vs-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e60c' !important;
+  font-size: 14px !important;
+  top: 2px !important;
+}
+.windows-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e60f' !important;
+  font-size: 14px !important;
+  top: 2px !important;
+}
+.yeoman-icon:before {
+  font-family: Devicons !important;
+  font-size: 16px !important;
+  top: 3px !important;
+  content: '\e67a' !important;
+}
+
+/*============================================================================*
+  Custom file icons
+  See https://github.com/file-icons/source/#adding-new-icons
+/*============================================================================*/
+
+._1c-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\a5ea' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+}
+._1c-alt-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\ea28' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+}
+.abap-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e92b' !important;
+  top: 2px !important;
+}
+.access-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9ea' !important;
+  top: 2px !important;
+}
+.ada-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e90b' !important;
+  top: 3px !important;
+  font-size: 17px !important;
+}
+.ae-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9f3' !important;
+  top: 2px !important;
+}
+.ahk-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e932' !important;
+  top: 2px !important;
+}
+.ai-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e6b4' !important;
+  top: 2px !important;
+}
+.alloy-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e935' !important;
+  top: 2px !important;
+}
+.alpine-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9ff' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+}
+.ampl-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e94e' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+  left: 1px !important;
+}
+.amx-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e99b' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+}
+.ant-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e93e' !important;
+  top: 4px !important;
+  font-size: 18px !important;
+  transform: scale(1.1) !important;
+}
+.antlr-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e92c' !important;
+  top: 3px !important;
+}
+.api-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e92d' !important;
+  top: 2px !important;
+}
+.apl-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\234b' !important;
+  top: 2px !important;
+}
+.apple-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e925' !important;
+  top: 1px !important;
+}
+.appveyor-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e923' !important;
+  top: 2px !important;
+}
+.arc-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e92f' !important;
+  top: 2px !important;
+}
+.arduino-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e930' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+}
+.arttext-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\24d0' !important;
+  top: 2px !important;
+}
+.as-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e92e' !important;
+  top: 1px !important;
+  font-size: 14px !important;
+}
+.asciidoc-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e918' !important;
+  top: 1px !important;
+  font-size: 14px !important;
+}
+.ats-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e934' !important;
+  top: 2px !important;
+}
+.audacity-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9f9' !important;
+  top: 2px !important;
+}
+.augeas-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e931' !important;
+  top: 2px !important;
+}
+.autoit-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e933' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+}
+.babel-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e91f' !important;
+  top: 2px !important;
+  left: 1px !important;
+}
+.bibtex-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e601' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+}
+.blender-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9fa' !important;
+  top: 2px !important;
+}
+.bluespec-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e93c' !important;
+  top: 1px !important;
+  font-size: 13px !important;
+  left: 1px !important;
+}
+.boo-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e939' !important;
+  top: 2px !important;
+}
+.boot-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\f103' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+}
+.brain-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e93a' !important;
+  top: 2px !important;
+}
+.brakeman-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9d6' !important;
+  top: 2px !important;
+}
+.bro-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e93b' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+}
+.broccoli-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e922' !important;
+  top: 1px !important;
+  font-size: 14px !important;
+}
+.byond-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e962' !important;
+  top: 2px !important;
+}
+.cabal-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9c2' !important;
+  top: 2px !important;
+}
+.cake-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9e3' !important;
+  top: 2px !important;
+}
+.cakefile-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e924' !important;
+  top: 2px !important;
+}
+.cakephp-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9d3' !important;
+  top: 1px !important;
+  font-size: 14px !important;
+}
+.cc-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9d5' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+}
+.ceylon-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e94f' !important;
+  top: 2px !important;
+}
+.cf-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e929' !important;
+  top: 2px !important;
+}
+.chai-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: 'c' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+}
+.chapel-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e950' !important;
+  top: 2px !important;
+}
+.chartjs-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\ea0b' !important;
+  top: 2px !important;
+}
+.chuck-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e943' !important;
+  top: 2px !important;
+}
+.circleci-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\ea12' !important;
+  top: 2px !important;
+  font-size: 14px !important;
+}
+.cirru-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e951' !important;
+  top: 2px !important;
+  text-shadow: 0 0 0 !important;
+}
+.cl-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e972' !important;
+  top: 2px !important;
+  text-shadow: 0 0 0 !important;
+}
+.clarion-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e952' !important;
+  top: 1px !important;
+  font-size: 14px !important;
+  left: 1px !important;
+}
+.clean-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e95b' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+}
+.click-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e95c' !important;
+  top: 2px !important;
+}
+.clips-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e940' !important;
+  top: 3px !important;
+  font-size: 18px !important;
+}
+.cljs-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\f104' !important;
+  top: 2px !important;
+}
+.cmake-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e93f' !important;
+  top: 1px !important;
+  font-size: 14px !important;
+}
+.codecov-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\2602' !important;
+  top: 2px !important;
+}
+.composer-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e683' !important;
+  top: 3px !important;
+  font-size: 17px !important;
+}
+.config-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\f07c' !important;
+  top: 2px !important;
+  font-size: 14px !important;
+}
+.cordova-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\ea11' !important;
+  top: 2px !important;
+}
+.coq-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e95f' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+  left: 1px !important;
+}
+.cp-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e942' !important;
+  top: 3px !important;
+  font-size: 17px !important;
+}
+.creole-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e95e' !important;
+  top: 2px !important;
+}
+.crystal-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e902' !important;
+  top: 2px !important;
+  left: 1px !important;
+}
+.csound-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9f0' !important;
+  top: 2px !important;
+}
+.csscript-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9e2' !important;
+  top: 2px !important;
+}
+.cucumber-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\f02b' !important;
+  top: 3px !important;
+}
+.cython-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e963' !important;
+  top: 2px !important;
+}
+.d3-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\ea10' !important;
+  top: 2px !important;
+}
+.darcs-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e964' !important;
+  top: 2px !important;
+}
+.dashboard-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\f07d' !important;
+  top: 2px !important;
+  font-size: 13px !important;
+}
+.dbase-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9f1' !important;
+  top: 2px !important;
+}
+.default-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\1f5cc' !important;
+  top: 2px !important;
+  font-size: 14px !important;
+}
+.diff-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e960' !important;
+  top: 2px !important;
+}
+.docker-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\f106' !important;
+  top: 3px !important;
+  font-size: 18px !important;
+}
+.doxygen-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e928' !important;
+  top: 1px !important;
+  font-size: 13px !important;
+}
+.doge-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e946' !important;
+  top: 2px !important;
+}
+.dyalog-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e90c' !important;
+  top: 1px !important;
+  font-size: 14px !important;
+  left: 1px !important;
+}
+.dylib-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\ea15' !important;
+  top: 2px !important;
+}
+.e-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: 'E' !important;
+  top: 1px !important;
+  font-size: 14px !important;
+}
+.eagle-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e965' !important;
+  top: 2px !important;
+}
+.ec-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9c9' !important;
+  top: 2px !important;
+}
+.ecere-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e966' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+}
+.editorconfig-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\ea1b' !important;
+  top: 3px !important;
+}
+.eiffel-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e967' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+}
+.electron-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\ea27' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+  text-shadow: 0 0 0 !important;
+}
+.elm-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\f102' !important;
+  top: 2px !important;
+}
+.em-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e968' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+}
+.ember-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e61b' !important;
+  top: 2px !important;
+  font-size: 14px !important;
+}
+.emacs-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e926' !important;
+  top: 2px !important;
+}
+.eq-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\ea0a' !important;
+  top: 5px !important;
+}
+.eslint-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\ea0f' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+}
+.excel-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9ee' !important;
+  top: 2px !important;
+}
+.fabfile-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e94b' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+}
+.factor-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e96a' !important;
+  top: 3px !important;
+  font-size: 18px !important;
+  left: -2px !important;
+  transform: scale(1.2) !important;
+}
+.fancy-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e96b' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+}
+.fantom-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e96f' !important;
+  top: 2px !important;
+  left: 1px !important;
+}
+.fbx-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9fc' !important;
+  top: 2px !important;
+}
+.ff-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\fb00' !important;
+  top: 3px !important;
+}
+.finder-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9e9' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+}
+.flow-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e921' !important;
+  top: 1px !important;
+}
+.flux-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e969' !important;
+  top: 2px !important;
+}
+.font-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e90f' !important;
+  top: 1px !important;
+  font-size: 14px !important;
+  left: 1px !important;
+}
+.fortran-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e90a' !important;
+  top: 1px !important;
+  font-size: 14px !important;
+  left: 1px !important;
+}
+.freemarker-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e970' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+  left: 1px !important;
+}
+.frege-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e96e' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+  left: 1px !important;
+}
+.fuelux-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\ea09' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+  left: 2px !important;
+  transform: scale(1.15) !important;
+  text-shadow: 0 0 0 !important;
+}
+.gams-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e973' !important;
+  top: 2px !important;
+  left: 1px !important;
+}
+.gap-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e971' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+  left: 1px !important;
+}
+.gdb-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\ea08' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+  transform: scale(1.15) !important;
+  text-shadow: 0 0 0 !important;
+}
+.genshi-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e976' !important;
+  top: 3px !important;
+}
+.gentoo-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e96d' !important;
+  top: 1px !important;
+  font-size: 14px !important;
+  left: 1px !important;
+}
+.gf-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e978' !important;
+  top: 2px !important;
+}
+.glade-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e938' !important;
+  top: 2px !important;
+}
+.glyphs-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: 'G' !important;
+  top: 3px !important;
+}
+.gml-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e975' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+}
+.gn-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\ea25' !important;
+  top: 2px !important;
+}
+.gnu-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e679' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+  text-shadow: 0 0 0 !important;
+}
+.go-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e624' !important;
+  top: 3px !important;
+}
+.godot-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e974' !important;
+  top: 2px !important;
+}
+.golo-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e979' !important;
+  top: 2px !important;
+}
+.gosu-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e97a' !important;
+  top: 2px !important;
+}
+.gradle-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e903' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+  left: 1px !important;
+}
+.graphql-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e97c' !important;
+  top: 2px !important;
+}
+.graphviz-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e97d' !important;
+  top: 4px !important;
+  font-size: 17px !important;
+  left: 1px !important;
+}
+.groovy-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e904' !important;
+  top: 4px !important;
+  font-size: 17px !important;
+  left: -1px !important;
+}
+.grunt-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e611' !important;
+  top: 1px !important;
+  font-size: 14px !important;
+}
+.gulp-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e610' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+}
+.hack-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9ce' !important;
+  top: 2px !important;
+}
+.haml-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\f15b' !important;
+  top: 2px !important;
+}
+.harbour-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e97b' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+  text-shadow: 0 0 0 !important;
+}
+.hashicorp-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e97e' !important;
+  top: 2px !important;
+}
+.haxe-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e907' !important;
+  top: 2px !important;
+}
+.hy-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e97f' !important;
+  top: 2px !important;
+}
+.idl-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e947' !important;
+  top: 3px !important;
+  font-size: 18px !important;
+}
+.idris-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e983' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+}
+.igorpro-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e980' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+}
+.indesign-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9f4' !important;
+  top: 2px !important;
+}
+.inform7-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e984' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+  text-shadow: 0 0 0 !important;
+}
+.inno-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e985' !important;
+  top: 2px !important;
+}
+.io-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e981' !important;
+  top: 1px !important;
+  font-size: 13px !important;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+}
+.ioke-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e982' !important;
+  top: 2px !important;
+}
+.ionic-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\f14b' !important;
+  top: 2px !important;
+}
+.isabelle-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e945' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+}
+.j-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e937' !important;
+  top: 1px !important;
+  font-size: 13px !important;
+}
+.jade-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e90d' !important;
+  top: 1px !important;
+  font-size: 14px !important;
+}
+.jake-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e948' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+}
+.jenkins-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e667' !important;
+  top: 3px !important;
+  font-size: 18px !important;
+  text-shadow: 0 0 0 !important;
+}
+.jinja-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e944' !important;
+  top: 2px !important;
+}
+.jsonld-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e958' !important;
+  top: 3px !important;
+  font-size: 17px !important;
+}
+.jsx-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9e6' !important;
+  top: 1px !important;
+  font-size: 14px !important;
+}
+.julia-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\26ec' !important;
+  top: 1px !important;
+  font-size: 14px !important;
+}
+.jupyter-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e987' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+}
+.karma-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9cd' !important;
+  top: 2px !important;
+}
+.keynote-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9e5' !important;
+  top: 2px !important;
+}
+.khronos-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9f8' !important;
+  top: 2px !important;
+}
+.kivy-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e901' !important;
+  top: 2px !important;
+}
+.knockout-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\4B' !important;
+  top: 2px !important;
+}
+.kotlin-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e989' !important;
+  top: 1px !important;
+  font-size: 14px !important;
+}
+.krl-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e988' !important;
+  top: 1px !important;
+  font-size: 14px !important;
+}
+.labview-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e98a' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+}
+.lasso-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e98c' !important;
+  top: 2px !important;
+  left: 1px !important;
+}
+.leaflet-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\ea07' !important;
+  top: 2px !important;
+}
+.lean-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: 'L' !important;
+  top: 1px !important;
+  font-size: 13px !important;
+}
+.lein-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\f105' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+  text-shadow: 0 0 0 !important;
+  transform: scale(1.15) !important;
+}
+.lfe-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e94c' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+}
+.lightwave-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9fb' !important;
+  top: 2px !important;
+}
+.lisp-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e908' !important;
+  top: 3px !important;
+  font-size: 17px !important;
+}
+.llvm-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e91d' !important;
+  top: 3px !important;
+  font-size: 17px !important;
+}
+.logtalk-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e98d' !important;
+  top: 2px !important;
+  text-shadow: 0 0 0 !important;
+}
+.lookml-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e98e' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+  text-shadow: 0 0 0 !important;
+}
+.ls-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e914' !important;
+  top: 2px !important;
+  font-size: 14px !important;
+}
+.lsl-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e98b' !important;
+  top: 1px !important;
+}
+.lua-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e91b' !important;
+  top: 2px !important;
+  font-size: 14px !important;
+}
+.mako-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e98f' !important;
+  top: 4px !important;
+  font-size: 16px !important;
+}
+.mapbox-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e941' !important;
+  top: 1px !important;
+  font-size: 13px !important;
+}
+.marko-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e920' !important;
+  top: 4px !important;
+  font-size: 18px !important;
+  left: -1px !important;
+  transform: scale(1.05) !important;
+}
+.mathematica-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e990' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+}
+.mathjax-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\ea06' !important;
+  top: 2px !important;
+}
+.matlab-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e991' !important;
+  top: 2px !important;
+}
+.max-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e993' !important;
+  top: 2px !important;
+}
+.maxscript-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e900' !important;
+  top: 2px !important;
+}
+.maya-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9f6' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+}
+.manpage-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e936' !important;
+  top: 3px !important;
+}
+.mediawiki-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e954' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+}
+.mercury-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e994' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+  transform: scale(1.2) !important;
+}
+.metal-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: 'M' !important;
+  top: 1px !important;
+  left: 1px !important;
+}
+.meteor-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e6a5' !important;
+  top: 1px !important;
+}
+.minecraft-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9dc' !important;
+  top: 2px !important;
+}
+.mirah-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e995' !important;
+  top: 2px !important;
+}
+.mocha-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\26fe' !important;
+  top: 2px !important;
+  font-size: 17px !important;
+}
+.model-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9e8' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+}
+.modula2-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e996' !important;
+  top: 2px !important;
+}
+.monkey-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e997' !important;
+  top: 3px !important;
+  font-size: 18px !important;
+  left: -1px !important;
+}
+.mruby-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\ea18' !important;
+  top: 2px !important;
+}
+.mupad-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9ca' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+}
+.mustache-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e60f' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+}
+.nant-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9e1' !important;
+  top: 3px !important;
+  transform: scale(1.2) !important;
+}
+.neko-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\ea05' !important;
+  top: 2px !important;
+}
+.netlogo-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e99c' !important;
+  top: 2px !important;
+  left: 1px !important;
+}
+.newrelic-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9d7' !important;
+  top: 2px !important;
+}
+.nginx-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\f146b' !important;
+  top: 2px !important;
+}
+.nib-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\2712' !important;
+  top: 2px !important;
+}
+.nimrod-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e998' !important;
+  top: 2px !important;
+}
+.nit-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e999' !important;
+  top: 2px !important;
+}
+.nix-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e99a' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+}
+.nmap-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e94d' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+  transform: scale(1.1) !important;
+}
+.nodemon-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\ea26' !important;
+  top: 2px !important;
+}
+.normalize-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\ea04' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+}
+.npm-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e91c' !important;
+  top: 3px !important;
+  font-size: 17px !important;
+}
+.nsis-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\ea1e' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+}
+.numpy-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e99d' !important;
+  top: 2px !important;
+  font-size: 14px !important;
+}
+.nuget-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9d9' !important;
+  top: 2px !important;
+}
+.nunjucks-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e953' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+}
+.nvidia-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e95d' !important;
+  top: 2px !important;
+}
+.objj-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e99e' !important;
+  top: 2px !important;
+}
+.ocaml-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e91a' !important;
+  top: 1px !important;
+  font-size: 14px !important;
+}
+.onenote-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9eb' !important;
+  top: 2px !important;
+}
+.ooc-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9cb' !important;
+  top: 2px !important;
+}
+.opa-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\2601' !important;
+  top: 2px !important;
+}
+.opencl-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e99f' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+}
+.openoffice-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9e4' !important;
+  top: 2px !important;
+}
+.org-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e917' !important;
+  top: 1px !important;
+  font-size: 14px !important;
+  left: 1px !important;
+}
+.owl-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e957' !important;
+  top: 2px !important;
+}
+.ox-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9a1' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+  text-shadow: 0 0 0 !important;
+}
+.oxygene-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9bf' !important;
+  top: 2px !important;
+}
+.oz-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9be' !important;
+  top: 2px !important;
+}
+.pan-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9bd' !important;
+  top: 2px !important;
+}
+.papyrus-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9bc' !important;
+  top: 2px !important;
+}
+.parrot-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9bb' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+}
+.pascal-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e92a' !important;
+  top: 2px !important;
+}
+.patch-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e961' !important;
+  top: 2px !important;
+}
+.pawn-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\265f' !important;
+  top: 1px !important;
+  font-size: 14px !important;
+}
+.perl6-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e96c' !important;
+  top: 2px !important;
+}
+.phalcon-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e94a' !important;
+  top: 2px !important;
+}
+.php-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\f147' !important;
+  top: 1px !important;
+  font-size: 14px !important;
+  left: 1px !important;
+}
+.pickle-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9c4' !important;
+  top: 2px !important;
+}
+.pike-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9b9' !important;
+  top: 4px !important;
+  font-size: 16px !important;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  transform: scale(1.15) !important;
+}
+.pogo-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9b8' !important;
+  top: 3px !important;
+  font-size: 14px !important;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+}
+.pony-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9b7' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+}
+.pointwise-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e977' !important;
+  top: 2px !important;
+}
+.postcss-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e910' !important;
+  top: 2px !important;
+  font-size: 14px !important;
+}
+.postscript-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e955' !important;
+  top: 2px !important;
+  left: 1px !important;
+}
+.povray-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: 'P' !important;
+  top: 2px !important;
+  left: 1px !important;
+}
+.powerbuilder-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\ea14' !important;
+}
+.powerpoint-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9ec' !important;
+  top: 2px !important;
+}
+.powershell-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9da' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+}
+.premiere-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9f5' !important;
+  top: 2px !important;
+}
+.processing-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9a0' !important;
+  top: 2px !important;
+}
+.progress-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9c0' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+  transform: scale(1.2) !important;
+}
+.propeller-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9b5' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+}
+.protractor-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9de' !important;
+  top: 3px !important;
+}
+.psd-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e6b8' !important;
+  top: 2px !important;
+}
+.pug-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\ea13' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+}
+.pug-alt-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9d0' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+}
+.puppet-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\f0c3' !important;
+  top: 2px !important;
+  left: 1px !important;
+}
+.purebasic-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\01b5' !important;
+  top: 2px !important;
+}
+.purescript-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9b2' !important;
+  top: 3px !important;
+}
+.r-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e905' !important;
+  top: 3px !important;
+  font-size: 17px !important;
+}
+.racket-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9b1' !important;
+  top: 2px !important;
+  left: 1px !important;
+}
+.raml-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e913' !important;
+  top: 1px !important;
+  font-size: 14px !important;
+}
+.rascal-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\ea24' !important;
+  top: 2px !important;
+}
+.rdoc-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9b0' !important;
+  top: 2px !important;
+  left: 1px !important;
+}
+.react-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\f100' !important;
+  top: 2px !important;
+}
+.rebol-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9ae' !important;
+  top: 1px !important;
+  font-size: 13px !important;
+}
+.reason-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\ea1d' !important;
+  top: 3px !important;
+}
+.red-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9ad' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+}
+.regex-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '*' !important;
+  top: 1px !important;
+  font-size: 12px !important;
+  left: 1px !important;
+}
+.rexx-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\ea16' !important;
+  top: 2px !important;
+  font-size: 14px !important;
+  left: 1px !important;
+}
+.riot-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e919' !important;
+  top: 4px !important;
+  font-size: 18px !important;
+}
+.robot-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9ac' !important;
+  top: 2px !important;
+  font-size: 14px !important;
+}
+.rollup-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\ea20' !important;
+  top: 2px !important;
+}
+.rst-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9cc' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+}
+.sage-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9ab' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+}
+.saltstack-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e915' !important;
+  top: 2px !important;
+  font-size: 14px !important;
+}
+.sas-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e95a' !important;
+  top: 2px !important;
+}
+.sbt-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9d2' !important;
+  top: 2px !important;
+  font-size: 14px !important;
+}
+.scd-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9a2' !important;
+  top: 2px !important;
+}
+.scad-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e911' !important;
+  top: 2px !important;
+  font-size: 14px !important;
+}
+.scheme-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\03bb' !important;
+  top: 2px !important;
+}
+.scilab-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9a9' !important;
+  top: 3px !important;
+  font-size: 18px !important;
+  left: -1px !important;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+}
+.scrutinizer-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9d4' !important;
+  top: 2px !important;
+  font-size: 14px !important;
+}
+.self-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9a8' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+  text-shadow: 0 0 0 !important;
+  transform: scale(1.2) !important;
+}
+.sf-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9db' !important;
+  top: 2px !important;
+}
+.shen-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9a7' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+}
+.shopify-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9cf' !important;
+  top: 2px !important;
+}
+.shuriken-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\272b' !important;
+  top: 2px !important;
+  font-size: 14px !important;
+}
+.sigils-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\1f764' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+  text-shadow: 0 0 0 !important;
+}
+.silverstripe-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e800' !important;
+  top: 2px !important;
+}
+.sketch-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e927' !important;
+  top: 2px !important;
+}
+.slash-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9a6' !important;
+  top: 2px !important;
+}
+.snyk-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\ea1c' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+}
+.sparql-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e959' !important;
+  top: 2px !important;
+}
+.sqf-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9a5' !important;
+  top: 1px !important;
+  text-shadow: 0 0 0 !important;
+}
+.sqlite-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9dd' !important;
+  top: 3px !important;
+}
+.stan-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9a4' !important;
+  top: 2px !important;
+}
+.stata-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9a3' !important;
+  top: 2px !important;
+}
+.storyist-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9ef' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+}
+.strings-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9e0' !important;
+  top: 2px !important;
+}
+.stylelint-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e93d' !important;
+  top: 2px !important;
+}
+.stylus-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: 's' !important;
+  top: 2px !important;
+  left: 1px !important;
+}
+.sublime-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e986' !important;
+  top: 2px !important;
+}
+.svn-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\ea17' !important;
+  top: 2px !important;
+}
+.sysverilog-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9c3' !important;
+  top: 2px !important;
+}
+.tag-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\f015' !important;
+  top: 2px !important;
+  font-size: 14px !important;
+}
+.tcl-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e956' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+}
+.terminal-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\f0c8' !important;
+  top: 2px !important;
+  font-size: 14px !important;
+}
+.tern-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\1f54a' !important;
+  top: 4px !important;
+  font-size: 16px !important;
+}
+.terraform-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e916' !important;
+  top: 1px !important;
+  font-size: 14px !important;
+}
+.tex-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e600' !important;
+  top: 4px !important;
+  font-size: 16px !important;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+}
+.textile-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: 't' !important;
+  top: 2px !important;
+}
+.textmate-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\2122' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+}
+.thor-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9d8' !important;
+  top: 2px !important;
+}
+.ts-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\2a6' !important;
+  top: 1px !important;
+  font-size: 14px !important;
+}
+.tsx-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9e7' !important;
+  top: 1px !important;
+  font-size: 14px !important;
+}
+.turing-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9b6' !important;
+  top: 2px !important;
+}
+.txl-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9c1' !important;
+  top: 2px !important;
+}
+.typedoc-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9fe' !important;
+  top: 2px !important;
+}
+.typings-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9df' !important;
+  top: 2px !important;
+}
+.uno-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9b3' !important;
+  top: 2px !important;
+}
+.unreal-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: 'u' !important;
+  top: 2px !important;
+}
+.urweb-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9ba' !important;
+  top: 4px !important;
+  font-size: 18px !important;
+  left: -1px !important;
+  text-shadow: 0 0 0 !important;
+}
+.webpack-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e91e' !important;
+  top: 3px !important;
+}
+.wercker-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\ea19' !important;
+  top: 2px !important;
+}
+.word-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9ed' !important;
+  top: 2px !important;
+}
+.v8-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\ea1f' !important;
+  top: 3px !important;
+  font-size: 16px !important;
+}
+.vagrant-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: 'V' !important;
+  top: 2px !important;
+  font-size: 14px !important;
+}
+.varnish-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9b4' !important;
+  top: 1px !important;
+  font-size: 14px !important;
+}
+.verilog-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e949' !important;
+  top: 2px !important;
+}
+.vhdl-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9aa' !important;
+  top: 2px !important;
+}
+.video-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\f057' !important;
+  top: 1px !important;
+  font-size: 14px !important;
+}
+.vue-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e906' !important;
+  top: 3px !important;
+}
+.x10-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\2169' !important;
+  top: 2px !important;
+}
+.xmos-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: 'X' !important;
+  top: 1px !important;
+  font-size: 14px !important;
+}
+.xojo-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9af' !important;
+  top: 2px !important;
+}
+.xpages-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9c5' !important;
+  top: 2px !important;
+}
+.xtend-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9c6' !important;
+  top: 2px !important;
+}
+.yang-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\262f' !important;
+  top: 2px !important;
+}
+.yarn-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\ea1a' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+}
+.yui-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\ea00' !important;
+  top: 2px !important;
+}
+.zbrush-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9f2' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+}
+.zephir-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9c7' !important;
+  top: 2px !important;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+}
+.zimpl-icon:before {
+  font-family: file-icons !important;
+  font-size: 15px !important;
+  content: '\e9c8' !important;
+  top: 2px !important;
+  font-size: 16px !important;
+  left: 1px !important;
+}

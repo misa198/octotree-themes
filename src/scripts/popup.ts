@@ -1,10 +1,7 @@
+import { get, set } from './storage';
+import { detectBrowser } from './detectBrowser';
+import { KEYS } from './keys';
 import '../styles/popup.css';
-
-export const KEYS = {
-  MISA198_OCTOTREE: 'misa198Octotree',
-  MISA198_GITHUB: 'misa198Github',
-  MISA198_RELOAD: 'misa198Reload',
-};
 
 const githubCheckbox = document.getElementById(
   KEYS.MISA198_GITHUB
@@ -19,31 +16,34 @@ const refreshButton = document.getElementById(
   'refreshButton'
 ) as HTMLButtonElement;
 
-chrome.storage.sync.get(
-  [KEYS.MISA198_GITHUB, KEYS.MISA198_OCTOTREE],
-  (result) => {
-    githubCheckbox.checked = Boolean(result.misa198Github);
-    octotreeCheckbox.checked = Boolean(result.misa198Octotree);
-  }
-);
+get([KEYS.MISA198_GITHUB, KEYS.MISA198_OCTOTREE], (result) => {
+  githubCheckbox.checked = Boolean(result.misa198Github);
+  octotreeCheckbox.checked = Boolean(result.misa198Octotree);
+});
 
 function onGithubCheckboxChange() {
-  chrome.storage.sync.set({ [KEYS.MISA198_GITHUB]: githubCheckbox.checked });
   buttonSession.classList.remove('hide');
+  set({ [KEYS.MISA198_GITHUB]: githubCheckbox.checked });
 }
 
 function onOctotreeCheckboxChange() {
-  chrome.storage.sync.set({
+  buttonSession.classList.remove('hide');
+  set({
     [KEYS.MISA198_OCTOTREE]: octotreeCheckbox.checked,
   });
-  buttonSession.classList.remove('hide');
 }
 
 function reloadCurrentTab() {
-  chrome.tabs.getSelected(function (tab) {
-    var code = 'window.location.reload();';
-    chrome.tabs.executeScript(tab.id as number, { code: code });
-  });
+  const code = 'window.location.reload();';
+  if (detectBrowser() === 'chrome') {
+    chrome.tabs.getSelected(function (tab) {
+      chrome.tabs.executeScript(tab.id as number, { code });
+    });
+  } else {
+    browser.tabs.query({ currentWindow: true, active: true }).then((tabs) => {
+      browser.tabs.executeScript(tabs[0].id as number, { code });
+    });
+  }
   buttonSession.classList.add('hide');
 }
 

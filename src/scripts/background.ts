@@ -1,24 +1,18 @@
+import { set, get } from './storage';
+import { KEYS } from './keys';
 const urlRegex = new RegExp(
   /^https:\/\/github.com\/[(a-z)(A-Z)(0-9)_-]+\/[(a-z)(A-Z)(0-9)_-]+(\/?)((\/.+)?)(\?(.+))?$/
 );
-export const KEYS = {
-  MISA198_OCTOTREE: 'misa198Octotree',
-  MISA198_GITHUB: 'misa198Github',
-  MISA198_RELOAD: 'misa198Reload',
-};
 
-chrome.storage.sync.get(
-  [KEYS.MISA198_GITHUB, KEYS.MISA198_OCTOTREE],
-  (result) => {
-    if (result[KEYS.MISA198_GITHUB] === undefined) {
-      chrome.storage.sync.set({ [KEYS.MISA198_GITHUB]: true });
-    }
-
-    if (result[KEYS.MISA198_OCTOTREE] === undefined) {
-      chrome.storage.sync.set({ [KEYS.MISA198_OCTOTREE]: true });
-    }
+get([KEYS.MISA198_GITHUB, KEYS.MISA198_OCTOTREE], (result) => {
+  if (result[KEYS.MISA198_GITHUB] === undefined) {
+    set({ [KEYS.MISA198_GITHUB]: true });
   }
-);
+
+  if (result[KEYS.MISA198_OCTOTREE] === undefined) {
+    set({ [KEYS.MISA198_OCTOTREE]: true });
+  }
+});
 
 chrome.tabs.onActivated.addListener(function (info) {
   chrome.tabs.get(info.tabId, function (change) {
