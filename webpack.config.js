@@ -86,26 +86,13 @@ const options = {
   ],
 };
 
-const env = process.env.NODE_ENV;
-
-if (env === 'chromium') {
-  options.mode = 'production';
-  options.plugins.push(
-    new webpack.LoaderOptionsPlugin({
-      minimize: true,
-      debug: false,
-    }),
-    new TerserPlugin()
-  );
-} else if (env !== 'firefox') {
-  options.mode = 'production';
-  options.plugins.push(
-    new webpack.LoaderOptionsPlugin({
-      minimize: true,
-      debug: false,
-    }),
-    new TerserPlugin()
-  );
-}
+options.mode = 'production';
+options.plugins.push(
+  new webpack.LoaderOptionsPlugin({
+    minimize: true,
+    debug: false,
+  }),
+  new TerserPlugin()
+);
 
 module.exports = options;

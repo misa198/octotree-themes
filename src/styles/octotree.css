@@ -16,3 +16,22 @@
   div {
   color: var(--color-fg-default) !important;
 }
+
+.jstree-node.jstree-leaf:hover .jstree-icon.blob:before {
+  content: '' !important;
+  font-family: octotree !important;
+  font-size: 15px !important;
+  top: 0px !important;
+  width: 16px !important;
+  display: inline-block !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: 1 !important;
+  position: relative !important;
+  text-align: center !important;
+  text-transform: none !important;
+  -webkit-font-smoothing: antialiased !important;
+  background-image: none !important;
+  color: rgb(172, 65, 66) !important !important;
+  font-variant: normal !important;
+}

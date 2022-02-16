@@ -6,9 +6,9 @@ import { observe } from 'selector-observer';
 import { detectBrowser } from './detectBrowser';
 import { get } from './storage';
 import { KEYS } from './keys';
+import '../styles/file-icon.css';
 import '../styles/icons.css';
 import '../styles/octotree.css';
-import '../styles/file-icon.css';
 
 const fonts = [
   { name: 'FontAwesome', path: 'fonts/fontawesome.woff2' },
