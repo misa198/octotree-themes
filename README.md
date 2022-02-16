@@ -8,6 +8,9 @@ Octotree Icon Theme
   <a href="https://microsoftedge.microsoft.com/addons/detail/octotree-icon-theme/cajppifioefokdcmnbehbkiddjnpmadb">
     <img src="https://img.shields.io/badge/Microsoft%20Edge%20Store-Download-blue" />
   </a>
+  <a href="https://addons.mozilla.org/vi/firefox/addon/octotree-icon-theme/">
+    <img src="https://img.shields.io/badge/Firefox%20Addons-Download-orange" />
+  </a>
   <a href="https://github.com/misa198/octotree-icon-theme/releases">
     <img src="https://img.shields.io/github/v/release/misa198/octotree-icon-theme" />
   </a>
@@ -29,9 +32,11 @@ Support Chromium Browsers and Firefox.
 
 - For Microsoft Edge Chromium
 
-  [ <img src="./docs/microsoft-edge.svg" /> ](https://microsoftedge.microsoft.com/addons/detail/octotree-icon-theme/cajppifioefokdcmnbehbkiddjnpmadb)
+  [ <img src="https://img.shields.io/badge/Microsoft_Edge-0078D7?style=for-the-badge&logo=Microsoft-edge&logoColor=white" /> ](https://microsoftedge.microsoft.com/addons/detail/octotree-icon-theme/cajppifioefokdcmnbehbkiddjnpmadb)
 
 - For Firefox
+
+  [ <img src="https://img.shields.io/badge/Firefox_Browser-FF7139?style=for-the-badge&logo=Firefox-Browser&logoColor=white" /> ](https://addons.mozilla.org/vi/firefox/addon/octotree-icon-theme/)
 
 - For other Chromium browser:
   <br>
