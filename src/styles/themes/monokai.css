@@ -1,0 +1,145 @@
+.misa198-code-color-theme-idle-fingers .highlight {
+  background: #272822;
+}
+.misa198-code-color-theme-idle-fingers .blob-num,
+.misa198-code-color-theme-idle-fingers .blob-code-inner,
+.misa198-code-color-theme-idle-fingers .pl-s2,
+.misa198-code-color-theme-idle-fingers .pl-stj {
+  color: #f8f8f2;
+}
+.misa198-code-color-theme-idle-fingers .pl-c1 {
+  color: #ae81ff;
+}
+.misa198-code-color-theme-idle-fingers .pl-enti {
+  color: #a6e22e;
+  font-weight: 700;
+}
+.misa198-code-color-theme-idle-fingers .pl-st {
+  color: #66d9ef;
+}
+.misa198-code-color-theme-idle-fingers .pl-mdr {
+  color: #66d9ef;
+  font-weight: 400;
+}
+.misa198-code-color-theme-idle-fingers .pl-ms1 {
+  background: #fd971f;
+}
+.misa198-code-color-theme-idle-fingers .pl-c,
+.misa198-code-color-theme-idle-fingers .pl-c span,
+.misa198-code-color-theme-idle-fingers .pl-pdc {
+  color: #75715e;
+  font-style: italic;
+}
+.misa198-code-color-theme-idle-fingers .pl-cce,
+.misa198-code-color-theme-idle-fingers .pl-cn,
+.misa198-code-color-theme-idle-fingers .pl-coc,
+.misa198-code-color-theme-idle-fingers .pl-enc,
+.misa198-code-color-theme-idle-fingers .pl-ens,
+.misa198-code-color-theme-idle-fingers .pl-kos,
+.misa198-code-color-theme-idle-fingers .pl-kou,
+.misa198-code-color-theme-idle-fingers .pl-mh .pl-pdh,
+.misa198-code-color-theme-idle-fingers .pl-mp,
+.misa198-code-color-theme-idle-fingers .pl-mp1 .pl-sf,
+.misa198-code-color-theme-idle-fingers .pl-mq,
+.misa198-code-color-theme-idle-fingers .pl-pde,
+.misa198-code-color-theme-idle-fingers .pl-pse,
+.misa198-code-color-theme-idle-fingers .pl-pse .pl-s2,
+.misa198-code-color-theme-idle-fingers .pl-mp .pl-s3,
+.misa198-code-color-theme-idle-fingers .pl-smi,
+.misa198-code-color-theme-idle-fingers .pl-stp,
+.misa198-code-color-theme-idle-fingers .pl-sv,
+.misa198-code-color-theme-idle-fingers .pl-v,
+.misa198-code-color-theme-idle-fingers .pl-vi,
+.misa198-code-color-theme-idle-fingers .pl-vpf,
+.misa198-code-color-theme-idle-fingers .pl-mri,
+.misa198-code-color-theme-idle-fingers .pl-va,
+.misa198-code-color-theme-idle-fingers .pl-vpu {
+  color: #66d9ef;
+}
+.misa198-code-color-theme-idle-fingers .pl-cos,
+.misa198-code-color-theme-idle-fingers .pl-ml,
+.misa198-code-color-theme-idle-fingers .pl-pds,
+.misa198-code-color-theme-idle-fingers .pl-s,
+.misa198-code-color-theme-idle-fingers .pl-s1,
+.misa198-code-color-theme-idle-fingers .pl-sol {
+  color: #e6db74;
+}
+.misa198-code-color-theme-idle-fingers .pl-e,
+.misa198-code-color-theme-idle-fingers .pl-ef,
+.misa198-code-color-theme-idle-fingers .pl-en,
+.misa198-code-color-theme-idle-fingers .pl-enf,
+.misa198-code-color-theme-idle-fingers .pl-enm,
+.misa198-code-color-theme-idle-fingers .pl-entc,
+.misa198-code-color-theme-idle-fingers .pl-entm,
+.misa198-code-color-theme-idle-fingers .pl-eoac,
+.misa198-code-color-theme-idle-fingers .pl-eoac .pl-pde,
+.misa198-code-color-theme-idle-fingers .pl-eoi,
+.misa198-code-color-theme-idle-fingers .pl-mai .pl-sf,
+.misa198-code-color-theme-idle-fingers .pl-mm,
+.misa198-code-color-theme-idle-fingers .pl-pdv,
+.misa198-code-color-theme-idle-fingers .pl-som,
+.misa198-code-color-theme-idle-fingers .pl-sr,
+.misa198-code-color-theme-idle-fingers .pl-vo {
+  color: #a6e22e;
+}
+.misa198-code-color-theme-idle-fingers .pl-ent,
+.misa198-code-color-theme-idle-fingers .pl-eoa,
+.misa198-code-color-theme-idle-fingers .pl-eoai,
+.misa198-code-color-theme-idle-fingers .pl-eoai .pl-pde,
+.misa198-code-color-theme-idle-fingers .pl-k,
+.misa198-code-color-theme-idle-fingers .pl-ko,
+.misa198-code-color-theme-idle-fingers .pl-kolp,
+.misa198-code-color-theme-idle-fingers .pl-mc,
+.misa198-code-color-theme-idle-fingers .pl-mr,
+.misa198-code-color-theme-idle-fingers .pl-ms,
+.misa198-code-color-theme-idle-fingers .pl-s3,
+.misa198-code-color-theme-idle-fingers .pl-smc,
+.misa198-code-color-theme-idle-fingers .pl-smp,
+.misa198-code-color-theme-idle-fingers .pl-sok,
+.misa198-code-color-theme-idle-fingers .pl-sra,
+.misa198-code-color-theme-idle-fingers .pl-src,
+.misa198-code-color-theme-idle-fingers .pl-sre {
+  color: #f92672;
+}
+.misa198-code-color-theme-idle-fingers .pl-mb,
+.misa198-code-color-theme-idle-fingers .pl-pdb {
+  color: #e6db74;
+  font-weight: 700;
+}
+.misa198-code-color-theme-idle-fingers .pl-mi,
+.misa198-code-color-theme-idle-fingers .pl-pdi {
+  color: #f92672;
+  font-style: italic;
+}
+.misa198-code-color-theme-idle-fingers .pl-pdc1,
+.misa198-code-color-theme-idle-fingers .pl-scp {
+  color: #ae81ff;
+}
+.misa198-code-color-theme-idle-fingers .pl-sc,
+.misa198-code-color-theme-idle-fingers .pl-sf,
+.misa198-code-color-theme-idle-fingers .pl-mo,
+.misa198-code-color-theme-idle-fingers .pl-entl {
+  color: #fd971f;
+}
+.misa198-code-color-theme-idle-fingers .pl-mi1,
+.misa198-code-color-theme-idle-fingers .pl-mdht {
+  color: #a6e22e;
+  background: rgba(0, 64, 0, 0.5);
+}
+.misa198-code-color-theme-idle-fingers .pl-md,
+.misa198-code-color-theme-idle-fingers .pl-mdhf {
+  color: #f92672;
+  background: rgba(64, 0, 0, 0.5);
+}
+.misa198-code-color-theme-idle-fingers .pl-mdh,
+.misa198-code-color-theme-idle-fingers .pl-mdi {
+  color: #a6e22e;
+  font-weight: 400;
+}
+.misa198-code-color-theme-idle-fingers .pl-ib,
+.misa198-code-color-theme-idle-fingers .pl-id,
+.misa198-code-color-theme-idle-fingers .pl-ii,
+.misa198-code-color-theme-idle-fingers .pl-iu {
+  background: #a6e22e;
+  color: #272822;
+}

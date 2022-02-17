@@ -1,0 +1,159 @@
+.misa198-code-color-theme-twilight .highlight {
+  background: #141414;
+}
+.misa198-code-color-theme-twilight .blob-num,
+.misa198-code-color-theme-twilight .blob-code-inner,
+.misa198-code-color-theme-twilight .pl-s2,
+.misa198-code-color-theme-twilight .pl-smi,
+.misa198-code-color-theme-twilight .pl-smp,
+.misa198-code-color-theme-twilight .pl-entl {
+  color: #ccc;
+}
+.misa198-code-color-theme-twilight .pl-enti {
+  color: #ac885b;
+  font-weight: 700;
+}
+.misa198-code-color-theme-twilight .pl-mp {
+  color: #c5af75;
+}
+.misa198-code-color-theme-twilight .pl-s {
+  color: #f9ee98;
+}
+.misa198-code-color-theme-twilight .pl-ib {
+  background: #f93;
+}
+.misa198-code-color-theme-twilight .pl-id {
+  background: #a31515;
+  color: #fff;
+}
+.misa198-code-color-theme-twilight .pl-ii {
+  background: #df5000;
+  color: #fff;
+}
+.misa198-code-color-theme-twilight .pl-iu {
+  background: #b4b7b4;
+}
+.misa198-code-color-theme-twilight .pl-mo {
+  color: #969896;
+}
+.misa198-code-color-theme-twilight .pl-ms1 {
+  background: #f5f5f5;
+}
+.misa198-code-color-theme-twilight .pl-c,
+.misa198-code-color-theme-twilight .pl-c span,
+.misa198-code-color-theme-twilight .pl-pdc {
+  color: #5f5a60;
+  font-style: italic;
+}
+.misa198-code-color-theme-twilight .pl-c1,
+.misa198-code-color-theme-twilight .pl-cn,
+.misa198-code-color-theme-twilight .pl-coc,
+.misa198-code-color-theme-twilight .pl-enc,
+.misa198-code-color-theme-twilight .pl-ens,
+.misa198-code-color-theme-twilight .pl-kos,
+.misa198-code-color-theme-twilight .pl-kou,
+.misa198-code-color-theme-twilight .pl-mh .pl-pdh,
+.misa198-code-color-theme-twilight .pl-mq,
+.misa198-code-color-theme-twilight .pl-pdc1,
+.misa198-code-color-theme-twilight .pl-pde,
+.misa198-code-color-theme-twilight .pl-pse,
+.misa198-code-color-theme-twilight .pl-pse .pl-s2,
+.misa198-code-color-theme-twilight .pl-scp,
+.misa198-code-color-theme-twilight .pl-vi {
+  color: #cf6a4c;
+}
+.misa198-code-color-theme-twilight .pl-cce,
+.misa198-code-color-theme-twilight .pl-mh,
+.misa198-code-color-theme-twilight .pl-mdr {
+  color: #cf6a4c;
+  font-weight: 400;
+}
+.misa198-code-color-theme-twilight .pl-cos,
+.misa198-code-color-theme-twilight .pl-ml,
+.misa198-code-color-theme-twilight .pl-pds,
+.misa198-code-color-theme-twilight .pl-s1,
+.misa198-code-color-theme-twilight .pl-sol {
+  color: #8f9d6a;
+}
+.misa198-code-color-theme-twilight .pl-e,
+.misa198-code-color-theme-twilight .pl-ef,
+.misa198-code-color-theme-twilight .pl-en,
+.misa198-code-color-theme-twilight .pl-enf,
+.misa198-code-color-theme-twilight .pl-enm,
+.misa198-code-color-theme-twilight .pl-entc,
+.misa198-code-color-theme-twilight .pl-eoi,
+.misa198-code-color-theme-twilight .pl-smc,
+.misa198-code-color-theme-twilight .pl-vo {
+  color: #ac885b;
+}
+.misa198-code-color-theme-twilight .pl-ent,
+.misa198-code-color-theme-twilight .pl-eoa,
+.misa198-code-color-theme-twilight .pl-eoai,
+.misa198-code-color-theme-twilight .pl-eoai .pl-pde,
+.misa198-code-color-theme-twilight .pl-k,
+.misa198-code-color-theme-twilight .pl-ko,
+.misa198-code-color-theme-twilight .pl-kolp,
+.misa198-code-color-theme-twilight .pl-mc,
+.misa198-code-color-theme-twilight .pl-mr,
+.misa198-code-color-theme-twilight .pl-ms,
+.misa198-code-color-theme-twilight .pl-mp .pl-s3,
+.misa198-code-color-theme-twilight .pl-sok,
+.misa198-code-color-theme-twilight .pl-sra,
+.misa198-code-color-theme-twilight .pl-src,
+.misa198-code-color-theme-twilight .pl-sre,
+.misa198-code-color-theme-twilight .pl-st {
+  color: #cda869;
+}
+.misa198-code-color-theme-twilight .pl-entm,
+.misa198-code-color-theme-twilight .pl-eoac,
+.misa198-code-color-theme-twilight .pl-eoac .pl-pde,
+.misa198-code-color-theme-twilight .pl-mai .pl-sf,
+.misa198-code-color-theme-twilight .pl-mm,
+.misa198-code-color-theme-twilight .pl-pdv,
+.misa198-code-color-theme-twilight .pl-som,
+.misa198-code-color-theme-twilight .pl-sr,
+.misa198-code-color-theme-twilight .pl-stj,
+.misa198-code-color-theme-twilight .pl-vpf {
+  color: #7587a6;
+}
+.misa198-code-color-theme-twilight .pl-mb,
+.misa198-code-color-theme-twilight .pl-pdb {
+  color: #8f9d6a;
+  font-weight: 700;
+}
+.misa198-code-color-theme-twilight .pl-mi,
+.misa198-code-color-theme-twilight .pl-pdi {
+  color: #cda869;
+  font-style: italic;
+}
+.misa198-code-color-theme-twilight .pl-mp1 .pl-sf,
+.misa198-code-color-theme-twilight .pl-s3,
+.misa198-code-color-theme-twilight .pl-sc,
+.misa198-code-color-theme-twilight .pl-sf {
+  color: #dad085;
+}
+.misa198-code-color-theme-twilight .pl-stp,
+.misa198-code-color-theme-twilight .pl-sv,
+.misa198-code-color-theme-twilight .pl-v {
+  color: #9b859d;
+}
+.misa198-code-color-theme-twilight .pl-mi1,
+.misa198-code-color-theme-twilight .pl-mdht {
+  color: #55a532;
+  background: #020;
+}
+.misa198-code-color-theme-twilight .pl-md,
+.misa198-code-color-theme-twilight .pl-mdhf {
+  color: #bd2c00;
+  background: #200;
+}
+.misa198-code-color-theme-twilight .pl-mdh,
+.misa198-code-color-theme-twilight .pl-mdi {
+  color: #7587a6;
+  font-weight: 400;
+}
+.misa198-code-color-theme-twilight .pl-mri,
+.misa198-code-color-theme-twilight .pl-va,
+.misa198-code-color-theme-twilight .pl-vpu {
+  color: teal;
+}

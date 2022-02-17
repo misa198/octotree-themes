@@ -1,0 +1,91 @@
+.misa198-code-color-theme-obsidian .highlight {
+  background: #293134;
+}
+.misa198-code-color-theme-obsidian .blob-num,
+.misa198-code-color-theme-obsidian .blob-code-inner,
+.misa198-code-color-theme-obsidian .pl-ent,
+.misa198-code-color-theme-obsidian .pl-s1,
+.misa198-code-color-theme-obsidian .pl-s1 .pl-s2,
+.misa198-code-color-theme-obsidian .pl-smi,
+.misa198-code-color-theme-obsidian .pl-smp,
+.misa198-code-color-theme-obsidian .pl-stj,
+.misa198-code-color-theme-obsidian .pl-vo,
+.misa198-code-color-theme-obsidian .pl-vpf {
+  color: #e0e2e4;
+}
+.misa198-code-color-theme-obsidian .pl-c,
+.misa198-code-color-theme-obsidian .pl-c span {
+  color: #66747b;
+  font-style: italic;
+}
+.misa198-code-color-theme-obsidian .pl-mb {
+  color: #ec7600;
+  font-weight: 700;
+}
+.misa198-code-color-theme-obsidian .pl-mh .pl-en {
+  color: #66747b;
+  font-weight: 700;
+}
+.misa198-code-color-theme-obsidian .pl-mi {
+  color: #93c763;
+  font-style: italic;
+}
+.misa198-code-color-theme-obsidian .pl-sc {
+  color: #96989a;
+}
+.misa198-code-color-theme-obsidian .pl-st {
+  color: #da4236;
+}
+.misa198-code-color-theme-obsidian .pl-c1 > .pl-c1 {
+  color: #678cb1;
+}
+.misa198-code-color-theme-obsidian .pl-c1,
+.misa198-code-color-theme-obsidian .pl-sr .pl-cce {
+  color: #ffcd22;
+}
+.misa198-code-color-theme-obsidian .pl-e,
+.misa198-code-color-theme-obsidian .pl-k,
+.misa198-code-color-theme-obsidian .pl-mdh,
+.misa198-code-color-theme-obsidian .pl-mdr,
+.misa198-code-color-theme-obsidian .pl-ml,
+.misa198-code-color-theme-obsidian .pl-mm,
+.misa198-code-color-theme-obsidian .pl-mo,
+.misa198-code-color-theme-obsidian .pl-mp,
+.misa198-code-color-theme-obsidian .pl-mr,
+.misa198-code-color-theme-obsidian .pl-ms,
+.misa198-code-color-theme-obsidian .pl-s1 .pl-v,
+.misa198-code-color-theme-obsidian .pl-s3 {
+  color: #93c763;
+}
+.misa198-code-color-theme-obsidian .pl-en,
+.misa198-code-color-theme-obsidian .pl-v {
+  color: #678cb1;
+}
+.misa198-code-color-theme-obsidian .pl-mh,
+.misa198-code-color-theme-obsidian .pl-mq {
+  color: #66747b;
+}
+.misa198-code-color-theme-obsidian .pl-pds,
+.misa198-code-color-theme-obsidian .pl-s,
+.misa198-code-color-theme-obsidian .pl-s1 .pl-pse .pl-s2,
+.misa198-code-color-theme-obsidian .pl-sv {
+  color: #ec7600;
+}
+.misa198-code-color-theme-obsidian .pl-sr,
+.misa198-code-color-theme-obsidian .pl-sr .pl-sra,
+.misa198-code-color-theme-obsidian .pl-sr .pl-sre,
+.misa198-code-color-theme-obsidian .pl-src {
+  color: #d39745;
+}
+.misa198-code-color-theme-obsidian .pl-mi1,
+.misa198-code-color-theme-obsidian .pl-mdht {
+  color: #e0e2e4;
+  background: rgba(0, 64, 0, 0.5);
+}
+.misa198-code-color-theme-obsidian .pl-md,
+.misa198-code-color-theme-obsidian .pl-mdhf,
+.misa198-code-color-theme-obsidian .pl-id,
+.misa198-code-color-theme-obsidian .pl-ii {
+  color: #e0e2e4;
+  background: rgba(64, 0, 0, 0.5);
+}

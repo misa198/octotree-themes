@@ -1,0 +1,90 @@
+.misa198-code-color-theme-chaos .highlight {
+  background: #161616;
+}
+.misa198-code-color-theme-chaos .blob-num,
+.misa198-code-color-theme-chaos .blob-code-inner,
+.misa198-code-color-theme-chaos .pl-st {
+  color: #e6e1dc;
+}
+.misa198-code-color-theme-chaos .pl-c,
+.misa198-code-color-theme-chaos .pl-c span {
+  color: #555;
+  font-style: italic;
+}
+.misa198-code-color-theme-chaos .pl-mb {
+  color: #1edafb;
+  font-weight: 700;
+}
+.misa198-code-color-theme-chaos .pl-mh .pl-en {
+  color: #fdc251;
+  font-weight: 700;
+}
+.misa198-code-color-theme-chaos .pl-mi {
+  color: #00698f;
+  font-style: italic;
+}
+.misa198-code-color-theme-chaos .pl-mq {
+  color: #555;
+}
+.misa198-code-color-theme-chaos .pl-sc {
+  color: #999;
+}
+.misa198-code-color-theme-chaos .pl-c1,
+.misa198-code-color-theme-chaos .pl-mh,
+.misa198-code-color-theme-chaos .pl-sr .pl-cce {
+  color: #fdc251;
+}
+.misa198-code-color-theme-chaos .pl-e,
+.misa198-code-color-theme-chaos .pl-en,
+.misa198-code-color-theme-chaos .pl-ent,
+.misa198-code-color-theme-chaos .pl-s,
+.misa198-code-color-theme-chaos .pl-v,
+.misa198-code-color-theme-chaos .pl-vpf {
+  color: #974;
+}
+.misa198-code-color-theme-chaos .pl-k,
+.misa198-code-color-theme-chaos .pl-mdh,
+.misa198-code-color-theme-chaos .pl-mdr,
+.misa198-code-color-theme-chaos .pl-ml,
+.misa198-code-color-theme-chaos .pl-mm,
+.misa198-code-color-theme-chaos .pl-mo,
+.misa198-code-color-theme-chaos .pl-mp,
+.misa198-code-color-theme-chaos .pl-mr,
+.misa198-code-color-theme-chaos .pl-ms,
+.misa198-code-color-theme-chaos .pl-s1 .pl-v,
+.misa198-code-color-theme-chaos .pl-s3 {
+  color: #00698f;
+}
+.misa198-code-color-theme-chaos .pl-pds,
+.misa198-code-color-theme-chaos .pl-s1,
+.misa198-code-color-theme-chaos .pl-s1 .pl-pse .pl-s2 {
+  color: #58c554;
+}
+.misa198-code-color-theme-chaos .pl-s1 .pl-s2,
+.misa198-code-color-theme-chaos .pl-sv {
+  color: #1edafb;
+}
+.misa198-code-color-theme-chaos .pl-smi,
+.misa198-code-color-theme-chaos .pl-smp,
+.misa198-code-color-theme-chaos .pl-stj,
+.misa198-code-color-theme-chaos .pl-vo {
+  color: #be53e6;
+}
+.misa198-code-color-theme-chaos .pl-sr,
+.misa198-code-color-theme-chaos .pl-sr .pl-sra,
+.misa198-code-color-theme-chaos .pl-sr .pl-sre,
+.misa198-code-color-theme-chaos .pl-src {
+  color: #ff308f;
+}
+.misa198-code-color-theme-chaos .pl-mi1,
+.misa198-code-color-theme-chaos .pl-mdht {
+  color: #fff;
+  background: rgba(0, 64, 0, 0.5);
+}
+.misa198-code-color-theme-chaos .pl-md,
+.misa198-code-color-theme-chaos .pl-mdhf,
+.misa198-code-color-theme-chaos .pl-id,
+.misa198-code-color-theme-chaos .pl-ii {
+  color: #fff;
+  background: #900;
+}
