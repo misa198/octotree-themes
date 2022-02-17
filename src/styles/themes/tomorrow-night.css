@@ -1,32 +1,32 @@
 .misa198-code-color-theme-tomorrow-night .highlight {
-  background: #1d1f21;
+  background: #1d1f21 !important;
 }
 .misa198-code-color-theme-tomorrow-night .blob-num,
 .misa198-code-color-theme-tomorrow-night .blob-code-inner {
-  color: #c5c8c6;
+  color: #c5c8c6 !important;
 }
 .misa198-code-color-theme-tomorrow-night .pl-enti {
-  color: #f0c674;
-  font-weight: 700;
+  color: #f0c674 !important;
+  font-weight: 700 !important;
 }
 .misa198-code-color-theme-tomorrow-night .pl-s3 {
-  color: #81a2be;
+  color: #81a2be !important;
 }
 .misa198-code-color-theme-tomorrow-night .pl-sf {
-  color: #dad085;
+  color: #dad085 !important;
 }
 .misa198-code-color-theme-tomorrow-night .pl-mdr {
-  color: #de935f;
-  font-weight: 400;
+  color: #de935f !important;
+  font-weight: 400 !important;
 }
 .misa198-code-color-theme-tomorrow-night .pl-ms1 {
-  background: #c5c8c6;
+  background: #c5c8c6 !important;
 }
 .misa198-code-color-theme-tomorrow-night .pl-c,
 .misa198-code-color-theme-tomorrow-night .pl-c span,
 .misa198-code-color-theme-tomorrow-night .pl-pdc {
-  color: #969896;
-  font-style: italic;
+  color: #969896 !important;
+  font-style: italic !important;
 }
 .misa198-code-color-theme-tomorrow-night .pl-c1,
 .misa198-code-color-theme-tomorrow-night .pl-cce,
@@ -51,14 +51,14 @@
 .misa198-code-color-theme-tomorrow-night .pl-mri,
 .misa198-code-color-theme-tomorrow-night .pl-va,
 .misa198-code-color-theme-tomorrow-night .pl-vpu {
-  color: #de935f;
+  color: #de935f !important;
 }
 .misa198-code-color-theme-tomorrow-night .pl-cos,
 .misa198-code-color-theme-tomorrow-night .pl-ml,
 .misa198-code-color-theme-tomorrow-night .pl-pds,
 .misa198-code-color-theme-tomorrow-night .pl-s1,
 .misa198-code-color-theme-tomorrow-night .pl-sol {
-  color: #b5bd68;
+  color: #b5bd68 !important;
 }
 .misa198-code-color-theme-tomorrow-night .pl-e,
 .misa198-code-color-theme-tomorrow-night .pl-ef,
@@ -68,7 +68,7 @@
 .misa198-code-color-theme-tomorrow-night .pl-entc,
 .misa198-code-color-theme-tomorrow-night .pl-eoi,
 .misa198-code-color-theme-tomorrow-night .pl-smc {
-  color: #f0c674;
+  color: #f0c674 !important;
 }
 .misa198-code-color-theme-tomorrow-night .pl-ent,
 .misa198-code-color-theme-tomorrow-night .pl-eoa,
@@ -87,7 +87,7 @@
 .misa198-code-color-theme-tomorrow-night .pl-src,
 .misa198-code-color-theme-tomorrow-night .pl-sre,
 .misa198-code-color-theme-tomorrow-night .pl-st {
-  color: #b294bb;
+  color: #b294bb !important;
 }
 .misa198-code-color-theme-tomorrow-night .pl-entm,
 .misa198-code-color-theme-tomorrow-night .pl-eoac,
@@ -98,21 +98,21 @@
 .misa198-code-color-theme-tomorrow-night .pl-som,
 .misa198-code-color-theme-tomorrow-night .pl-sr,
 .misa198-code-color-theme-tomorrow-night .pl-vo {
-  color: #c66;
+  color: #c66 !important;
 }
 .misa198-code-color-theme-tomorrow-night .pl-mb,
 .misa198-code-color-theme-tomorrow-night .pl-pdb {
-  color: #b5bd68;
-  font-weight: 700;
+  color: #b5bd68 !important;
+  font-weight: 700 !important;
 }
 .misa198-code-color-theme-tomorrow-night .pl-mi,
 .misa198-code-color-theme-tomorrow-night .pl-pdi {
-  color: #b294bb;
-  font-style: italic;
+  color: #b294bb !important;
+  font-style: italic !important;
 }
 .misa198-code-color-theme-tomorrow-night .pl-mp,
 .misa198-code-color-theme-tomorrow-night .pl-mp1 .pl-sf {
-  color: #81a2be;
+  color: #81a2be !important;
 }
 .misa198-code-color-theme-tomorrow-night .pl-s2,
 .misa198-code-color-theme-tomorrow-night .pl-sc,
@@ -121,29 +121,29 @@
 .misa198-code-color-theme-tomorrow-night .pl-stj,
 .misa198-code-color-theme-tomorrow-night .pl-mo,
 .misa198-code-color-theme-tomorrow-night .pl-entl {
-  color: #c5c8c6;
+  color: #c5c8c6 !important;
 }
 .misa198-code-color-theme-tomorrow-night .pl-mi1,
 .misa198-code-color-theme-tomorrow-night .pl-mdht {
-  color: #8f9d6a;
-  background: rgba(0, 64, 0, 0.5);
+  color: #8f9d6a !important;
+  background: rgba(0, 64, 0, 0.5) !important;
 }
 .misa198-code-color-theme-tomorrow-night .pl-md,
 .misa198-code-color-theme-tomorrow-night .pl-mdhf {
-  color: #c66;
-  background: rgba(64, 0, 0, 0.5);
+  color: #c66 !important;
+  background: rgba(64, 0, 0, 0.5) !important;
 }
 .misa198-code-color-theme-tomorrow-night .pl-mdh,
 .misa198-code-color-theme-tomorrow-night .pl-mdi {
-  color: #c66;
-  font-weight: 400;
+  color: #c66 !important;
+  font-weight: 400 !important;
 }
 .misa198-code-color-theme-tomorrow-night .pl-ib,
 .misa198-code-color-theme-tomorrow-night .pl-iu {
-  background: #c66;
+  background: #c66 !important;
 }
 .misa198-code-color-theme-tomorrow-night .pl-id,
 .misa198-code-color-theme-tomorrow-night .pl-ii {
-  background: #c66;
-  color: #fff;
+  background: #c66 !important;
+  color: #fff !important;
 }

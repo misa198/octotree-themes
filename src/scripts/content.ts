@@ -4,11 +4,28 @@ import mobile from 'is-mobile';
 import select from 'select-dom';
 import { observe } from 'selector-observer';
 import { detectBrowser } from './utils/detectBrowser';
-import { get } from './utils/storage';
+import { get, set } from './utils/storage';
 import { KEYS } from './constants/keys';
+// Content css
 import '../styles/file-icon.css';
 import '../styles/icons.css';
 import '../styles/octotree.css';
+// Code color themes
+import '../styles/themes/chaos.css';
+import '../styles/themes/cobalt.css';
+import '../styles/themes/idle-fingers.css';
+import '../styles/themes/monokai.css';
+import '../styles/themes/obsidian.css';
+import '../styles/themes/one-dark.css';
+import '../styles/themes/pastel-on-dark.css';
+import '../styles/themes/solarized-dark.css';
+import '../styles/themes/solarized-light.css';
+import '../styles/themes/terminal.css';
+import '../styles/themes/tomorrow-night.css';
+import '../styles/themes/twilight.css';
+import { colorThemeDeaultClass, colorThemes } from './constants/colorThemes';
+
+// ============ Icon theme ===================
 
 const fonts = [
   { name: 'FontAwesome', path: 'fonts/fontawesome.woff2' },
@@ -170,10 +187,54 @@ const init = async () => {
   }
 };
 
+// ============ Code color theme ===================
+
+const applyColorTheme = async () => {
+  await domLoaded;
+  const changeTheme = (themeName?: string) => {
+    const body = document.querySelector('body') as HTMLElement;
+    const { classList } = body;
+    const currentThemeClass = Array.from(classList).find((className) =>
+      className.startsWith(`${colorThemeDeaultClass}`)
+    );
+    if (currentThemeClass) {
+      body.classList.remove(currentThemeClass);
+    }
+    if (themeName) {
+      const foundTheme = colorThemes.find(
+        (colorTheme) => colorTheme === themeName
+      );
+      if (foundTheme) {
+        classList.add(`${colorThemeDeaultClass}-${foundTheme}`);
+        set({ [KEYS.MISA198_CODE_COLOR_THEME]: foundTheme });
+      }
+    }
+  };
+
+  get([KEYS.MISA198_CODE_COLOR_THEME], (result) => {
+    if (result) {
+      const themeName = result[KEYS.MISA198_CODE_COLOR_THEME];
+      changeTheme(themeName);
+    }
+  });
+
+  (browserName === 'chrome' ? chrome : browser).runtime.onMessage.addListener(
+    (request) => {
+      try {
+        const message = JSON.parse(request.message);
+        if (message.type === 'MISA198_CODE_COLOR_THEME') {
+          changeTheme(message.codeColorTheme);
+        }
+      } catch (e) {}
+    }
+  );
+};
+
 (() => {
   get([KEYS.MISA198_GITHUB, KEYS.MISA198_OCTOTREE], (result) => {
     github = result[KEYS.MISA198_GITHUB] === true;
     octotree = result[KEYS.MISA198_OCTOTREE] === true;
   });
   init();
+  applyColorTheme();
 })();

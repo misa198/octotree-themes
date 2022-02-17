@@ -10,7 +10,7 @@ a {
 }
 
 body {
-  width: 22.5em;
+  width: 300px;
   font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
     'Helvetica Neue', Arial, sans-serif;
   color: #c8d0d8;
@@ -46,8 +46,34 @@ body {
   margin-top: 16px;
 }
 
+.session--octotree {
+  margin-top: 25px;
+}
+
 .session__label {
   font-size: 1.17em;
+}
+
+.select {
+  width: 150px;
+  font-size: 14px;
+  color: #fff;
+  padding: 14px 10px;
+  border-radius: 6px;
+  border: 1px solid #383838;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-image: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 10L12 15L17 10H7Z" fill="white"/></svg>');
+  background-repeat: no-repeat;
+  background-position-x: 99%;
+  background-position-y: 10px;
+}
+
+.select option {
+  background-color: #2f2f35;
+  color: #fff;
 }
 
 .form-switch {
@@ -59,7 +85,6 @@ body {
 .form-switch i {
   position: relative;
   display: inline-block;
-  margin-right: 0.5rem;
   width: 46px;
   height: 26px;
   background-color: #ccc;

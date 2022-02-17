@@ -1,5 +1,5 @@
 .misa198-code-color-theme-idle-fingers .highlight {
-  background: #323232;
+  background: #323232 !important;
 }
 .misa198-code-color-theme-idle-fingers .blob-num,
 .misa198-code-color-theme-idle-fingers .blob-code-inner,
@@ -8,23 +8,23 @@
 .misa198-code-color-theme-idle-fingers .pl-vo,
 .misa198-code-color-theme-idle-fingers .pl-id,
 .misa198-code-color-theme-idle-fingers .pl-ii {
-  color: #fff;
+  color: #fff !important;
 }
 .misa198-code-color-theme-idle-fingers .pl-enti,
 .misa198-code-color-theme-idle-fingers .pl-mb,
 .misa198-code-color-theme-idle-fingers .pl-pdb {
-  font-weight: 700;
+  font-weight: 700 !important;
 }
 .misa198-code-color-theme-idle-fingers .pl-c,
 .misa198-code-color-theme-idle-fingers .pl-c span,
 .misa198-code-color-theme-idle-fingers .pl-pdc {
-  color: #bc9458;
-  font-style: italic;
+  color: #bc9458 !important;
+  font-style: italic !important;
 }
 .misa198-code-color-theme-idle-fingers .pl-c1,
 .misa198-code-color-theme-idle-fingers .pl-pdc1,
 .misa198-code-color-theme-idle-fingers .pl-scp {
-  color: #6c99bb;
+  color: #6c99bb !important;
 }
 .misa198-code-color-theme-idle-fingers .pl-ent,
 .misa198-code-color-theme-idle-fingers .pl-eoa,
@@ -37,41 +37,41 @@
 .misa198-code-color-theme-idle-fingers .pl-ms,
 .misa198-code-color-theme-idle-fingers .pl-s3,
 .misa198-code-color-theme-idle-fingers .pl-sok {
-  color: #ffe5bb;
+  color: #ffe5bb !important;
 }
 .misa198-code-color-theme-idle-fingers .pl-mdh,
 .misa198-code-color-theme-idle-fingers .pl-mdi,
 .misa198-code-color-theme-idle-fingers .pl-mdr {
-  font-weight: 400;
+  font-weight: 400 !important;
 }
 .misa198-code-color-theme-idle-fingers .pl-mi,
 .misa198-code-color-theme-idle-fingers .pl-pdi {
-  color: #ffe5bb;
-  font-style: italic;
+  color: #ffe5bb !important;
+  font-style: italic !important;
 }
 .misa198-code-color-theme-idle-fingers .pl-sra,
 .misa198-code-color-theme-idle-fingers .pl-src,
 .misa198-code-color-theme-idle-fingers .pl-sre {
-  color: #cc3;
+  color: #cc3 !important;
 }
 .misa198-code-color-theme-idle-fingers .pl-mdht,
 .misa198-code-color-theme-idle-fingers .pl-mi1 {
-  color: #a5c261;
-  background: rgba(0, 64, 0, 0.5);
+  color: #a5c261 !important;
+  background: rgba(0, 64, 0, 0.5) !important;
 }
 .misa198-code-color-theme-idle-fingers .pl-md,
 .misa198-code-color-theme-idle-fingers .pl-mdhf {
-  color: #b83426;
-  background: rgba(64, 0, 0, 0.5);
+  color: #b83426 !important;
+  background: rgba(64, 0, 0, 0.5) !important;
 }
 .misa198-code-color-theme-idle-fingers .pl-ib,
 .misa198-code-color-theme-idle-fingers .pl-id,
 .misa198-code-color-theme-idle-fingers .pl-ii,
 .misa198-code-color-theme-idle-fingers .pl-iu {
-  background: #b83426;
+  background: #b83426 !important;
 }
 .misa198-code-color-theme-idle-fingers .pl-ms1 {
-  background: #ffc66d;
+  background: #ffc66d !important;
 }
 .misa198-code-color-theme-idle-fingers .highlight-text-html-basic .pl-ent,
 .misa198-code-color-theme-idle-fingers .pl-cce,
@@ -101,7 +101,7 @@
 .misa198-code-color-theme-idle-fingers .pl-vpf,
 .misa198-code-color-theme-idle-fingers .pl-vpu,
 .misa198-code-color-theme-idle-fingers .pl-mdr {
-  color: #cc7833;
+  color: #cc7833 !important;
 }
 .misa198-code-color-theme-idle-fingers .pl-cos,
 .misa198-code-color-theme-idle-fingers .pl-ml,
@@ -110,7 +110,7 @@
 .misa198-code-color-theme-idle-fingers .pl-sol,
 .misa198-code-color-theme-idle-fingers .pl-mb,
 .misa198-code-color-theme-idle-fingers .pl-pdb {
-  color: #a5c261;
+  color: #a5c261 !important;
 }
 .misa198-code-color-theme-idle-fingers .pl-e,
 .misa198-code-color-theme-idle-fingers .pl-en,
@@ -122,7 +122,7 @@
 .misa198-code-color-theme-idle-fingers .pl-smp,
 .misa198-code-color-theme-idle-fingers .pl-mdh,
 .misa198-code-color-theme-idle-fingers .pl-mdi {
-  color: #ffc66d;
+  color: #ffc66d !important;
 }
 .misa198-code-color-theme-idle-fingers .pl-ef,
 .misa198-code-color-theme-idle-fingers .pl-enf,
@@ -139,5 +139,5 @@
 .misa198-code-color-theme-idle-fingers .pl-som,
 .misa198-code-color-theme-idle-fingers .pl-sr,
 .misa198-code-color-theme-idle-fingers .pl-enti {
-  color: #b83426;
+  color: #b83426 !important;
 }

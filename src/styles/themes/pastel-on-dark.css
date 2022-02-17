@@ -1,5 +1,5 @@
 .misa198-code-color-theme-pastel-on-dark .highlight {
-  background: #2c2828;
+  background: #2c2828 !important;
 }
 .misa198-code-color-theme-pastel-on-dark .blob-num,
 .misa198-code-color-theme-pastel-on-dark .blob-code-inner,
@@ -14,38 +14,38 @@
 .misa198-code-color-theme-pastel-on-dark .pl-ms,
 .misa198-code-color-theme-pastel-on-dark .pl-s3,
 .misa198-code-color-theme-pastel-on-dark .pl-sok {
-  color: #e6e1dc;
+  color: #e6e1dc !important;
 }
 .misa198-code-color-theme-pastel-on-dark .pl-cce {
-  color: #afa472;
+  color: #afa472 !important;
 }
 .misa198-code-color-theme-pastel-on-dark .pl-cn {
-  color: #ccc;
+  color: #ccc !important;
 }
 .misa198-code-color-theme-pastel-on-dark .pl-enti {
-  color: #aeb2f8;
-  font-weight: 700;
+  color: #aeb2f8 !important;
+  font-weight: 700 !important;
 }
 .misa198-code-color-theme-pastel-on-dark .pl-sra {
-  color: #797878;
+  color: #797878 !important;
 }
 .misa198-code-color-theme-pastel-on-dark .pl-mdr {
-  color: #757ad8;
-  font-weight: 400;
+  color: #757ad8 !important;
+  font-weight: 400 !important;
 }
 .misa198-code-color-theme-pastel-on-dark .pl-ms1 {
-  background: #bebf55;
+  background: #bebf55 !important;
 }
 .misa198-code-color-theme-pastel-on-dark .pl-c,
 .misa198-code-color-theme-pastel-on-dark .pl-c span,
 .misa198-code-color-theme-pastel-on-dark .pl-pdc {
-  color: #a6c6ff;
-  font-style: italic;
+  color: #a6c6ff !important;
+  font-style: italic !important;
 }
 .misa198-code-color-theme-pastel-on-dark .pl-c1,
 .misa198-code-color-theme-pastel-on-dark .pl-st,
 .misa198-code-color-theme-pastel-on-dark .pl-vo {
-  color: #a5c261;
+  color: #a5c261 !important;
 }
 .misa198-code-color-theme-pastel-on-dark .pl-coc,
 .misa198-code-color-theme-pastel-on-dark .pl-en,
@@ -73,12 +73,12 @@
 .misa198-code-color-theme-pastel-on-dark .pl-va,
 .misa198-code-color-theme-pastel-on-dark .pl-vpu,
 .misa198-code-color-theme-pastel-on-dark .highlight-text-tex .pl-s3 {
-  color: #757ad8;
+  color: #757ad8 !important;
 }
 .misa198-code-color-theme-pastel-on-dark .pl-cos,
 .misa198-code-color-theme-pastel-on-dark .pl-ml,
 .misa198-code-color-theme-pastel-on-dark .pl-sol {
-  color: #66a968;
+  color: #66a968 !important;
 }
 .misa198-code-color-theme-pastel-on-dark .pl-ef,
 .misa198-code-color-theme-pastel-on-dark .pl-enf,
@@ -94,67 +94,67 @@
 .misa198-code-color-theme-pastel-on-dark .pl-smc,
 .misa198-code-color-theme-pastel-on-dark .pl-som,
 .misa198-code-color-theme-pastel-on-dark .pl-sr {
-  color: #aeb2f8;
+  color: #aeb2f8 !important;
 }
 .misa198-code-color-theme-pastel-on-dark .pl-ent,
 .misa198-code-color-theme-pastel-on-dark .highlight-text-html-basic .pl-e {
-  color: #6782d3;
+  color: #6782d3 !important;
 }
 .misa198-code-color-theme-pastel-on-dark .pl-mb,
 .misa198-code-color-theme-pastel-on-dark .pl-pdb {
-  color: #66a968;
-  font-weight: 700;
+  color: #66a968 !important;
+  font-weight: 700 !important;
 }
 .misa198-code-color-theme-pastel-on-dark .pl-mi,
 .misa198-code-color-theme-pastel-on-dark .pl-pdi {
-  color: #e6e1dc;
-  font-style: italic;
+  color: #e6e1dc !important;
+  font-style: italic !important;
 }
 .misa198-code-color-theme-pastel-on-dark .pl-pdc1,
 .misa198-code-color-theme-pastel-on-dark .pl-scp {
-  color: #4fb7c5;
+  color: #4fb7c5 !important;
 }
 .misa198-code-color-theme-pastel-on-dark .pl-pds,
 .misa198-code-color-theme-pastel-on-dark .pl-s1,
 .misa198-code-color-theme-pastel-on-dark .highlight-source-css .pl-v {
-  color: #ad9361;
+  color: #ad9361 !important;
 }
 .misa198-code-color-theme-pastel-on-dark .pl-s2,
 .misa198-code-color-theme-pastel-on-dark .pl-stj {
-  color: #8f938f;
+  color: #8f938f !important;
 }
 .misa198-code-color-theme-pastel-on-dark .pl-sf,
 .misa198-code-color-theme-pastel-on-dark .pl-smi,
 .misa198-code-color-theme-pastel-on-dark .pl-smp,
 .misa198-code-color-theme-pastel-on-dark .pl-mo,
 .misa198-code-color-theme-pastel-on-dark .pl-entl {
-  color: #bebf55;
+  color: #bebf55 !important;
 }
 .misa198-code-color-theme-pastel-on-dark .pl-src,
 .misa198-code-color-theme-pastel-on-dark .pl-sre {
-  color: #e9c062;
+  color: #e9c062 !important;
 }
 .misa198-code-color-theme-pastel-on-dark .pl-mi1,
 .misa198-code-color-theme-pastel-on-dark .pl-mdht {
-  color: #66a968;
-  background: rgba(0, 64, 0, 0.5);
+  color: #66a968 !important;
+  background: rgba(0, 64, 0, 0.5) !important;
 }
 .misa198-code-color-theme-pastel-on-dark .pl-md,
 .misa198-code-color-theme-pastel-on-dark .pl-mdhf {
-  color: #aeb2f8;
-  background: rgba(64, 0, 0, 0.5);
+  color: #aeb2f8 !important;
+  background: rgba(64, 0, 0, 0.5) !important;
 }
 .misa198-code-color-theme-pastel-on-dark .pl-mdh,
 .misa198-code-color-theme-pastel-on-dark .pl-mdi {
-  color: #bebf55;
-  font-weight: 400;
+  color: #bebf55 !important;
+  font-weight: 400 !important;
 }
 .misa198-code-color-theme-pastel-on-dark .pl-ib,
 .misa198-code-color-theme-pastel-on-dark .pl-iu {
-  background: #aeb2f8;
+  background: #aeb2f8 !important;
 }
 .misa198-code-color-theme-pastel-on-dark .pl-id,
 .misa198-code-color-theme-pastel-on-dark .pl-ii {
-  background: #aeb2f8;
-  color: #fff;
+  background: #aeb2f8 !important;
+  color: #fff !important;
 }

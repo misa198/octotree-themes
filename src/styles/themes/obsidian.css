@@ -1,5 +1,5 @@
 .misa198-code-color-theme-obsidian .highlight {
-  background: #293134;
+  background: #293134 !important;
 }
 .misa198-code-color-theme-obsidian .blob-num,
 .misa198-code-color-theme-obsidian .blob-code-inner,
@@ -11,37 +11,37 @@
 .misa198-code-color-theme-obsidian .pl-stj,
 .misa198-code-color-theme-obsidian .pl-vo,
 .misa198-code-color-theme-obsidian .pl-vpf {
-  color: #e0e2e4;
+  color: #e0e2e4 !important;
 }
 .misa198-code-color-theme-obsidian .pl-c,
 .misa198-code-color-theme-obsidian .pl-c span {
-  color: #66747b;
-  font-style: italic;
+  color: #66747b !important;
+  font-style: italic !important;
 }
 .misa198-code-color-theme-obsidian .pl-mb {
-  color: #ec7600;
-  font-weight: 700;
+  color: #ec7600 !important;
+  font-weight: 700 !important;
 }
 .misa198-code-color-theme-obsidian .pl-mh .pl-en {
-  color: #66747b;
-  font-weight: 700;
+  color: #66747b !important;
+  font-weight: 700 !important;
 }
 .misa198-code-color-theme-obsidian .pl-mi {
-  color: #93c763;
-  font-style: italic;
+  color: #93c763 !important;
+  font-style: italic !important;
 }
 .misa198-code-color-theme-obsidian .pl-sc {
-  color: #96989a;
+  color: #96989a !important;
 }
 .misa198-code-color-theme-obsidian .pl-st {
-  color: #da4236;
+  color: #da4236 !important;
 }
 .misa198-code-color-theme-obsidian .pl-c1 > .pl-c1 {
-  color: #678cb1;
+  color: #678cb1 !important;
 }
 .misa198-code-color-theme-obsidian .pl-c1,
 .misa198-code-color-theme-obsidian .pl-sr .pl-cce {
-  color: #ffcd22;
+  color: #ffcd22 !important;
 }
 .misa198-code-color-theme-obsidian .pl-e,
 .misa198-code-color-theme-obsidian .pl-k,
@@ -55,37 +55,37 @@
 .misa198-code-color-theme-obsidian .pl-ms,
 .misa198-code-color-theme-obsidian .pl-s1 .pl-v,
 .misa198-code-color-theme-obsidian .pl-s3 {
-  color: #93c763;
+  color: #93c763 !important;
 }
 .misa198-code-color-theme-obsidian .pl-en,
 .misa198-code-color-theme-obsidian .pl-v {
-  color: #678cb1;
+  color: #678cb1 !important;
 }
 .misa198-code-color-theme-obsidian .pl-mh,
 .misa198-code-color-theme-obsidian .pl-mq {
-  color: #66747b;
+  color: #66747b !important;
 }
 .misa198-code-color-theme-obsidian .pl-pds,
 .misa198-code-color-theme-obsidian .pl-s,
 .misa198-code-color-theme-obsidian .pl-s1 .pl-pse .pl-s2,
 .misa198-code-color-theme-obsidian .pl-sv {
-  color: #ec7600;
+  color: #ec7600 !important;
 }
 .misa198-code-color-theme-obsidian .pl-sr,
 .misa198-code-color-theme-obsidian .pl-sr .pl-sra,
 .misa198-code-color-theme-obsidian .pl-sr .pl-sre,
 .misa198-code-color-theme-obsidian .pl-src {
-  color: #d39745;
+  color: #d39745 !important;
 }
 .misa198-code-color-theme-obsidian .pl-mi1,
 .misa198-code-color-theme-obsidian .pl-mdht {
-  color: #e0e2e4;
-  background: rgba(0, 64, 0, 0.5);
+  color: #e0e2e4 !important;
+  background: rgba(0, 64, 0, 0.5) !important;
 }
 .misa198-code-color-theme-obsidian .pl-md,
 .misa198-code-color-theme-obsidian .pl-mdhf,
 .misa198-code-color-theme-obsidian .pl-id,
 .misa198-code-color-theme-obsidian .pl-ii {
-  color: #e0e2e4;
-  background: rgba(64, 0, 0, 0.5);
+  color: #e0e2e4 !important;
+  background: rgba(64, 0, 0, 0.5) !important;
 }

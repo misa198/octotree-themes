@@ -1,38 +1,38 @@
 .misa198-code-color-theme-chaos .highlight {
-  background: #161616;
+  background: #161616 !important;
 }
 .misa198-code-color-theme-chaos .blob-num,
 .misa198-code-color-theme-chaos .blob-code-inner,
 .misa198-code-color-theme-chaos .pl-st {
-  color: #e6e1dc;
+  color: #e6e1dc !important;
 }
 .misa198-code-color-theme-chaos .pl-c,
 .misa198-code-color-theme-chaos .pl-c span {
-  color: #555;
-  font-style: italic;
+  color: #555 !important;
+  font-style: italic !important;
 }
 .misa198-code-color-theme-chaos .pl-mb {
-  color: #1edafb;
-  font-weight: 700;
+  color: #1edafb !important;
+  font-weight: 700 !important;
 }
 .misa198-code-color-theme-chaos .pl-mh .pl-en {
-  color: #fdc251;
-  font-weight: 700;
+  color: #fdc251 !important;
+  font-weight: 700 !important;
 }
 .misa198-code-color-theme-chaos .pl-mi {
-  color: #00698f;
-  font-style: italic;
+  color: #00698f !important;
+  font-style: italic !important;
 }
 .misa198-code-color-theme-chaos .pl-mq {
-  color: #555;
+  color: #555 !important;
 }
 .misa198-code-color-theme-chaos .pl-sc {
-  color: #999;
+  color: #999 !important;
 }
 .misa198-code-color-theme-chaos .pl-c1,
 .misa198-code-color-theme-chaos .pl-mh,
 .misa198-code-color-theme-chaos .pl-sr .pl-cce {
-  color: #fdc251;
+  color: #fdc251 !important;
 }
 .misa198-code-color-theme-chaos .pl-e,
 .misa198-code-color-theme-chaos .pl-en,
@@ -40,7 +40,7 @@
 .misa198-code-color-theme-chaos .pl-s,
 .misa198-code-color-theme-chaos .pl-v,
 .misa198-code-color-theme-chaos .pl-vpf {
-  color: #974;
+  color: #974 !important;
 }
 .misa198-code-color-theme-chaos .pl-k,
 .misa198-code-color-theme-chaos .pl-mdh,
@@ -53,38 +53,38 @@
 .misa198-code-color-theme-chaos .pl-ms,
 .misa198-code-color-theme-chaos .pl-s1 .pl-v,
 .misa198-code-color-theme-chaos .pl-s3 {
-  color: #00698f;
+  color: #00698f !important;
 }
 .misa198-code-color-theme-chaos .pl-pds,
 .misa198-code-color-theme-chaos .pl-s1,
 .misa198-code-color-theme-chaos .pl-s1 .pl-pse .pl-s2 {
-  color: #58c554;
+  color: #58c554 !important;
 }
 .misa198-code-color-theme-chaos .pl-s1 .pl-s2,
 .misa198-code-color-theme-chaos .pl-sv {
-  color: #1edafb;
+  color: #1edafb !important;
 }
 .misa198-code-color-theme-chaos .pl-smi,
 .misa198-code-color-theme-chaos .pl-smp,
 .misa198-code-color-theme-chaos .pl-stj,
 .misa198-code-color-theme-chaos .pl-vo {
-  color: #be53e6;
+  color: #be53e6 !important;
 }
 .misa198-code-color-theme-chaos .pl-sr,
 .misa198-code-color-theme-chaos .pl-sr .pl-sra,
 .misa198-code-color-theme-chaos .pl-sr .pl-sre,
 .misa198-code-color-theme-chaos .pl-src {
-  color: #ff308f;
+  color: #ff308f !important;
 }
 .misa198-code-color-theme-chaos .pl-mi1,
 .misa198-code-color-theme-chaos .pl-mdht {
-  color: #fff;
-  background: rgba(0, 64, 0, 0.5);
+  color: #fff !important;
+  background: rgba(0, 64, 0, 0.5) !important;
 }
 .misa198-code-color-theme-chaos .pl-md,
 .misa198-code-color-theme-chaos .pl-mdhf,
 .misa198-code-color-theme-chaos .pl-id,
 .misa198-code-color-theme-chaos .pl-ii {
-  color: #fff;
-  background: #900;
+  color: #fff !important;
+  background: #900 !important;
 }

@@ -21,11 +21,16 @@ Octotree Icon Theme
 
 ## Overview
 
-A Browser Extension which gives different filetypes different icons to GitHub and Octotree for free.
+A browser extension which gives different filetypes different icons, and code color theme to GitHub and Octotree for free.
+
 Support Chromium Browsers and Firefox.
 
 <p align="center">
-  <img src="./docs/screenshot-main.png" />
+  <img src="./docs/screenshot-1.png" />
+</p>
+<br />
+<p align="center">
+  <img src="./docs/screenshot-2.png" />
 </p>
 
 ## Installation

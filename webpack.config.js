@@ -3,7 +3,6 @@ const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WriteFilePlugin = require('write-file-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
 
 const fileExtensions = [
   'jpg',
@@ -91,8 +90,7 @@ options.plugins.push(
   new webpack.LoaderOptionsPlugin({
     minimize: true,
     debug: false,
-  }),
-  new TerserPlugin()
+  })
 );
 
 module.exports = options;
