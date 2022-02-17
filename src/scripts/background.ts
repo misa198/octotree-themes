@@ -1,5 +1,5 @@
-import { set, get } from './storage';
-import { KEYS } from './keys';
+import { set, get } from './utils/storage';
+import { KEYS } from './constants/keys';
 const urlRegex = new RegExp(
   /^https:\/\/github.com\/[(a-z)(A-Z)(0-9)_-]+\/[(a-z)(A-Z)(0-9)_-]+(\/?)((\/.+)?)(\?(.+))?$/
 );

@@ -1,6 +1,6 @@
-import { get, set } from './storage';
-import { detectBrowser } from './detectBrowser';
-import { KEYS } from './keys';
+import { get, set } from './utils/storage';
+import { detectBrowser } from './utils/detectBrowser';
+import { KEYS } from './constants/keys';
 import '../styles/popup.css';
 
 const githubCheckbox = document.getElementById(
