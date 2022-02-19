@@ -18,7 +18,8 @@
     "build:chromium": "rm -rf build/chromium && cross-env PLATFORM=chromium webpack --config webpack.config.js --display-error-details --progress --colors",
     "build": "npm run build:firefox && npm run build:chromium",
     "lint": "eslint src/**/*.ts",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "generate-code-themes": "node tools/generate.js && prettier --write src/scripts/constants/colorThemes.ts"
   },
   "dependencies": {
     "dom-loaded": "^2.0.0",
