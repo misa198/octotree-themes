@@ -6,11 +6,14 @@ import { observe } from 'selector-observer';
 import { detectBrowser } from './utils/detectBrowser';
 import { get, set } from './utils/storage';
 import { KEYS } from './constants/keys';
+import { colorThemeDeaultClass, colorThemes } from './constants/colorThemes';
 // Content css
+import './constants/colorThemesScss';
 import '../styles/file-icon.scss';
 import '../styles/icons.scss';
 import '../styles/octotree.scss';
-import { colorThemeDeaultClass, colorThemes } from './constants/colorThemes';
+import '../styles/themes/code.scss';
+import '../styles/themes/gist.scss';
 
 // ============ Icon theme ===================
 
@@ -177,7 +180,6 @@ const init = async () => {
 // ============ Code color theme ===================
 
 const applyColorTheme = async () => {
-  await domLoaded;
   const changeTheme = (themeName?: string) => {
     const body = document.querySelector('body') as HTMLElement;
     const { classList } = body;
@@ -198,11 +200,15 @@ const applyColorTheme = async () => {
     }
   };
 
-  get([KEYS.MISA198_CODE_COLOR_THEME], (result) => {
-    if (result) {
-      const themeName = result[KEYS.MISA198_CODE_COLOR_THEME];
-      changeTheme(themeName);
-    }
+  observe('body', {
+    add() {
+      get([KEYS.MISA198_CODE_COLOR_THEME], (result) => {
+        if (result) {
+          const themeName = result[KEYS.MISA198_CODE_COLOR_THEME];
+          changeTheme(themeName);
+        }
+      });
+    },
   });
 
   (browserName === 'chrome' ? chrome : browser).runtime.onMessage.addListener(

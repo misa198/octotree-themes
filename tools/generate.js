@@ -12,13 +12,33 @@ codeThemeFiles.forEach((file) => {
   themes.push(themeName);
 });
 
-const desContent = `
-export const colorThemeDeaultClass = 'misa198-code-color-theme';
+const colorThemesDesContent = `
+export const colorThemeDeaultClass = 'misa198-github-code-color-theme';
 export const colorThemes = ${JSON.stringify(themes)};
 `;
 
+let colorThemesScssDesContent = ``;
+themes.forEach((theme) => {
+  colorThemesScssDesContent = colorThemesScssDesContent.concat(
+    `import "../../styles/themes/code/${theme}.scss"\n`
+  );
+});
+
 fs.writeFileSync(
   path.join(__dirname, '..', 'src', 'scripts', 'constants', 'colorThemes.ts'),
-  desContent,
+  colorThemesDesContent,
+  'utf8'
+);
+
+fs.writeFileSync(
+  path.join(
+    __dirname,
+    '..',
+    'src',
+    'scripts',
+    'constants',
+    'colorThemesScss.ts'
+  ),
+  colorThemesScssDesContent,
   'utf8'
 );

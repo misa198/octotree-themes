@@ -6,10 +6,22 @@
     "target": "es5",
     "allowJs": true,
     "moduleResolution": "node",
-    "types": ["chrome", "firefox-webext-browser", "css-font-loading-module"],
+    "types": [
+      "chrome",
+      "firefox-webext-browser",
+      "css-font-loading-module",
+      "node"
+    ],
     "strict": true,
     "sourceMap": false
   },
-  "include": ["src/scripts/*.ts", "src/scripts/constants/keys.ts", "src/scripts/constants/colorThemes.ts", "src/scripts/utils/detectBrowser.ts", "src/scripts/popup.ts", "src/scripts/utils/storage.ts"],
+  "include": [
+    "src/scripts/*.ts",
+    "src/scripts/constants/keys.ts",
+    "src/scripts/constants/colorThemes.ts",
+    "src/scripts/utils/detectBrowser.ts",
+    "src/scripts/popup.ts",
+    "src/scripts/utils/storage.ts"
+  ],
   "exclude": ["node_modules", "build"]
 }
