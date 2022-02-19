@@ -1,7 +1,22 @@
-import { get, set } from './storage';
-import { detectBrowser } from './detectBrowser';
-import { KEYS } from './keys';
-import '../styles/popup.css';
+import * as capitalize from 'capitalize';
+import { get, set } from './utils/storage';
+import { detectBrowser } from './utils/detectBrowser';
+import { KEYS } from './constants/keys';
+import { colorThemes } from './constants/colorThemes';
+import '../styles/popup.scss';
+
+const themeSelector = document.getElementById(
+  'select-code-color-theme'
+) as HTMLSelectElement;
+
+colorThemes.forEach((colorTheme) => {
+  const option = document.createElement('option');
+  option.value = colorTheme;
+  option.textContent = capitalize(colorTheme.split('-').join(' '));
+  themeSelector.appendChild(option);
+});
+
+const browserName = detectBrowser();
 
 const githubCheckbox = document.getElementById(
   KEYS.MISA198_GITHUB
@@ -35,7 +50,7 @@ function onOctotreeCheckboxChange() {
 
 function reloadCurrentTab() {
   const code = 'window.location.reload();';
-  if (detectBrowser() === 'chrome') {
+  if (browserName === 'chrome') {
     chrome.tabs.getSelected(function (tab) {
       chrome.tabs.executeScript(tab.id as number, { code });
     });
@@ -50,3 +65,48 @@ function reloadCurrentTab() {
 githubCheckbox.addEventListener('click', onGithubCheckboxChange);
 octotreeCheckbox.addEventListener('click', onOctotreeCheckboxChange);
 refreshButton.addEventListener('click', reloadCurrentTab);
+
+// ============= Code color theme =============
+get([KEYS.MISA198_CODE_COLOR_THEME], (result) => {
+  const select = document.getElementById(
+    'select-code-color-theme'
+  ) as HTMLSelectElement;
+  if (result) {
+    const themeName = result[KEYS.MISA198_CODE_COLOR_THEME];
+    const foundTheme = colorThemes.find(
+      (colorTheme) => colorTheme === themeName
+    );
+    if (foundTheme) {
+      select.value = foundTheme;
+    }
+  }
+});
+
+function onSelectCodeColorTheme(event: Event) {
+  const message = {
+    codeColorTheme: (event.target as HTMLSelectElement).value,
+    type: 'MISA198_CODE_COLOR_THEME',
+  };
+  if (browserName === 'chrome') {
+    chrome.tabs.query({}, (tabs) => {
+      tabs.forEach((tab) => {
+        chrome.tabs.sendMessage(tab.id as number, {
+          message: JSON.stringify(message),
+        });
+      });
+    });
+  } else {
+    browser.tabs.query({}).then((tabs) => {
+      tabs.forEach((tab) => {
+        browser.tabs.sendMessage(tab.id as number, {
+          message: JSON.stringify(message),
+        });
+      });
+    });
+  }
+}
+
+const selectCodeColorTheme = document.querySelector(
+  '#select-code-color-theme'
+) as HTMLSelectElement;
+selectCodeColorTheme.addEventListener('change', onSelectCodeColorTheme);

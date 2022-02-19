@@ -4,21 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./popup.css" />
-    <!-- <link rel="stylesheet" href="./styles/popup.css" /> -->
+    <link rel="stylesheet" href="popup.css" />
   </head>
   <body>
     <a
-      href="https://github.com/misa198/octotree-icon-theme"
+      href="https://github.com/misa198/octotree-theme"
       rel="noreferrer"
       target="__blank"
     >
       <header class="header">
         <img class="header__icon" src="./icons/icon64.png" alt="" />
-        <h3 class="header__title">Octotree Icon Theme</h3>
+        <h3 class="header__title">Octotree Theme</h3>
       </header>
     </a>
     <main class="main">
+      <div class="session">
+        <h3 class="session__label">Code Theme</h3>
+        <select class="select" id="select-code-color-theme">
+          <option value="default">Default</option>
+        </select>
+      </div>
       <div class="session">
         <h3 class="session__label">Github</h3>
         <label class="form-switch">
@@ -26,7 +31,7 @@
           <i></i>
         </label>
       </div>
-      <div class="session">
+      <div class="session session--octotree">
         <h3 class="session_label">Octotree</h3>
         <label class="form-switch">
           <input id="misa198Octotree" type="checkbox" />

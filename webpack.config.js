@@ -3,7 +3,6 @@ const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WriteFilePlugin = require('write-file-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
 
 const fileExtensions = [
   'jpg',
@@ -25,7 +24,7 @@ const options = {
     content: path.join(__dirname, 'src', 'scripts', 'content.ts'),
   },
   output: {
-    path: path.join(__dirname, 'build', process.env.NODE_ENV),
+    path: path.join(__dirname, 'build', process.env.PLATFORM),
     filename: '[name].js',
   },
   resolve: {
@@ -39,8 +38,8 @@ const options = {
         exclude: /node_modules/,
       },
       {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        test: /\.(scss|css)$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
         exclude: /node_modules/,
       },
       {
@@ -51,12 +50,12 @@ const options = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+      'process.env.PLATFORM': JSON.stringify(process.env.PLATFORM),
     }),
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: `src/platforms/manifest.${process.env.NODE_ENV}.json`,
+          from: `src/platforms/manifest.${process.env.PLATFORM}.json`,
           to: 'manifest.json',
           transform: (content) =>
             Buffer.from(
@@ -91,8 +90,7 @@ options.plugins.push(
   new webpack.LoaderOptionsPlugin({
     minimize: true,
     debug: false,
-  }),
-  new TerserPlugin()
+  })
 );
 
 module.exports = options;

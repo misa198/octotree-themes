@@ -5,14 +5,14 @@
 Octotree Icon Theme
 </h1>
 <p align="center">
-  <a href="https://microsoftedge.microsoft.com/addons/detail/octotree-icon-theme/cajppifioefokdcmnbehbkiddjnpmadb">
+  <a href="https://microsoftedge.microsoft.com/addons/detail/cajppifioefokdcmnbehbkiddjnpmadb">
     <img src="https://img.shields.io/badge/Microsoft%20Edge%20Store-Download-blue" />
   </a>
-  <a href="https://addons.mozilla.org/vi/firefox/addon/octotree-icon-theme/">
+  <a href="https://addons.mozilla.org/vi/firefox/addon/octotree-theme/">
     <img src="https://img.shields.io/badge/Firefox%20Addons-Download-orange" />
   </a>
-  <a href="https://github.com/misa198/octotree-icon-theme/releases">
-    <img src="https://img.shields.io/github/v/release/misa198/octotree-icon-theme" />
+  <a href="https://github.com/misa198/octotree-theme/releases">
+    <img src="https://img.shields.io/github/v/release/misa198/octotree-theme" />
   </a>
   <a href="https://www.octotree.io/download">
     <img src="https://img.shields.io/badge/install-Octotree-orange" />
@@ -21,29 +21,38 @@ Octotree Icon Theme
 
 ## Overview
 
-A Browser Extension which gives different filetypes different icons to GitHub and Octotree for free.
+A browser extension which gives different filetypes different icons, and code color theme to GitHub and Octotree for free.
+
 Support Chromium Browsers and Firefox.
 
 <p align="center">
-  <img src="./docs/screenshot-main.png" />
+  <img src="./docs/screenshot-1.png" />
+</p>
+<br />
+<p align="center">
+  <img src="./docs/screenshot-2.png" />
 </p>
 
 ## Installation
 
 - For Microsoft Edge Chromium
 
-  [ <img src="https://img.shields.io/badge/Microsoft_Edge-0078D7?style=for-the-badge&logo=Microsoft-edge&logoColor=white" /> ](https://microsoftedge.microsoft.com/addons/detail/octotree-icon-theme/cajppifioefokdcmnbehbkiddjnpmadb)
+  [ <img src="https://img.shields.io/badge/Microsoft_Edge-0078D7?style=for-the-badge&logo=Microsoft-edge&logoColor=white" /> ](https://microsoftedge.microsoft.com/addons/detail/cajppifioefokdcmnbehbkiddjnpmadb)
 
 - For Firefox
 
-  [ <img src="https://img.shields.io/badge/Firefox_Browser-FF7139?style=for-the-badge&logo=Firefox-Browser&logoColor=white" /> ](https://addons.mozilla.org/vi/firefox/addon/octotree-icon-theme/)
+  [ <img src="https://img.shields.io/badge/Firefox_Browser-FF7139?style=for-the-badge&logo=Firefox-Browser&logoColor=white" /> ](https://addons.mozilla.org/vi/firefox/addon/octotree-theme/)
 
 - For other Chromium browser:
   <br>
-  Download from <a href="https://github.com/misa198/octotree-icon-theme/releases">
+  Download from <a href="https://github.com/misa198/octotree-theme/releases">
   here
   </a> and follow the instructions [here](https://www.quora.com/How-do-I-install-a-chrome-extension-from-a-zip-file).
 
+## Credits
+
+- [@StylishThemes](https://github.com/StylishThemes) for [GitHub Dark](https://github.com/StylishThemes/GitHub-Dark/)
+
 ## License
 
-[MIT](./LICENSE)
+[BSD 2-Clause "Simplified" License](./LICENSE)

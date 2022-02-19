@@ -3,12 +3,19 @@ import * as fileIcons from 'file-icons-js';
 import mobile from 'is-mobile';
 import select from 'select-dom';
 import { observe } from 'selector-observer';
-import { detectBrowser } from './detectBrowser';
-import { get } from './storage';
-import { KEYS } from './keys';
-import '../styles/file-icon.css';
-import '../styles/icons.css';
-import '../styles/octotree.css';
+import { detectBrowser } from './utils/detectBrowser';
+import { get, set } from './utils/storage';
+import { KEYS } from './constants/keys';
+import { colorThemeDeaultClass, colorThemes } from './constants/colorThemes';
+// Content css
+import './constants/colorThemesScss';
+import '../styles/file-icon.scss';
+import '../styles/icons.scss';
+import '../styles/octotree.scss';
+import '../styles/themes/code.scss';
+import '../styles/themes/gist.scss';
+
+// ============ Icon theme ===================
 
 const fonts = [
   { name: 'FontAwesome', path: 'fonts/fontawesome.woff2' },
@@ -170,10 +177,57 @@ const init = async () => {
   }
 };
 
+// ============ Code color theme ===================
+
+const applyColorTheme = async () => {
+  const changeTheme = (themeName?: string) => {
+    const body = document.querySelector('body') as HTMLElement;
+    const { classList } = body;
+    const currentThemeClass = Array.from(classList).find((className) =>
+      className.startsWith(`${colorThemeDeaultClass}`)
+    );
+    if (currentThemeClass) {
+      body.classList.remove(currentThemeClass);
+    }
+    if (themeName) {
+      const foundTheme = colorThemes.find(
+        (colorTheme) => colorTheme === themeName
+      );
+      if (foundTheme) {
+        classList.add(`${colorThemeDeaultClass}-${foundTheme}`);
+        set({ [KEYS.MISA198_CODE_COLOR_THEME]: foundTheme });
+      }
+    }
+  };
+
+  observe('body', {
+    add() {
+      get([KEYS.MISA198_CODE_COLOR_THEME], (result) => {
+        if (result) {
+          const themeName = result[KEYS.MISA198_CODE_COLOR_THEME];
+          changeTheme(themeName);
+        }
+      });
+    },
+  });
+
+  (browserName === 'chrome' ? chrome : browser).runtime.onMessage.addListener(
+    (request) => {
+      try {
+        const message = JSON.parse(request.message);
+        if (message.type === 'MISA198_CODE_COLOR_THEME') {
+          changeTheme(message.codeColorTheme);
+        }
+      } catch (e) {}
+    }
+  );
+};
+
 (() => {
   get([KEYS.MISA198_GITHUB, KEYS.MISA198_OCTOTREE], (result) => {
     github = result[KEYS.MISA198_GITHUB] === true;
     octotree = result[KEYS.MISA198_OCTOTREE] === true;
   });
   init();
+  applyColorTheme();
 })();
