@@ -49,6 +49,9 @@ Support Chromium Browsers and Firefox.
   here
   </a> and follow the instructions [here](https://www.quora.com/How-do-I-install-a-chrome-extension-from-a-zip-file).
 
+## Credits
+- [@StylishThemes](https://github.com/StylishThemes) for [GitHub Dark](https://github.com/StylishThemes/GitHub-Dark/)
+
 ## License
 
-[MIT](./LICENSE)
+[BSD 2-Clause "Simplified" License](./LICENSE)
