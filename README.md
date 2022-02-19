@@ -33,6 +33,37 @@ Support Chromium Browsers and Firefox.
   <img src="./docs/screenshot-2.png" />
 </p>
 
+## Themes
+
+- Default (Default Github theme)
+- Ambiance
+- Ayu mirage
+- Chaos
+- Clouds midnight
+- Cobalt
+- Dracula
+- Github dark
+- Idle fingers
+- Kr theme
+- Merbivore soft
+- Merbivore
+- Mono industrial clear
+- Mono industrial
+- Monokai spacegray eighties
+- Monokai
+- Obsidian
+- One dark
+- Pastel on dark
+- Railscasts
+- Solarized dark
+- Terminal
+- Tomorrow night blue
+- Tomorrow night bright
+- Tomorrow night eighties
+- Tomorrow night
+- Twilight
+- Vibrant ink
+
 ## Installation
 
 - For Microsoft Edge Chromium
