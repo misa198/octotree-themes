@@ -96,7 +96,7 @@ body {
             transition: all 0.25s linear;
           }
 
-          ::after {
+          &::after {
             content: '';
             position: absolute;
             left: 0;
@@ -108,15 +108,6 @@ body {
             transform: translate3d(2px, 2px, 0);
             transition: all 0.2s ease-in-out;
           }
-        }
-
-        &:active i::after {
-          width: 28px;
-          transform: translate3d(2px, 2px, 0);
-        }
-
-        &:active input:checked + i::after {
-          transform: translate3d(16px, 2px, 0);
         }
 
         input {
@@ -138,6 +129,15 @@ body {
             transform: translate3d(22px, 2px, 0);
           }
         }
+      }
+
+      .form-switch:active i::after {
+        width: 28px;
+        transform: translate3d(2px, 2px, 0);
+      }
+
+      .form-switch:active input:checked + i::after {
+        transform: translate3d(16px, 2px, 0);
       }
 
       .button-wrapper {

@@ -1,8 +1,20 @@
+import * as capitalize from 'capitalize';
 import { get, set } from './utils/storage';
 import { detectBrowser } from './utils/detectBrowser';
 import { KEYS } from './constants/keys';
-import '../styles/popup.scss';
 import { colorThemes } from './constants/colorThemes';
+import '../styles/popup.scss';
+
+const themeSelector = document.getElementById(
+  'select-code-color-theme'
+) as HTMLSelectElement;
+
+colorThemes.forEach((colorTheme) => {
+  const option = document.createElement('option');
+  option.value = colorTheme;
+  option.textContent = capitalize(colorTheme.split('-').join(' '));
+  themeSelector.appendChild(option);
+});
 
 const browserName = detectBrowser();
 
