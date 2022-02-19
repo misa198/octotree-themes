@@ -14,8 +14,8 @@
   "version": "1.3.0",
   "scripts": {
     "pre-commit": "lint-staged",
-    "build:firefox": "rm -rf build/firefox && cross-env NODE_ENV=firefox webpack --config webpack.config.js --display-error-details --progress --colors",
-    "build:chromium": "rm -rf build/chromium && cross-env NODE_ENV=chromium webpack --config webpack.config.js --display-error-details --progress --colors",
+    "build:firefox": "rm -rf build/firefox && cross-env PLATFORM=firefox webpack --config webpack.config.js --display-error-details --progress --colors",
+    "build:chromium": "rm -rf build/chromium && cross-env PLATFORM=chromium webpack --config webpack.config.js --display-error-details --progress --colors",
     "build": "npm run build:firefox && npm run build:chromium",
     "lint": "eslint src/**/*.ts",
     "lint:fix": "npm run lint -- --fix"
@@ -24,6 +24,8 @@
     "dom-loaded": "^2.0.0",
     "file-icons-js": "^1.1.0",
     "is-mobile": "^3.0.0",
+    "node-sass": "^4.9.4",
+    "sass-loader": "^7.2.0",
     "select-dom": "^7.1.1",
     "selector-observer": "^2.1.6",
     "webext-domain-permission-toggle": "^2.1.0",

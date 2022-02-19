@@ -1,7 +1,7 @@
 import { get, set } from './utils/storage';
 import { detectBrowser } from './utils/detectBrowser';
 import { KEYS } from './constants/keys';
-import '../styles/popup.css';
+import '../styles/popup.scss';
 import { colorThemes } from './constants/colorThemes';
 
 const browserName = detectBrowser();

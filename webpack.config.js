@@ -24,7 +24,7 @@ const options = {
     content: path.join(__dirname, 'src', 'scripts', 'content.ts'),
   },
   output: {
-    path: path.join(__dirname, 'build', process.env.NODE_ENV),
+    path: path.join(__dirname, 'build', process.env.PLATFORM),
     filename: '[name].js',
   },
   resolve: {
@@ -38,8 +38,8 @@ const options = {
         exclude: /node_modules/,
       },
       {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        test: /\.scss$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
         exclude: /node_modules/,
       },
       {
@@ -50,12 +50,12 @@ const options = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+      'process.env.PLATFORM': JSON.stringify(process.env.PLATFORM),
     }),
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: `src/platforms/manifest.${process.env.NODE_ENV}.json`,
+          from: `src/platforms/manifest.${process.env.PLATFORM}.json`,
           to: 'manifest.json',
           transform: (content) =>
             Buffer.from(

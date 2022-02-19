@@ -7,22 +7,9 @@ import { detectBrowser } from './utils/detectBrowser';
 import { get, set } from './utils/storage';
 import { KEYS } from './constants/keys';
 // Content css
-import '../styles/file-icon.css';
-import '../styles/icons.css';
-import '../styles/octotree.css';
-// Code color themes
-import '../styles/themes/chaos.css';
-import '../styles/themes/cobalt.css';
-import '../styles/themes/idle-fingers.css';
-import '../styles/themes/monokai.css';
-import '../styles/themes/obsidian.css';
-import '../styles/themes/one-dark.css';
-import '../styles/themes/pastel-on-dark.css';
-import '../styles/themes/solarized-dark.css';
-import '../styles/themes/solarized-light.css';
-import '../styles/themes/terminal.css';
-import '../styles/themes/tomorrow-night.css';
-import '../styles/themes/twilight.css';
+import '../styles/file-icon.scss';
+import '../styles/icons.scss';
+import '../styles/octotree.scss';
 import { colorThemeDeaultClass, colorThemes } from './constants/colorThemes';
 
 // ============ Icon theme ===================
