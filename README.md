@@ -2,7 +2,7 @@
 <sub>
 <img  src="./docs/logo.png" height="38" width="38">
 </sub>
-Octotree Icon Theme
+Octotree Theme
 </h1>
 <p align="center">
   <a href="https://microsoftedge.microsoft.com/addons/detail/cajppifioefokdcmnbehbkiddjnpmadb">
