@@ -11,7 +11,7 @@
   "bugs": {
     "url": "https://github.com/misa198/octotree-theme/issues"
   },
-  "version": "1.3.1",
+  "version": "1.3.2",
   "scripts": {
     "pre-commit": "lint-staged",
     "build:firefox": "rm -rf build/firefox && cross-env PLATFORM=firefox webpack --config webpack.config.js --display-error-details --progress --colors",

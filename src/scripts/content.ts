@@ -33,7 +33,7 @@ const loadFonts = () => {
   for (const font of fonts) {
     const fontFace = new FontFace(
       font.name,
-      `url("${(browserName === 'chrome' ? chrome : browser).extension.getURL(
+      `url("${(browserName === 'chrome' ? chrome : browser).runtime.getURL(
         font.path
       )}") format("woff2")`,
       {
