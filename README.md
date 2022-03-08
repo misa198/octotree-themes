@@ -5,19 +5,23 @@
 Octotree Theme
 </h1>
 <p align="center">
+  <a href="https://chrome.google.com/webstore/detail/meagmbmaaljhgdcglcmflnnglpokldcj">
+    <img src="https://img.shields.io/badge/Google%20Chrome%20Store-Download-red" />
   <a href="https://microsoftedge.microsoft.com/addons/detail/cajppifioefokdcmnbehbkiddjnpmadb">
     <img src="https://img.shields.io/badge/Microsoft%20Edge%20Store-Download-blue" />
   </a>
   <a href="https://addons.mozilla.org/vi/firefox/addon/octotree-theme/">
     <img src="https://img.shields.io/badge/Firefox%20Addons-Download-orange" />
   </a>
+</p>
+<p align="center">
   <a href="https://github.com/misa198/octotree-theme/releases">
     <img src="https://img.shields.io/github/v/release/misa198/octotree-theme" />
   </a>
   <a href="https://www.octotree.io/download">
     <img src="https://img.shields.io/badge/install-Octotree-orange" />
   </a>
-</p>
+<p>
 
 ## Overview
 
@@ -65,6 +69,10 @@ Support Chromium Browsers and Firefox.
 - Vibrant ink
 
 ## Installation
+
+- For Google Chrome
+
+  [ <img src="https://img.shields.io/badge/Google_chrome-red?style=for-the-badge&logo=Google-chrome&logoColor=white" /> ](https://chrome.google.com/webstore/detail/meagmbmaaljhgdcglcmflnnglpokldcj)
 
 - For Microsoft Edge Chromium
 

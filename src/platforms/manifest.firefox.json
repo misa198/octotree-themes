@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "Octotree Icon Theme",
+  "name": "Octotree Theme",
   "author": "misa198",
   "homepage_url": "https://github.com/misa198/octotree-theme",
   "background": {
@@ -25,13 +25,7 @@
   },
   "content_security_policy": "script-src 'self'; object-src 'self'",
   "web_accessible_resources": ["*.woff2"],
-  "permissions": [
-    "contextMenus",
-    "storage",
-    "activeTab",
-    "https://github.com/*",
-    "tabs"
-  ],
+  "permissions": ["storage", "activeTab", "tabs"],
   "optional_permissions": ["http://*/*", "https://*/*"],
   "browser_specific_settings": {
     "gecko": {

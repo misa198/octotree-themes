@@ -28,10 +28,9 @@
       "matches": ["<all_urls>"]
     }
   ],
-  "permissions": ["contextMenus", "storage", "activeTab", "tabs"],
+  "permissions": ["storage", "activeTab", "tabs"],
   "action": {
     "default_icon": "icons/icon64-disabled.png",
     "default_popup": "popup-disabled.html"
-  },
-  "host_permissions": ["https://github.com/*"]
+  }
 }
