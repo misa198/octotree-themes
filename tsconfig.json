@@ -16,12 +16,7 @@
     "sourceMap": false
   },
   "include": [
-    "src/scripts/*.ts",
-    "src/scripts/constants/keys.ts",
-    "src/scripts/constants/colorThemes.ts",
-    "src/scripts/utils/detectBrowser.ts",
-    "src/scripts/popup.ts",
-    "src/scripts/utils/storage.ts"
+    "src/scripts/**/*.ts",
   ],
   "exclude": ["node_modules", "build"]
 }

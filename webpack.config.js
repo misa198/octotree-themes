@@ -1,8 +1,9 @@
 const webpack = require('webpack');
 const path = require('path');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const WriteFilePlugin = require('write-file-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const HtmlMinimizerPlugin = require('html-minimizer-webpack-plugin');
 
 const fileExtensions = [
   'jpg',
@@ -18,6 +19,7 @@ const fileExtensions = [
 ];
 
 const options = {
+  mode: 'production',
   entry: {
     background: path.join(__dirname, 'src', 'scripts', 'background.ts'),
     popup: path.join(__dirname, 'src', 'scripts', 'popup.ts'),
@@ -33,14 +35,13 @@ const options = {
   module: {
     rules: [
       {
-        test: /\.ts$/,
+        test: /\.ts?$/,
         use: 'ts-loader',
         exclude: /node_modules/,
       },
       {
-        test: /\.(scss|css)$/,
+        test: /\.s[ac]ss$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
-        exclude: /node_modules/,
       },
       {
         test: new RegExp(`.(${fileExtensions.join('|')})$`),
@@ -52,7 +53,7 @@ const options = {
     new webpack.DefinePlugin({
       'process.env.PLATFORM': JSON.stringify(process.env.PLATFORM),
     }),
-    new CopyWebpackPlugin({
+    new CopyPlugin({
       patterns: [
         {
           from: `src/platforms/manifest.${process.env.PLATFORM}.json`,
@@ -67,30 +68,27 @@ const options = {
             ),
         },
         {
-          from: 'src/icons',
-          to: 'icons',
+          from: path.join(__dirname, 'src', 'icons/*.png'),
+          to: 'icons/[name][ext]',
         },
         {
-          from: 'src/popup.html',
-          to: '',
-        },
-        {
-          from: 'src/popup-disabled.html',
-          to: '',
+          from: path.join(__dirname, 'src', '*.html'),
+          to: '[name].html',
         },
       ],
     }),
-    new WriteFilePlugin(),
-    new MiniCssExtractPlugin({ filename: '[name].css' }),
+    new HtmlMinimizerPlugin(),
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+    }),
+    new webpack.LoaderOptionsPlugin({
+      minimize: true,
+      debug: false,
+    }),
   ],
+  optimization: {
+    minimizer: [new CssMinimizerPlugin()],
+  },
 };
-
-options.mode = 'production';
-options.plugins.push(
-  new webpack.LoaderOptionsPlugin({
-    minimize: true,
-    debug: false,
-  })
-);
 
 module.exports = options;
