@@ -49,14 +49,15 @@ function onOctotreeCheckboxChange() {
 }
 
 function reloadCurrentTab() {
-  const code = 'window.location.reload();';
   if (browserName === 'chrome') {
-    chrome.tabs.getSelected(function (tab) {
-      chrome.tabs.executeScript(tab.id as number, { code });
+    chrome.tabs.query({ active: true }, (tabs) => {
+      chrome.tabs.reload(tabs[0].id as number);
     });
   } else {
     browser.tabs.query({ currentWindow: true, active: true }).then((tabs) => {
-      browser.tabs.executeScript(tabs[0].id as number, { code });
+      browser.tabs.executeScript(tabs[0].id as number, {
+        code: 'window.location.reload();',
+      });
     });
   }
   buttonSession.classList.add('hide');
