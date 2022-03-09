@@ -5,19 +5,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const HtmlMinimizerPlugin = require('html-minimizer-webpack-plugin');
 
-const fileExtensions = [
-  'jpg',
-  'jpeg',
-  'png',
-  'gif',
-  'eot',
-  'otf',
-  'svg',
-  'ttf',
-  'woff',
-  'woff2',
-];
-
 const options = {
   mode: 'production',
   entry: {
@@ -42,10 +29,6 @@ const options = {
       {
         test: /\.s[ac]ss$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
-      },
-      {
-        test: new RegExp(`.(${fileExtensions.join('|')})$`),
-        use: 'file-loader?name=/fonts/[name].[ext]',
       },
     ],
   },
@@ -74,6 +57,10 @@ const options = {
         {
           from: path.join(__dirname, 'src', '*.html'),
           to: '[name].html',
+        },
+        {
+          from: path.join(__dirname, 'node_modules', 'file-icons-js', 'fonts'),
+          to: 'fonts/[name][ext]',
         },
       ],
     }),
