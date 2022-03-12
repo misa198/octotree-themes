@@ -16,7 +16,8 @@
     "pre-commit": "lint-staged",
     "build:firefox": "rm -rf build/firefox && cross-env PLATFORM=firefox webpack --config webpack.config.js",
     "build:chromium": "rm -rf build/chromium && cross-env PLATFORM=chromium webpack --config webpack.config.js",
-    "build": "npm run build:chromium && npm run build:firefox",
+    "build:chromium-v2": "rm -rf build/chromium-v2 && cross-env PLATFORM=chromium-v2 webpack --config webpack.config.js",
+    "build": "npm run build:chromium && npm run build:firefox && npm run build:chromium-v2",
     "lint": "eslint src/**/*.ts",
     "lint:fix": "npm run lint -- --fix",
     "generate-code-themes": "node tools/generate.js && prettier --write src/scripts/constants"
