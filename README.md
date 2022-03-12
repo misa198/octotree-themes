@@ -6,20 +6,20 @@ Octotree Theme
 </h1>
 <p align="center">
   <a href="https://chrome.google.com/webstore/detail/meagmbmaaljhgdcglcmflnnglpokldcj">
-    <img src="https://img.shields.io/badge/Google%20Chrome%20Store-Download-red" />
+    <img src="https://img.shields.io/badge/Google_chrome-red?style=for-the-badge&logo=Google-chrome&logoColor=white" />
   <a href="https://microsoftedge.microsoft.com/addons/detail/cajppifioefokdcmnbehbkiddjnpmadb">
-    <img src="https://img.shields.io/badge/Microsoft%20Edge%20Store-Download-blue" />
+    <img src="https://img.shields.io/badge/Microsoft_Edge-0078D7?style=for-the-badge&logo=Microsoft-edge&logoColor=white" />
   </a>
   <a href="https://addons.mozilla.org/vi/firefox/addon/octotree-theme/">
-    <img src="https://img.shields.io/badge/Firefox%20Addons-Download-orange" />
+    <img src="https://img.shields.io/badge/Firefox_Browser-FF7139?style=for-the-badge&logo=Firefox-Browser&logoColor=white" />
   </a>
 </p>
 <p align="center">
   <a href="https://github.com/misa198/octotree-theme/releases">
-    <img src="https://img.shields.io/github/v/release/misa198/octotree-theme" />
+    <img src="https://img.shields.io/github/v/release/misa198/octotree-theme?style=for-the-badge" />
   </a>
   <a href="https://www.octotree.io/download">
-    <img src="https://img.shields.io/badge/install-Octotree-orange" />
+    <img src="https://img.shields.io/badge/install-Octotree-orange?style=for-the-badge" />
   </a>
 <p>
 
@@ -70,18 +70,6 @@ Support Chromium Browsers and Firefox.
 
 ## Installation
 
-- For Google Chrome
-
-  [ <img src="https://img.shields.io/badge/Google_chrome-red?style=for-the-badge&logo=Google-chrome&logoColor=white" /> ](https://chrome.google.com/webstore/detail/meagmbmaaljhgdcglcmflnnglpokldcj)
-
-- For Microsoft Edge Chromium
-
-  [ <img src="https://img.shields.io/badge/Microsoft_Edge-0078D7?style=for-the-badge&logo=Microsoft-edge&logoColor=white" /> ](https://microsoftedge.microsoft.com/addons/detail/cajppifioefokdcmnbehbkiddjnpmadb)
-
-- For Firefox
-
-  [ <img src="https://img.shields.io/badge/Firefox_Browser-FF7139?style=for-the-badge&logo=Firefox-Browser&logoColor=white" /> ](https://addons.mozilla.org/vi/firefox/addon/octotree-theme/)
-
 - For other Chromium browser:
   <br>
   Download from <a href="https://github.com/misa198/octotree-theme/releases">
@@ -95,3 +83,7 @@ Support Chromium Browsers and Firefox.
 ## License
 
 [BSD 2-Clause "Simplified" License](./LICENSE)
+
+## Support me
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/gbraad)
