@@ -79,7 +79,7 @@ get([KEYS.MISA198_CODE_COLOR_THEME], (result) => {
     );
     if (foundTheme) {
       select.value = foundTheme;
-    }
+    } else select.value = 'default';
   }
 });
 

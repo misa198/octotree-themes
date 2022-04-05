@@ -179,27 +179,27 @@ const init = async () => {
 
 // ============ Code color theme ===================
 
-const applyColorTheme = async () => {
-  const changeTheme = (themeName?: string) => {
-    const body = document.querySelector('body') as HTMLElement;
-    const { classList } = body;
-    const currentThemeClass = Array.from(classList).find((className) =>
-      className.startsWith(`${colorThemeDeaultClass}`)
+const changeTheme = (themeName?: string) => {
+  const body = document.querySelector('body') as HTMLElement;
+  const { classList } = body;
+  const currentThemeClass = Array.from(classList).find((className) =>
+    className.startsWith(`${colorThemeDeaultClass}`)
+  );
+  if (currentThemeClass) {
+    body.classList.remove(currentThemeClass);
+  }
+  if (themeName) {
+    const foundTheme = colorThemes.find(
+      (colorTheme) => colorTheme === themeName
     );
-    if (currentThemeClass) {
-      body.classList.remove(currentThemeClass);
-    }
-    if (themeName) {
-      const foundTheme = colorThemes.find(
-        (colorTheme) => colorTheme === themeName
-      );
-      if (foundTheme) {
-        classList.add(`${colorThemeDeaultClass}-${foundTheme}`);
-        set({ [KEYS.MISA198_CODE_COLOR_THEME]: foundTheme });
-      }
-    }
-  };
+    if (foundTheme) {
+      classList.add(`${colorThemeDeaultClass}-${foundTheme}`);
+      set({ [KEYS.MISA198_CODE_COLOR_THEME]: foundTheme });
+    } else set({ [KEYS.MISA198_CODE_COLOR_THEME]: 'default' });
+  }
+};
 
+const applyColorTheme = async () => {
   observe('body', {
     add() {
       get([KEYS.MISA198_CODE_COLOR_THEME], (result) => {
