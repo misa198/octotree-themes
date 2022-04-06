@@ -37,7 +37,9 @@ Support Chromium Browsers and Firefox.
   <img src="./docs/screenshot-2.png" />
 </p>
 
-## Themes
+## 
+<details><summary>Themes</summary>
+<p>
 
 - Default (Default Github theme)
 - Ambiance
@@ -67,6 +69,9 @@ Support Chromium Browsers and Firefox.
 - Tomorrow night
 - Twilight
 - Vibrant ink
+
+</p>
+</details>
 
 ## Installation
 
