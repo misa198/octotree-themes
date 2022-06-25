@@ -5,7 +5,7 @@
   background: var(--color-header-bg) !important;
 }
 
-.misa198-octotree-sidebar {
+.ot-octotree-sidebar {
   background-color: var(--color-canvas-default) !important;
 }
 
@@ -47,8 +47,4 @@
 .dark {
   filter: brightness(125%) contrast(150%) drop-shadow(0 0 0 #fff)
     drop-shadow(1px 1px 1px #444);
-}
-
-.misa198-octotree-icon {
-  margin-right: 3px;
 }

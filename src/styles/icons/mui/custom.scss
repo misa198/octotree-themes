@@ -1,0 +1,18 @@
+.mui-icon {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 16px;
+}
+
+.octotree-mui-icon-provider > i {
+  opacity: 0;
+}
+
+.jstree-node.jstree-leaf:hover .mui-icon {
+  display: none;
+}
+
+.jstree-node.jstree-leaf:hover i {
+  opacity: 1;
+}

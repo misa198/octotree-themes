@@ -103,26 +103,39 @@ const replaceOctotreeIcon = ({
     ? getGitHubMobileFilename(filenameDom)
     : filenameDom.innerText.trim();
 
-  let isDirectory = false;
+  let isDir = false;
   if (iconDom) {
     if (
       iconDom.parentElement!.getAttribute('aria-expanded') === 'false' ||
       iconDom.parentElement!.getAttribute('aria-expanded') === 'true'
     ) {
-      isDirectory = true;
+      isDir = true;
     }
   }
 
-  const className: string | null = fileIcons.getClassWithColor(filename);
-
-  if (className && !isDirectory) {
-    const icon = document.createElement('i');
-    icon.className = `icon octicon-file misa198-octotree-icon ${iconDom?.classList.value} ${className}`;
-    icon.setAttribute('role', 'presentation');
-    icon.setAttribute('rel', 'blob octotree-default-icon octotree-icon-file');
-
+  if (iconTheme === IconThemes.MUI) {
     if (iconDom) {
-      iconDom.parentNode!.replaceChild(icon, iconDom as HTMLElement);
+      let icon;
+      if (isDir) icon = getMUIDirIcon(filename);
+      else icon = getMuiFileIcon(filename);
+      if (icon) {
+        const img = document.createElement('img');
+        img.classList.add('mui-icon');
+        img.src = icon;
+        iconDom.parentElement?.classList.add('octotree-mui-icon-provider');
+        iconDom.parentNode?.appendChild(img);
+      }
+    }
+  } else {
+    const className: string | null = fileIcons.getClassWithColor(filename);
+    if (className && !isDir) {
+      const icon = document.createElement('i');
+      icon.className = `icon octicon-file ot-octotree-icon ${iconDom?.classList.value} ${className}`;
+      icon.setAttribute('role', 'presentation');
+      icon.setAttribute('rel', 'blob octotree-default-icon octotree-icon-file');
+      if (iconDom) {
+        iconDom.parentNode!.replaceChild(icon, iconDom as HTMLElement);
+      }
     }
   }
 };
@@ -166,7 +179,7 @@ const init = async () => {
               if (element) {
                 select(
                   '.octotree-sidebar.octotree-github-sidebar.ui-resizable'
-                )?.classList.add('misa198-octotree-sidebar');
+                )?.classList.add('ot-octotree-sidebar');
               }
             },
           });
@@ -174,10 +187,7 @@ const init = async () => {
           observe('.jstree-node', {
             add(element) {
               const filenameDom = select('.jstree-anchor > div', element);
-
-              if (!filenameDom) {
-                return;
-              }
+              if (!filenameDom) return;
 
               replaceOctotreeIcon({
                 iconDom: select(
