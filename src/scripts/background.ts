@@ -6,19 +6,31 @@ const urlRegex = new RegExp(
   /^https:\/\/(gist.)?github.com\/[(a-z)(A-Z)(0-9)_-]+\/[(a-z)(A-Z)(0-9)_-]+(\/?)((\/.+)?)(\?(.+))?$/
 );
 
-get([Keys.OT_GITHUB, Keys.OT_OCTOTREE, Keys.OT_CODE_ICONS_THEME], (result) => {
-  if (result[Keys.OT_GITHUB] === undefined) {
-    set({ [Keys.OT_GITHUB]: true });
-  }
+get(
+  [
+    Keys.OT_GITHUB,
+    Keys.OT_OCTOTREE,
+    Keys.OT_CODE_ICONS_THEME,
+    Keys.OT_GITHUB_DIFF,
+  ],
+  (result) => {
+    if (result[Keys.OT_GITHUB] === undefined) {
+      set({ [Keys.OT_GITHUB]: true });
+    }
 
-  if (result[Keys.OT_OCTOTREE] === undefined) {
-    set({ [Keys.OT_OCTOTREE]: true });
-  }
+    if (result[Keys.OT_OCTOTREE] === undefined) {
+      set({ [Keys.OT_OCTOTREE]: true });
+    }
 
-  if (!Object.values(IconThemes).includes(result[Keys.OT_CODE_ICONS_THEME])) {
-    set({ [Keys.OT_CODE_ICONS_THEME]: IconThemes.MUI });
+    if (result[Keys.OT_GITHUB_DIFF] === undefined) {
+      set({ [Keys.OT_GITHUB_DIFF]: true });
+    }
+
+    if (!Object.values(IconThemes).includes(result[Keys.OT_CODE_ICONS_THEME])) {
+      set({ [Keys.OT_CODE_ICONS_THEME]: IconThemes.MUI });
+    }
   }
-});
+);
 
 const browserName = detectBrowser();
 const browserAction =
