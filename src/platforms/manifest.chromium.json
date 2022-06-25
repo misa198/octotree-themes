@@ -24,7 +24,7 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["*.woff2"],
+      "resources": ["*.woff2", "assets/**/*"],
       "matches": ["<all_urls>"]
     }
   ],

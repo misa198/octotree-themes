@@ -1,7 +1,7 @@
 import * as capitalize from 'capitalize';
 import { get, set } from './utils/storage';
 import { detectBrowser } from './utils/detectBrowser';
-import { KEYS } from './constants/keys';
+import { Keys } from './constants/keys';
 import { colorThemes } from './constants/colorThemes';
 import '../styles/popup.scss';
 
@@ -19,32 +19,30 @@ colorThemes.forEach((colorTheme) => {
 const browserName = detectBrowser();
 
 const githubCheckbox = document.getElementById(
-  KEYS.MISA198_GITHUB
+  Keys.OT_GITHUB
 ) as HTMLInputElement;
 const octotreeCheckbox = document.getElementById(
-  KEYS.MISA198_OCTOTREE
+  Keys.OT_OCTOTREE
 ) as HTMLInputElement;
-const buttonSession = document.getElementById(
-  KEYS.MISA198_RELOAD
-) as HTMLDivElement;
+const buttonSession = document.getElementById(Keys.OT_RELOAD) as HTMLDivElement;
 const refreshButton = document.getElementById(
   'refreshButton'
 ) as HTMLButtonElement;
 
-get([KEYS.MISA198_GITHUB, KEYS.MISA198_OCTOTREE], (result) => {
+get([Keys.OT_GITHUB, Keys.OT_OCTOTREE], (result) => {
   githubCheckbox.checked = Boolean(result.misa198Github);
   octotreeCheckbox.checked = Boolean(result.misa198Octotree);
 });
 
 function onGithubCheckboxChange() {
   buttonSession.classList.remove('hide');
-  set({ [KEYS.MISA198_GITHUB]: githubCheckbox.checked });
+  set({ [Keys.OT_GITHUB]: githubCheckbox.checked });
 }
 
 function onOctotreeCheckboxChange() {
   buttonSession.classList.remove('hide');
   set({
-    [KEYS.MISA198_OCTOTREE]: octotreeCheckbox.checked,
+    [Keys.OT_OCTOTREE]: octotreeCheckbox.checked,
   });
 }
 
@@ -68,12 +66,12 @@ octotreeCheckbox.addEventListener('click', onOctotreeCheckboxChange);
 refreshButton.addEventListener('click', reloadCurrentTab);
 
 // ============= Code color theme =============
-get([KEYS.MISA198_CODE_COLOR_THEME], (result) => {
+get([Keys.OT_CODE_COLOR_THEME], (result) => {
   const select = document.getElementById(
     'select-code-color-theme'
   ) as HTMLSelectElement;
   if (result) {
-    const themeName = result[KEYS.MISA198_CODE_COLOR_THEME];
+    const themeName = result[Keys.OT_CODE_COLOR_THEME];
     const foundTheme = colorThemes.find(
       (colorTheme) => colorTheme === themeName
     );
@@ -86,7 +84,7 @@ get([KEYS.MISA198_CODE_COLOR_THEME], (result) => {
 function onSelectCodeColorTheme(event: Event) {
   const message = {
     codeColorTheme: (event.target as HTMLSelectElement).value,
-    type: 'MISA198_CODE_COLOR_THEME',
+    type: 'OT_CODE_COLOR_THEME',
   };
   if (browserName === 'chrome') {
     chrome.tabs.query({}, (tabs) => {

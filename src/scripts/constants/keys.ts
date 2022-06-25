@@ -1,6 +1,7 @@
-export const KEYS = {
-  MISA198_OCTOTREE: 'misa198Octotree',
-  MISA198_GITHUB: 'misa198Github',
-  MISA198_RELOAD: 'misa198Reload',
-  MISA198_CODE_COLOR_THEME: 'misa198CodeColorTheme',
+export const Keys = {
+  OT_OCTOTREE: 'OT_OCTOTREE',
+  OT_GITHUB: 'OT_GITHUB',
+  OT_RELOAD: 'OT_RELOAD',
+  OT_CODE_COLOR_THEME: 'OT_CODE_COLOR_THEME',
+  OT_CODE_ICON_THEME: 'OT_CODE_ICON_THEME',
 };

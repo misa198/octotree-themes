@@ -62,6 +62,10 @@ const options = {
           from: path.join(__dirname, 'node_modules', 'file-icons-js', 'fonts'),
           to: 'fonts/[name][ext]',
         },
+        {
+          from: path.join(__dirname, 'src', 'assets'),
+          to: 'assets',
+        },
       ],
     }),
     new HtmlMinimizerPlugin(),

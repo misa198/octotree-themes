@@ -3,17 +3,19 @@ import * as fileIcons from 'file-icons-js';
 import mobile from 'is-mobile';
 import select from 'select-dom';
 import { observe } from 'selector-observer';
+import { colorThemeDeaultClass, colorThemes } from './constants/colorThemes';
+import { Keys } from './constants/keys';
+import { getMUIDirIcon, getMuiFileIcon } from './libs/mui';
 import { detectBrowser } from './utils/detectBrowser';
 import { get, set } from './utils/storage';
-import { KEYS } from './constants/keys';
-import { colorThemeDeaultClass, colorThemes } from './constants/colorThemes';
 // Content css
-import './constants/colorThemesScss';
-import '../styles/file-icon.scss';
-import '../styles/icons.scss';
+import '../styles/icons/icons.scss';
 import '../styles/octotree.scss';
 import '../styles/themes/code.scss';
 import '../styles/themes/gist.scss';
+import './constants/colorThemesScss';
+import { getResourceURL } from './utils/getResourceURL';
+import { IconThemes } from './constants/iconThemes';
 
 // ============ Icon theme ===================
 
@@ -23,19 +25,19 @@ const fonts = [
   { name: 'Devicons', path: 'fonts/devopicons.woff2' },
   { name: 'file-icons', path: 'fonts/file-icons.woff2' },
   { name: 'octicons', path: 'fonts/octicons.woff2' },
+  { name: 'mui-icons', path: 'fonts/mui-icons.ttf' },
 ];
 
 let octotree = false;
 let github = false;
+let iconTheme = IconThemes.MUI;
 const browserName = detectBrowser();
 
 const loadFonts = () => {
   for (const font of fonts) {
     const fontFace = new FontFace(
       font.name,
-      `url("${(browserName === 'chrome' ? chrome : browser).runtime.getURL(
-        font.path
-      )}") format("woff2")`,
+      `url("${getResourceURL(font.path)}") format("woff2")`,
       {
         style: 'normal',
         weight: 'normal',
@@ -56,29 +58,36 @@ const getGitHubMobileFilename = (filenameDom: HTMLElement) =>
 
 const isMobile = mobile();
 
-const replaceIcon = ({
+const replaceGithubIcon = ({
   iconDom,
   filenameDom,
+  isDir,
 }: {
   iconDom: HTMLElement | null;
   filenameDom: HTMLElement;
+  isDir: boolean;
 }) => {
-  const filename = isMobile
+  const fileName = isMobile
     ? getGitHubMobileFilename(filenameDom)
     : filenameDom.innerText.trim();
+  if (iconTheme === IconThemes.MUI) {
+    let icon;
+    if (!isDir) icon = getMuiFileIcon(fileName);
+    else icon = getMUIDirIcon(fileName);
 
-  let isDirectory = false;
-  if (iconDom) {
-    isDirectory = iconDom.classList.contains('octicon-file-directory');
-  }
-
-  const className: string | null = fileIcons.getClassWithColor(filename);
-
-  if (className && !isDirectory) {
-    const icon = document.createElement('span');
-    icon.className = `icon octicon-file ${className}`;
-    if (iconDom) {
-      iconDom.parentNode!.replaceChild(icon, iconDom as HTMLElement);
+    if (iconDom && icon) {
+      const img = document.createElement('img');
+      img.src = icon;
+      iconDom.parentNode?.replaceChild(img, iconDom as HTMLElement);
+    }
+  } else {
+    const className: string | null = fileIcons.getClassWithColor(fileName);
+    if (className && !isDir) {
+      const icon = document.createElement('span');
+      icon.className = `icon octicon-file ${className}`;
+      if (iconDom) {
+        iconDom.parentNode!.replaceChild(icon, iconDom as HTMLElement);
+      }
     }
   }
 };
@@ -119,21 +128,29 @@ const replaceOctotreeIcon = ({
 };
 
 const init = async () => {
-  loadFonts();
+  if (iconTheme === IconThemes.ATOM) {
+    loadFonts();
+  }
   await domLoaded;
 
   if (github) {
     observe('.js-navigation-container > .js-navigation-item', {
       add(element) {
         const filenameDom = select('div[role="rowheader"] > span', element);
+        if (!filenameDom) return;
+        const dirIconDom = select(
+          'svg[aria-label=Directory]',
+          element
+        ) as HTMLElement;
+        const fileIconDom = select(
+          'svg[aria-label=File]',
+          element
+        ) as HTMLElement;
 
-        if (!filenameDom) {
-          return;
-        }
-
-        replaceIcon({
-          iconDom: select('.octicon-file', element) as HTMLElement,
+        replaceGithubIcon({
+          iconDom: dirIconDom || fileIconDom,
           filenameDom,
+          isDir: Boolean(dirIconDom),
         });
       },
     });
@@ -194,17 +211,17 @@ const changeTheme = (themeName?: string) => {
     );
     if (foundTheme) {
       classList.add(`${colorThemeDeaultClass}-${foundTheme}`);
-      set({ [KEYS.MISA198_CODE_COLOR_THEME]: foundTheme });
-    } else set({ [KEYS.MISA198_CODE_COLOR_THEME]: 'default' });
+      set({ [Keys.OT_CODE_COLOR_THEME]: foundTheme });
+    } else set({ [Keys.OT_CODE_COLOR_THEME]: 'default' });
   }
 };
 
 const applyColorTheme = async () => {
   observe('body', {
     add() {
-      get([KEYS.MISA198_CODE_COLOR_THEME], (result) => {
+      get([Keys.OT_CODE_COLOR_THEME], (result) => {
         if (result) {
-          const themeName = result[KEYS.MISA198_CODE_COLOR_THEME];
+          const themeName = result[Keys.OT_CODE_COLOR_THEME];
           changeTheme(themeName);
         }
       });
@@ -215,7 +232,7 @@ const applyColorTheme = async () => {
     (request) => {
       try {
         const message = JSON.parse(request.message);
-        if (message.type === 'MISA198_CODE_COLOR_THEME') {
+        if (message.type === 'OT_CODE_COLOR_THEME') {
           changeTheme(message.codeColorTheme);
         }
       } catch (e) {}
@@ -224,9 +241,10 @@ const applyColorTheme = async () => {
 };
 
 (() => {
-  get([KEYS.MISA198_GITHUB, KEYS.MISA198_OCTOTREE], (result) => {
-    github = result[KEYS.MISA198_GITHUB] === true;
-    octotree = result[KEYS.MISA198_OCTOTREE] === true;
+  get([Keys.OT_GITHUB, Keys.OT_OCTOTREE, Keys.OT_CODE_ICON_THEME], (result) => {
+    github = result[Keys.OT_GITHUB] === true;
+    octotree = result[Keys.OT_OCTOTREE] === true;
+    iconTheme = result[Keys.OT_CODE_ICON_THEME];
   });
   init();
   applyColorTheme();
