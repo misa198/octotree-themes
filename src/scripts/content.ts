@@ -49,13 +49,8 @@ const loadFonts = () => {
   for (const font of fonts) {
     const fontFace = new FontFace(
       font.name,
-      `url("${getResourceURL(font.path)}") format("woff2")`,
-      {
-        style: 'normal',
-        weight: 'normal',
-      }
+      `url("${getResourceURL(font.path)}")`
     );
-
     fontFace
       .load()
       .then((loadedFontFace) => document.fonts.add(loadedFontFace));
@@ -149,14 +144,15 @@ const replaceGithubDiffIcon = ({
       }
     }
   } else {
-    // const className: string | null = fileIcons.getClassWithColor(fileName);
-    // if (className && !isDir) {
-    //   const icon = document.createElement('span');
-    //   icon.className = `icon octicon-file ${className}`;
-    //   if (iconDom) {
-    //     iconDom.parentNode!.replaceChild(icon, iconDom as HTMLElement);
-    //   }
-    // }
+    const className: string | null = fileIcons.getClassWithColor(fileName);
+    if (className && !isDir) {
+      console.log(className);
+      const icon = document.createElement('span');
+      icon.className = `icon octicon-file ${className}`;
+      if (iconDom) {
+        iconDom.parentNode!.replaceChild(icon, iconDom as HTMLElement);
+      }
+    }
   }
 };
 
@@ -229,9 +225,7 @@ const replaceOctotreeIcon = ({
 };
 
 const init = async () => {
-  if (iconTheme === IconThemes.ATOM) {
-    loadFonts();
-  }
+  if (iconTheme === IconThemes.ATOM) loadFonts();
   await domLoaded;
 
   if (github) {
@@ -364,21 +358,20 @@ const applyColorTheme = async () => {
   );
 };
 
-(() => {
-  get(
-    [
-      Keys.OT_GITHUB,
-      Keys.OT_OCTOTREE,
-      Keys.OT_CODE_ICONS_THEME,
-      Keys.OT_GITHUB_DIFF,
-    ],
-    (result) => {
-      github = result[Keys.OT_GITHUB] === true;
-      octotree = result[Keys.OT_OCTOTREE] === true;
-      githubDiff = result[Keys.OT_GITHUB_DIFF] === true;
-      iconTheme = result[Keys.OT_CODE_ICONS_THEME];
-    }
-  );
-  init();
-  applyColorTheme();
-})();
+get(
+  [
+    Keys.OT_GITHUB,
+    Keys.OT_OCTOTREE,
+    Keys.OT_CODE_ICONS_THEME,
+    Keys.OT_GITHUB_DIFF,
+  ],
+  (result) => {
+    github = result[Keys.OT_GITHUB] === true;
+    octotree = result[Keys.OT_OCTOTREE] === true;
+    githubDiff = result[Keys.OT_GITHUB_DIFF] === true;
+    iconTheme = result[Keys.OT_CODE_ICONS_THEME];
+
+    init();
+    applyColorTheme();
+  }
+);

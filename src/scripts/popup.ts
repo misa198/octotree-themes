@@ -34,6 +34,9 @@ const browserName = detectBrowser();
 const githubCheckbox = document.getElementById(
   Keys.OT_GITHUB
 ) as HTMLInputElement;
+const githubDiffCheckbox = document.getElementById(
+  Keys.OT_GITHUB_DIFF
+) as HTMLInputElement;
 const octotreeCheckbox = document.getElementById(
   Keys.OT_OCTOTREE
 ) as HTMLInputElement;
@@ -44,14 +47,20 @@ const refreshButton = document.getElementById(
   Keys.OT_RELOAD
 ) as HTMLButtonElement;
 
-get([Keys.OT_GITHUB, Keys.OT_OCTOTREE], (result) => {
+get([Keys.OT_GITHUB, Keys.OT_GITHUB_DIFF, Keys.OT_OCTOTREE], (result) => {
   githubCheckbox.checked = Boolean(result[Keys.OT_GITHUB]);
+  githubDiffCheckbox.checked = Boolean(result[Keys.OT_GITHUB_DIFF]);
   octotreeCheckbox.checked = Boolean(result[Keys.OT_OCTOTREE]);
 });
 
 function onGithubCheckboxChange() {
   buttonSession.classList.remove('hide');
   set({ [Keys.OT_GITHUB]: githubCheckbox.checked });
+}
+
+function onGithubDiffCheckboxChange() {
+  buttonSession.classList.remove('hide');
+  set({ [Keys.OT_GITHUB_DIFF]: githubDiffCheckbox.checked });
 }
 
 function onOctotreeCheckboxChange() {
@@ -77,6 +86,7 @@ function reloadCurrentTab() {
 }
 
 githubCheckbox.addEventListener('click', onGithubCheckboxChange);
+githubDiffCheckbox.addEventListener('click', onGithubDiffCheckboxChange);
 octotreeCheckbox.addEventListener('click', onOctotreeCheckboxChange);
 refreshButton.addEventListener('click', reloadCurrentTab);
 
