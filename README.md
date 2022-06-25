@@ -6,12 +6,13 @@ Octotree Theme
 </h1>
 <p align="center">
   <a href="https://chrome.google.com/webstore/detail/meagmbmaaljhgdcglcmflnnglpokldcj">
-    <img src="https://img.shields.io/badge/Google_chrome-red?style=for-the-badge&logo=Google-chrome&logoColor=white" />
-  <a href="https://microsoftedge.microsoft.com/addons/detail/cajppifioefokdcmnbehbkiddjnpmadb">
-    <img src="https://img.shields.io/badge/Microsoft_Edge-0078D7?style=for-the-badge&logo=Microsoft-edge&logoColor=white" />
+    <img src="./docs/chrome-store.png" width="30%" />
   </a>
   <a href="https://addons.mozilla.org/vi/firefox/addon/octotree-theme/">
-    <img src="https://img.shields.io/badge/Firefox_Browser-FF7139?style=for-the-badge&logo=Firefox-Browser&logoColor=white" />
+    <img src="./docs/firefox-add-ons.png"width="30%" />
+  </a>
+  <a href="https://microsoftedge.microsoft.com/addons/detail/cajppifioefokdcmnbehbkiddjnpmadb" >
+    <img src="docs/edge-addons.png"width="30%" />
   </a>
 </p>
 <p align="center">
@@ -39,37 +40,66 @@ Support Chromium Browsers and Firefox.
 
 ## Themes
 
-- Default (Default Github theme)
-- Ambiance
-- Ayu mirage
-- Chaos
-- Clouds midnight
-- Cobalt
-- Dracula
-- Github dark
-- Idle fingers
-- Kr theme
-- Merbivore soft
-- Merbivore
-- Mono industrial clear
-- Mono industrial
-- Monokai spacegray eighties
-- Monokai
-- Obsidian
-- One dark
-- Pastel on dark
-- Railscasts
-- Solarized dark
-- Terminal
-- Tomorrow night blue
-- Tomorrow night bright
-- Tomorrow night eighties
-- Tomorrow night
-- Twilight
-- Vibrant ink
+## Icons themes
+
+#### Material icons theme
+
+<details>
+  <summary>View details</summary>
+  <br />
+
+  <img src="./docs/mui-file-icons.png" />
+  <img src="./docs/mui-folder-icons.png" />
+</details>
+
+#### Atom icons theme
+
+<details>
+  <summary>View details</summary>
+  <br />
+
+  <img src="./docs/atom-file-icons.png" />
+</details>
+
+### Code color thems
+
+<details>
+  <summary>View details</summary>
+  <br />
+  
+  - Default (Default Github theme)
+  - Ambiance
+  - Ayu mirage
+  - Chaos
+  - Clouds midnight
+  - Cobalt
+  - Dracula
+  - Github dark
+  - Idle fingers
+  - Kr theme
+  - Merbivore soft
+  - Merbivore
+  - Mono industrial clear
+  - Mono industrial
+  - Monokai spacegray eighties
+  - Monokai
+  - Obsidian
+  - One dark
+  - Pastel on dark
+  - Railscasts
+  - Solarized dark
+  - Terminal
+  - Tomorrow night blue
+  - Tomorrow night bright
+  - Tomorrow night eighties
+  - Tomorrow night
+  - Twilight
+  - Vibrant ink
+</details>
 
 ## Installation
 
+- Click the icon on the top of the page that matches your browser.
 - For other Chromium browser:
   <br>
   Download from <a href="https://github.com/misa198/octotree-theme/releases">
@@ -79,6 +109,8 @@ Support Chromium Browsers and Firefox.
 ## Credits
 
 - [@StylishThemes](https://github.com/StylishThemes) for [GitHub Dark](https://github.com/StylishThemes/GitHub-Dark/)
+
+- [@PKief](https://github.com/PKief) for [Material Icon Theme](https://github.com/PKief/vscode-material-icon-theme)
 
 ## License
 
