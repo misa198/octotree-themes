@@ -5,7 +5,11 @@ import select from 'select-dom';
 import { observe } from 'selector-observer';
 import { colorThemeDeaultClass, colorThemes } from './constants/colorThemes';
 import { Keys } from './constants/keys';
-import { getMUIDirIcon, getMuiFileIcon } from './libs/mui';
+import {
+  getMuiDirExpandedIcon,
+  getMUIDirIcon,
+  getMuiFileIcon,
+} from './libs/mui';
 import { detectBrowser } from './utils/detectBrowser';
 import { get, set } from './utils/storage';
 // Content css
@@ -32,6 +36,10 @@ let octotree = false;
 let github = false;
 let iconTheme = IconThemes.MUI;
 const browserName = detectBrowser();
+const githubMuiIconClass = 'github-mui-icon';
+const muiIconClass = 'mui-icon';
+const muiDirClass = 'mui-icon-dir';
+const muiDirExpandedClass = 'mui-icon-dir-expanded';
 
 const loadFonts = () => {
   for (const font of fonts) {
@@ -74,9 +82,9 @@ const replaceGithubIcon = ({
     let icon;
     if (!isDir) icon = getMuiFileIcon(fileName);
     else icon = getMUIDirIcon(fileName);
-
-    if (iconDom && icon) {
+    if (iconDom) {
       const img = document.createElement('img');
+      img.classList.add(githubMuiIconClass);
       img.src = icon;
       iconDom.parentNode?.replaceChild(img, iconDom as HTMLElement);
     }
@@ -115,15 +123,36 @@ const replaceOctotreeIcon = ({
 
   if (iconTheme === IconThemes.MUI) {
     if (iconDom) {
-      let icon;
-      if (isDir) icon = getMUIDirIcon(filename);
-      else icon = getMuiFileIcon(filename);
-      if (icon) {
-        const img = document.createElement('img');
-        img.classList.add('mui-icon');
-        img.src = icon;
-        iconDom.parentElement?.classList.add('octotree-mui-icon-provider');
-        iconDom.parentNode?.appendChild(img);
+      const foundIcon =
+        iconDom.parentElement?.getElementsByClassName(muiIconClass);
+      if (!foundIcon || foundIcon.length === 0) {
+        if (isDir) {
+          const [icon, expandedIcon] = [
+            getMUIDirIcon(filename),
+            getMuiDirExpandedIcon(filename),
+          ];
+
+          const img = document.createElement('img');
+          img.classList.add(muiIconClass);
+          img.classList.add(muiDirClass);
+          img.src = icon;
+          const expandedImg = document.createElement('img');
+          expandedImg.classList.add(muiIconClass);
+          expandedImg.classList.add(muiDirExpandedClass);
+          expandedImg.src = expandedIcon;
+          iconDom.parentElement?.classList.add('octotree-mui-icon-provider');
+          iconDom.parentNode?.appendChild(img);
+          iconDom.parentNode?.appendChild(expandedImg);
+        } else {
+          const icon = getMuiFileIcon(filename);
+          if (icon) {
+            const img = document.createElement('img');
+            img.classList.add(muiIconClass);
+            img.src = icon;
+            iconDom.parentElement?.classList.add('octotree-mui-icon-provider');
+            iconDom.parentNode?.appendChild(img);
+          }
+        }
       }
     }
   } else {

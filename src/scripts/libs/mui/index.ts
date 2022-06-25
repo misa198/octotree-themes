@@ -1,7 +1,7 @@
 import { getResourceURL } from '../../utils/getResourceURL';
 import { extentions } from './extensions';
 import { files } from './files';
-import { folders } from './folders';
+import { folders, foldersExpanded } from './folders';
 import { icons } from './icons';
 
 export const getMuiFileIcon = (fileName: string) => {
@@ -17,6 +17,11 @@ export const getMuiFileIcon = (fileName: string) => {
 };
 
 export const getMUIDirIcon = (dirName: string) => {
-  const dirIcon = folders[dirName];
-  return dirIcon ? getResourceURL(`assets/mui/${dirIcon}`) : null;
+  const dirIcon = folders[dirName] || 'folder';
+  return getResourceURL(`assets/mui/${icons[dirIcon]}`);
+};
+
+export const getMuiDirExpandedIcon = (dirName: string) => {
+  const dirIcon = foldersExpanded[dirName] || 'folder-open';
+  return getResourceURL(`assets/mui/${icons[dirIcon]}`);
 };

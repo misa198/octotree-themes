@@ -37,6 +37,7 @@ export const extentions: {
   'YAML-tmLanguage': 'yaml',
   xml: 'xml',
   plist: 'xml',
+  'code-workspace': 'vscode',
   xsd: 'xml',
   dtd: 'xml',
   xsl: 'xml',

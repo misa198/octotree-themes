@@ -16,3 +16,15 @@
 .jstree-node.jstree-leaf:hover i {
   opacity: 1;
 }
+
+.jstree-node.jstree-closed > a > .mui-icon-dir-expanded {
+  display: none;
+}
+
+.jstree-node.jstree-open > a > .mui-icon-dir {
+  display: none;
+}
+
+.github-mui-icon {
+  width: 16px;
+}
