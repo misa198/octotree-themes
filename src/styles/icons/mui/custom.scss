@@ -1,7 +1,11 @@
-.mui-icon {
+.mui-icon-octotree {
   position: absolute;
   top: 4px;
   left: 0;
+  width: 16px;
+}
+
+.mui-icon-github-diff {
   width: 16px;
 }
 
@@ -9,7 +13,7 @@
   opacity: 0;
 }
 
-.jstree-node.jstree-leaf:hover .mui-icon {
+.jstree-node.jstree-leaf:hover .mui-icon-octotree {
   display: none;
 }
 
@@ -22,6 +26,20 @@
 }
 
 .jstree-node.jstree-open > a > .mui-icon-dir {
+  display: none;
+}
+
+.js-tree-node
+  > button[aria-expanded='false']
+  > .ActionList-item-visual
+  > .mui-icon-diff-dir-expanded {
+  display: none;
+}
+
+.js-tree-node
+  > button[aria-expanded='true']
+  > .ActionList-item-visual
+  > .mui-icon-diff-dir {
   display: none;
 }
 

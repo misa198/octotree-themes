@@ -34,24 +34,23 @@ const fonts = [
 
 let octotree = false;
 let github = false;
+let githubDiff = false;
 let iconTheme = IconThemes.MUI;
 const browserName = detectBrowser();
 const githubMuiIconClass = 'github-mui-icon';
-const muiIconClass = 'mui-icon';
+const muiIconOctotreeClass = 'mui-icon-octotree';
 const muiDirClass = 'mui-icon-dir';
 const muiDirExpandedClass = 'mui-icon-dir-expanded';
+const muiDiffDirClass = 'mui-icon-diff-dir';
+const muiDiffDirExpandedClass = 'mui-icon-diff-dir-expanded';
+const muiIconDiffClass = 'mui-icon-github-diff';
 
 const loadFonts = () => {
   for (const font of fonts) {
     const fontFace = new FontFace(
       font.name,
-      `url("${getResourceURL(font.path)}") format("woff2")`,
-      {
-        style: 'normal',
-        weight: 'normal',
-      }
+      `url("${getResourceURL(font.path)}")`
     );
-
     fontFace
       .load()
       .then((loadedFontFace) => document.fonts.add(loadedFontFace));
@@ -100,6 +99,63 @@ const replaceGithubIcon = ({
   }
 };
 
+const replaceGithubDiffIcon = ({
+  iconDom,
+  filenameDom,
+  isDir,
+}: {
+  iconDom: HTMLElement | null;
+  filenameDom: HTMLElement;
+  isDir: boolean;
+}) => {
+  const fileName = isMobile
+    ? getGitHubMobileFilename(filenameDom)
+    : filenameDom.innerText.trim();
+  if (iconTheme === IconThemes.MUI) {
+    let icon;
+    if (!isDir) icon = getMuiFileIcon(fileName);
+    else icon = getMUIDirIcon(fileName);
+    if (iconDom) {
+      if (isDir) {
+        const [icon, expandedIcon] = [
+          getMUIDirIcon(fileName),
+          getMuiDirExpandedIcon(fileName),
+        ];
+        const img = document.createElement('img');
+        img.classList.add(muiIconDiffClass);
+        img.classList.add(muiDiffDirClass);
+        img.src = icon;
+        const expandedImg = document.createElement('img');
+        expandedImg.classList.add(muiIconDiffClass);
+        expandedImg.classList.add(muiDiffDirExpandedClass);
+        expandedImg.src = expandedIcon;
+        iconDom.parentElement?.classList.add('octotree-mui-icon-provider');
+        iconDom.parentNode?.replaceChild(img, iconDom);
+        img.parentNode?.appendChild(expandedImg);
+      } else {
+        const icon = getMuiFileIcon(fileName);
+        if (icon) {
+          const img = document.createElement('img');
+          img.classList.add(muiIconDiffClass);
+          img.src = icon;
+          iconDom.parentElement?.classList.add('octotree-mui-icon-provider');
+          iconDom.parentNode?.replaceChild(img, iconDom);
+        }
+      }
+    }
+  } else {
+    const className: string | null = fileIcons.getClassWithColor(fileName);
+    if (className && !isDir) {
+      console.log(className);
+      const icon = document.createElement('span');
+      icon.className = `icon octicon-file ${className}`;
+      if (iconDom) {
+        iconDom.parentNode!.replaceChild(icon, iconDom as HTMLElement);
+      }
+    }
+  }
+};
+
 const replaceOctotreeIcon = ({
   iconDom,
   filenameDom,
@@ -124,20 +180,19 @@ const replaceOctotreeIcon = ({
   if (iconTheme === IconThemes.MUI) {
     if (iconDom) {
       const foundIcon =
-        iconDom.parentElement?.getElementsByClassName(muiIconClass);
+        iconDom.parentElement?.getElementsByClassName(muiIconOctotreeClass);
       if (!foundIcon || foundIcon.length === 0) {
         if (isDir) {
           const [icon, expandedIcon] = [
             getMUIDirIcon(filename),
             getMuiDirExpandedIcon(filename),
           ];
-
           const img = document.createElement('img');
-          img.classList.add(muiIconClass);
+          img.classList.add(muiIconOctotreeClass);
           img.classList.add(muiDirClass);
           img.src = icon;
           const expandedImg = document.createElement('img');
-          expandedImg.classList.add(muiIconClass);
+          expandedImg.classList.add(muiIconOctotreeClass);
           expandedImg.classList.add(muiDirExpandedClass);
           expandedImg.src = expandedIcon;
           iconDom.parentElement?.classList.add('octotree-mui-icon-provider');
@@ -147,7 +202,7 @@ const replaceOctotreeIcon = ({
           const icon = getMuiFileIcon(filename);
           if (icon) {
             const img = document.createElement('img');
-            img.classList.add(muiIconClass);
+            img.classList.add(muiIconOctotreeClass);
             img.src = icon;
             iconDom.parentElement?.classList.add('octotree-mui-icon-provider');
             iconDom.parentNode?.appendChild(img);
@@ -170,12 +225,11 @@ const replaceOctotreeIcon = ({
 };
 
 const init = async () => {
-  if (iconTheme === IconThemes.ATOM) {
-    loadFonts();
-  }
+  if (iconTheme === IconThemes.ATOM) loadFonts();
   await domLoaded;
 
   if (github) {
+    // Github tree
     observe('.js-navigation-container > .js-navigation-item', {
       add(element) {
         const filenameDom = select('div[role="rowheader"] > span', element);
@@ -196,6 +250,31 @@ const init = async () => {
         });
       },
     });
+  }
+
+  if (githubDiff) {
+    observe(
+      '#files_bucket > diff-file-filter > diff-layout nav > ul li > .ActionList-content',
+      {
+        add(element) {
+          const filenameDom = select('.ActionList-item-label', element);
+          if (!filenameDom) return;
+          const dirIconDom = select(
+            'svg[aria-label=Directory]',
+            element
+          ) as HTMLElement;
+          const fileIconDom = select(
+            'svg[aria-label=File]',
+            element
+          ) as HTMLElement;
+          replaceGithubDiffIcon({
+            iconDom: dirIconDom || fileIconDom,
+            filenameDom,
+            isDir: Boolean(dirIconDom),
+          });
+        },
+      }
+    );
   }
 
   if (octotree) {
@@ -279,12 +358,20 @@ const applyColorTheme = async () => {
   );
 };
 
-(() => {
-  get([Keys.OT_GITHUB, Keys.OT_OCTOTREE, Keys.OT_CODE_ICONS_THEME], (result) => {
+get(
+  [
+    Keys.OT_GITHUB,
+    Keys.OT_OCTOTREE,
+    Keys.OT_CODE_ICONS_THEME,
+    Keys.OT_GITHUB_DIFF,
+  ],
+  (result) => {
     github = result[Keys.OT_GITHUB] === true;
     octotree = result[Keys.OT_OCTOTREE] === true;
+    githubDiff = result[Keys.OT_GITHUB_DIFF] === true;
     iconTheme = result[Keys.OT_CODE_ICONS_THEME];
-  });
-  init();
-  applyColorTheme();
-})();
+
+    init();
+    applyColorTheme();
+  }
+);
