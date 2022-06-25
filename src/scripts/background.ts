@@ -1,17 +1,22 @@
 import { set, get } from './utils/storage';
-import { KEYS } from './constants/keys';
+import { Keys } from './constants/keys';
 import { detectBrowser } from './utils/detectBrowser';
+import { IconThemes } from './constants/iconThemes';
 const urlRegex = new RegExp(
   /^https:\/\/(gist.)?github.com\/[(a-z)(A-Z)(0-9)_-]+\/[(a-z)(A-Z)(0-9)_-]+(\/?)((\/.+)?)(\?(.+))?$/
 );
 
-get([KEYS.MISA198_GITHUB, KEYS.MISA198_OCTOTREE], (result) => {
-  if (result[KEYS.MISA198_GITHUB] === undefined) {
-    set({ [KEYS.MISA198_GITHUB]: true });
+get([Keys.OT_GITHUB, Keys.OT_OCTOTREE, Keys.OT_CODE_ICONS_THEME], (result) => {
+  if (result[Keys.OT_GITHUB] === undefined) {
+    set({ [Keys.OT_GITHUB]: true });
   }
 
-  if (result[KEYS.MISA198_OCTOTREE] === undefined) {
-    set({ [KEYS.MISA198_OCTOTREE]: true });
+  if (result[Keys.OT_OCTOTREE] === undefined) {
+    set({ [Keys.OT_OCTOTREE]: true });
+  }
+
+  if (!Object.values(IconThemes).includes(result[Keys.OT_CODE_ICONS_THEME])) {
+    set({ [Keys.OT_CODE_ICONS_THEME]: IconThemes.MUI });
   }
 });
 
