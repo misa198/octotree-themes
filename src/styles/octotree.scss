@@ -5,7 +5,7 @@
   background: var(--color-header-bg) !important;
 }
 
-.misa198-octotree-sidebar {
+.ot-octotree-sidebar {
   background-color: var(--color-canvas-default) !important;
 }
 
@@ -34,4 +34,17 @@
   background-image: none !important;
   color: rgb(172, 65, 66) !important ;
   font-variant: normal !important;
+}
+
+.jstree-container-ul .text-icon {
+  color: #c9d2d9;
+}
+
+.jstree-icon.jstree-themeicon.jstree-themeicon-custom.blob.octotree-default-icon.octotree-icon-file {
+  color: #8b949e;
+}
+
+.dark {
+  filter: brightness(125%) contrast(150%) drop-shadow(0 0 0 #fff)
+    drop-shadow(1px 1px 1px #444);
 }

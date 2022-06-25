@@ -1,4 +1,4 @@
-export const colorThemeDeaultClass = 'misa198-github-code-color-theme';
+export const colorThemeDeaultClass = 'ot-github-code-color-theme';
 export const colorThemes = [
   'ambiance',
   'ayu-mirage',
