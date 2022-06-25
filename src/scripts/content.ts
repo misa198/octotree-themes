@@ -280,10 +280,10 @@ const applyColorTheme = async () => {
 };
 
 (() => {
-  get([Keys.OT_GITHUB, Keys.OT_OCTOTREE, Keys.OT_CODE_ICON_THEME], (result) => {
+  get([Keys.OT_GITHUB, Keys.OT_OCTOTREE, Keys.OT_CODE_ICONS_THEME], (result) => {
     github = result[Keys.OT_GITHUB] === true;
     octotree = result[Keys.OT_OCTOTREE] === true;
-    iconTheme = result[Keys.OT_CODE_ICON_THEME];
+    iconTheme = result[Keys.OT_CODE_ICONS_THEME];
   });
   init();
   applyColorTheme();

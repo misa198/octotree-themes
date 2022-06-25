@@ -4,16 +4,29 @@ import { detectBrowser } from './utils/detectBrowser';
 import { Keys } from './constants/keys';
 import { colorThemes } from './constants/colorThemes';
 import '../styles/popup.scss';
+import { IconThemes } from './constants/iconThemes';
 
 const themeSelector = document.getElementById(
-  'select-code-color-theme'
+  Keys.OT_CODE_COLOR_THEME
 ) as HTMLSelectElement;
+
+const iconsThemeSelector = document.getElementById(
+  Keys.OT_CODE_ICONS_THEME
+) as HTMLSelectElement;
+const iconsThemes = Object.values(IconThemes);
 
 colorThemes.forEach((colorTheme) => {
   const option = document.createElement('option');
   option.value = colorTheme;
   option.textContent = capitalize(colorTheme.split('-').join(' '));
   themeSelector.appendChild(option);
+});
+
+iconsThemes.forEach((theme) => {
+  const option = document.createElement('option');
+  option.value = theme;
+  option.textContent = theme;
+  iconsThemeSelector.appendChild(option);
 });
 
 const browserName = detectBrowser();
@@ -24,14 +37,16 @@ const githubCheckbox = document.getElementById(
 const octotreeCheckbox = document.getElementById(
   Keys.OT_OCTOTREE
 ) as HTMLInputElement;
-const buttonSession = document.getElementById(Keys.OT_RELOAD) as HTMLDivElement;
+const buttonSession = document.getElementById(
+  Keys.OT_RELOAD_SEESSION
+) as HTMLDivElement;
 const refreshButton = document.getElementById(
-  'refreshButton'
+  Keys.OT_RELOAD
 ) as HTMLButtonElement;
 
 get([Keys.OT_GITHUB, Keys.OT_OCTOTREE], (result) => {
-  githubCheckbox.checked = Boolean(result.misa198Github);
-  octotreeCheckbox.checked = Boolean(result.misa198Octotree);
+  githubCheckbox.checked = Boolean(result[Keys.OT_GITHUB]);
+  octotreeCheckbox.checked = Boolean(result[Keys.OT_OCTOTREE]);
 });
 
 function onGithubCheckboxChange() {
@@ -65,19 +80,36 @@ githubCheckbox.addEventListener('click', onGithubCheckboxChange);
 octotreeCheckbox.addEventListener('click', onOctotreeCheckboxChange);
 refreshButton.addEventListener('click', reloadCurrentTab);
 
+// ============= Icons theme =================
+get([Keys.OT_CODE_ICONS_THEME], (result) => {
+  if (result) {
+    const themeName = result[Keys.OT_CODE_ICONS_THEME];
+    const foundTheme = iconsThemes.find(
+      (colorTheme) => colorTheme === themeName
+    );
+    if (foundTheme) {
+      iconsThemeSelector.value = foundTheme;
+    } else iconsThemeSelector.value = iconsThemes[0];
+  }
+});
+
+function onSelectIconTheme(event: Event) {
+  const theme = (event.target as HTMLSelectElement).value;
+  set({ [Keys.OT_CODE_ICONS_THEME]: theme });
+  buttonSession.classList.remove('hide');
+}
+iconsThemeSelector.addEventListener('change', onSelectIconTheme);
+
 // ============= Code color theme =============
 get([Keys.OT_CODE_COLOR_THEME], (result) => {
-  const select = document.getElementById(
-    'select-code-color-theme'
-  ) as HTMLSelectElement;
   if (result) {
     const themeName = result[Keys.OT_CODE_COLOR_THEME];
     const foundTheme = colorThemes.find(
       (colorTheme) => colorTheme === themeName
     );
     if (foundTheme) {
-      select.value = foundTheme;
-    } else select.value = 'default';
+      themeSelector.value = foundTheme;
+    } else themeSelector.value = 'default';
   }
 });
 
@@ -105,7 +137,4 @@ function onSelectCodeColorTheme(event: Event) {
   }
 }
 
-const selectCodeColorTheme = document.querySelector(
-  '#select-code-color-theme'
-) as HTMLSelectElement;
-selectCodeColorTheme.addEventListener('change', onSelectCodeColorTheme);
+themeSelector.addEventListener('change', onSelectCodeColorTheme);

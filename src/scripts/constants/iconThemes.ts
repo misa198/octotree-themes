@@ -1,4 +1,4 @@
 export const IconThemes = {
-  MUI: 'MUI',
-  ATOM: 'ATOM',
+  MUI: 'Material Icons',
+  ATOM: 'Atom Icons',
 };
