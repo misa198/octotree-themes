@@ -4,6 +4,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const HtmlMinimizerPlugin = require('html-minimizer-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 const options = {
   mode: 'production',
@@ -78,7 +79,25 @@ const options = {
     }),
   ],
   optimization: {
-    minimizer: [new CssMinimizerPlugin()],
+    minimizer: [
+      new CssMinimizerPlugin({
+        minimizerOptions: {
+          parallel: true,
+          preset: [
+            'default',
+            {
+              discardComments: { removeAll: true },
+            },
+          ],
+        },
+      }),
+      new TerserPlugin({
+        parallel: true,
+        extractComments: 'all',
+        minify: TerserPlugin.uglifyJsMinify,
+      }),
+    ],
+    minimize: true,
   },
 };
 
