@@ -2,6 +2,10 @@
 
 ==================
 
+### v1.3.7
+
+- Commit change view icons
+
 ### v1.3.6
 
 - Add Icons to diff page

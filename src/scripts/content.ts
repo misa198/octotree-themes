@@ -253,28 +253,25 @@ const init = async () => {
   }
 
   if (githubDiff) {
-    observe(
-      '#files_bucket > diff-file-filter > diff-layout nav > ul li > .ActionList-content',
-      {
-        add(element) {
-          const filenameDom = select('.ActionList-item-label', element);
-          if (!filenameDom) return;
-          const dirIconDom = select(
-            'svg[aria-label=Directory]',
-            element
-          ) as HTMLElement;
-          const fileIconDom = select(
-            'svg[aria-label=File]',
-            element
-          ) as HTMLElement;
-          replaceGithubDiffIcon({
-            iconDom: dirIconDom || fileIconDom,
-            filenameDom,
-            isDir: Boolean(dirIconDom),
-          });
-        },
-      }
-    );
+    observe('diff-layout nav > ul li > .ActionList-content', {
+      add(element) {
+        const filenameDom = select('.ActionList-item-label', element);
+        if (!filenameDom) return;
+        const dirIconDom = select(
+          'svg[aria-label=Directory]',
+          element
+        ) as HTMLElement;
+        const fileIconDom = select(
+          'svg[aria-label=File]',
+          element
+        ) as HTMLElement;
+        replaceGithubDiffIcon({
+          iconDom: dirIconDom || fileIconDom,
+          filenameDom,
+          isDir: Boolean(dirIconDom),
+        });
+      },
+    });
   }
 
   if (octotree) {
