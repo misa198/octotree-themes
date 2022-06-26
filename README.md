@@ -6,13 +6,16 @@ Octotree Theme
 </h1>
 <p align="center">
   <a href="https://chrome.google.com/webstore/detail/meagmbmaaljhgdcglcmflnnglpokldcj">
-    <img src="./docs/chrome-store.png" width="30%" />
+    <img src="./docs/chrome-store.png" width="23%" />
   </a>
   <a href="https://addons.mozilla.org/vi/firefox/addon/octotree-theme/">
-    <img src="./docs/firefox-add-ons.png"width="30%" />
+    <img src="./docs/firefox-add-ons.png" width="23%" />
   </a>
   <a href="https://microsoftedge.microsoft.com/addons/detail/cajppifioefokdcmnbehbkiddjnpmadb" >
-    <img src="docs/edge-addons.png"width="30%" />
+    <img src="docs/edge-addons.png" width="23%" />
+  </a>
+  <a href="https://addons.opera.com/extensions/details/octotree-theme/" >
+    <img src="docs/opera-addons.png" width="23%" />
   </a>
 </p>
 <p align="center">
