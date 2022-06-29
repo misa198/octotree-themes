@@ -312,13 +312,13 @@ const init = async () => {
 // ============ Code color theme ===================
 
 const changeTheme = (themeName?: string) => {
-  const body = document.querySelector('body') as HTMLElement;
-  const { classList } = body;
+  const html = document.querySelector('html') as HTMLElement;
+  const { classList } = html;
   const currentThemeClass = Array.from(classList).find((className) =>
     className.startsWith(`${colorThemeDeaultClass}`)
   );
   if (currentThemeClass) {
-    body.classList.remove(currentThemeClass);
+    html.classList.remove(currentThemeClass);
   }
   if (themeName) {
     const foundTheme = colorThemes.find(
@@ -332,7 +332,7 @@ const changeTheme = (themeName?: string) => {
 };
 
 const applyColorTheme = async () => {
-  observe('body', {
+  observe('html', {
     add() {
       get([Keys.OT_CODE_COLOR_THEME], (result) => {
         if (result) {

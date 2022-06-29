@@ -2,6 +2,10 @@
 
 ==================
 
+### v1.3.8
+
+- Fix missing theme after redirect
+
 ### v1.3.7
 
 - Commit change view icons
