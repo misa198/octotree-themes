@@ -7,16 +7,10 @@
     <link rel="stylesheet" href="popup.css" />
   </head>
   <body>
-    <a
-      href="https://github.com/misa198/octotree-theme"
-      rel="noreferrer"
-      target="__blank"
-    >
-      <header class="header">
-        <img class="header__icon" src="./icons/icon64.png" alt="" />
-        <h3 class="header__title">Octotree Theme</h3>
-      </header>
-    </a>
+    <header class="header">
+      <img class="header__icon" src="./icons/icon64.png" alt="" />
+      <h3 class="header__title">Octotree Theme</h3>
+    </header>
     <main class="main">
       <div class="session">
         <h3 class="session__label">Code Theme</h3>
@@ -57,6 +51,20 @@
         </div>
       </div>
     </main>
+    <footer>
+      <p class="copyright">
+        <span id="OT_COPYRIGHT_VERSION"></span>
+        -
+        <span id="OT_COPYRIGHT_YEAR"></span>
+        ©
+        <a
+          href="#"
+          rel="noreferrer"
+          target="__blank"
+          id="OT_COPYRIGHT_HOLDER"
+        ></a>
+      </p>
+    </footer>
     <script src="./popup.js"></script>
   </body>
 </html>

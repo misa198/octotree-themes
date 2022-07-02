@@ -48,6 +48,8 @@ const options = {
               JSON.stringify({
                 description: process.env.npm_package_description,
                 version: process.env.npm_package_version,
+                author: process.env.npm_package_author_name,
+                homepage_url: process.env.npm_package_homepage,
                 ...JSON.parse(content.toString()),
               })
             ),

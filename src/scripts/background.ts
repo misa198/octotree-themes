@@ -72,7 +72,13 @@ chrome.tabs.onActivated.addListener(function (info) {
   });
 });
 
-chrome.tabs.onUpdated.addListener(function (tabId, _, tab) {
+chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
+  if (changeInfo.status === 'complete') {
+    chrome.tabs.sendMessage(tabId, {
+      message: Keys.OT_TAB_UPDATE,
+    });
+  }
+
   if (tab.url === undefined) {
     return;
   } else if (tab.url.match(urlRegex) === null) {
