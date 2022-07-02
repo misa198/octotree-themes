@@ -14,6 +14,7 @@ get(
     Keys.OT_GITHUB_DIFF,
   ],
   (result) => {
+    console.log(result);
     if (result[Keys.OT_GITHUB] === undefined) {
       set({ [Keys.OT_GITHUB]: true });
     }

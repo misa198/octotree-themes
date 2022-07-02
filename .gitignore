@@ -62,6 +62,7 @@ typings/
 
 # build
 build
+*.zip
 
 # .DS_Store
 .DS_Store
