@@ -2,6 +2,10 @@
 
 ==================
 
+### v1.4.0
+
+- Detect extension more than 1 dot
+
 ### v1.3.9
 
 - Fix missing theme on commit diff page

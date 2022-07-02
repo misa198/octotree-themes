@@ -8,10 +8,18 @@ export const getMuiFileIcon = (fileName: string) => {
   let iconName = 'file';
   const lowerCaseFileName = fileName.toLowerCase();
 
-  const ext = lowerCaseFileName.split('.').pop();
-  if (ext && extentions[ext]) iconName = extentions[ext];
-  if (files[lowerCaseFileName]) iconName = files[lowerCaseFileName];
   if (files[fileName]) iconName = files[fileName];
+  else if (files[lowerCaseFileName]) iconName = files[lowerCaseFileName];
+  else {
+    const splitedName = lowerCaseFileName.split('.').reverse();
+    let currentPath = '';
+    splitedName.forEach((path, index) => {
+      if (index === 0) currentPath = path;
+      else currentPath = `${path}.${currentPath}`;
+      console.log(currentPath);
+      if (extentions[currentPath]) iconName = extentions[currentPath];
+    });
+  }
 
   return getResourceURL(`assets/mui/${icons[iconName]}`);
 };
