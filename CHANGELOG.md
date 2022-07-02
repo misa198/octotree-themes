@@ -2,6 +2,18 @@
 
 ==================
 
+### v1.3.9
+
+- Fix missing theme on commit diff page
+
+### v1.3.8
+
+- Fix missing theme after redirect
+
+### v1.3.7
+
+- Commit change view icons
+
 ### v1.3.6
 
 - Add Icons to diff page
