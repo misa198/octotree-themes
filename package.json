@@ -2,7 +2,7 @@
   "name": "octotree-theme",
   "description": "A Browser Extension which gives different filetypes different icons, and code color theme to GitHub and Octotree for free.",
   "license": "BSD-2-Clause Simplified License",
-  "author": "Thanh Vu <misa198>",
+  "author": "Thanh Vu",
   "homepage": "https://github.com/misa198/octotree-theme#readme",
   "repository": {
     "type": "git",

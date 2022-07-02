@@ -1,8 +1,6 @@
 {
   "manifest_version": 3,
   "name": "Octotree Theme",
-  "author": "misa198",
-  "homepage_url": "https://github.com/misa198/octotree-theme",
   "background": {
     "service_worker": "background.js"
   },

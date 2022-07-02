@@ -183,6 +183,16 @@ body {
       }
     }
   }
+
+  .copyright {
+    text-align: center;
+    font-size: 0.95em;
+    margin-bottom: 1rem;
+
+    #OT_COPYRIGHT_HOLDER {
+      text-decoration: underline !important;
+    }
+  }
 }
 
 @keyframes appear {

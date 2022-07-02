@@ -6,6 +6,21 @@ import { colorThemes } from './constants/colorThemes';
 import '../styles/popup.scss';
 import { IconThemes } from './constants/iconThemes';
 
+const manifestData = chrome.runtime.getManifest();
+const copyrightVerison = document.getElementById(
+  Keys.OT_COPYRIGHT_VERSION
+) as HTMLSpanElement;
+const copyrightYear = document.getElementById(
+  Keys.OT_COPYRIGHT_YEAR
+) as HTMLSpanElement;
+const copyrightHolder = document.getElementById(
+  Keys.OT_COPYRIGHT_HOLDER
+) as HTMLLinkElement;
+copyrightVerison.innerText = `v${manifestData.version}`;
+copyrightYear.innerText = new Date().getFullYear().toString();
+copyrightHolder.href = manifestData.homepage_url as string;
+copyrightHolder.innerText = manifestData.author as string;
+
 const themeSelector = document.getElementById(
   Keys.OT_CODE_COLOR_THEME
 ) as HTMLSelectElement;
