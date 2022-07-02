@@ -2,6 +2,10 @@
 
 ==================
 
+### v1.3.9
+
+- Fix missing theme on commit diff page
+
 ### v1.3.8
 
 - Fix missing theme after redirect

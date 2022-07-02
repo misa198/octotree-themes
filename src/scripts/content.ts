@@ -370,5 +370,11 @@ get(
 
     init();
     applyColorTheme();
+
+    chrome.runtime.onMessage.addListener(function (request) {
+      if (request.message === Keys.OT_TAB_UPDATE) {
+        applyColorTheme();
+      }
+    });
   }
 );
