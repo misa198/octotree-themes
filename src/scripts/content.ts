@@ -9,8 +9,9 @@ import {
   getMuiDirExpandedIcon,
   getMUIDirIcon,
   getMuiFileIcon,
+  getMUISubmoduleIcon,
 } from './libs/mui';
-import { detectBrowser } from './utils/detectBrowser';
+import { getCurrentBrowser } from './utils/detectBrowser';
 import { get, set } from './utils/storage';
 // Content css
 import '../styles/icons/icons.scss';
@@ -20,6 +21,8 @@ import '../styles/themes/gist.scss';
 import './constants/colorThemesScss';
 import { getResourceURL } from './utils/getResourceURL';
 import { IconThemes } from './constants/iconThemes';
+
+const currentBrowser = getCurrentBrowser();
 
 // ============ Icon theme ===================
 
@@ -36,7 +39,6 @@ let octotree = false;
 let github = false;
 let githubDiff = false;
 let iconTheme = IconThemes.MUI;
-const browserName = detectBrowser();
 const githubMuiIconClass = 'github-mui-icon';
 const muiIconOctotreeClass = 'mui-icon-octotree';
 const muiDirClass = 'mui-icon-dir';
@@ -69,17 +71,20 @@ const replaceGithubIcon = ({
   iconDom,
   filenameDom,
   isDir,
+  isSubmodule,
 }: {
   iconDom: HTMLElement | null;
   filenameDom: HTMLElement;
   isDir: boolean;
+  isSubmodule: boolean;
 }) => {
   const fileName = isMobile
     ? getGitHubMobileFilename(filenameDom)
     : filenameDom.innerText.trim();
   if (iconTheme === IconThemes.MUI) {
     let icon;
-    if (!isDir) icon = getMuiFileIcon(fileName);
+    if (!isDir)
+      icon = isSubmodule ? getMUISubmoduleIcon() : getMuiFileIcon(fileName);
     else icon = getMUIDirIcon(fileName);
     if (iconDom) {
       const img = document.createElement('img');
@@ -103,18 +108,17 @@ const replaceGithubDiffIcon = ({
   iconDom,
   filenameDom,
   isDir,
+  isSubmodule,
 }: {
   iconDom: HTMLElement | null;
   filenameDom: HTMLElement;
   isDir: boolean;
+  isSubmodule: boolean;
 }) => {
   const fileName = isMobile
     ? getGitHubMobileFilename(filenameDom)
     : filenameDom.innerText.trim();
   if (iconTheme === IconThemes.MUI) {
-    let icon;
-    if (!isDir) icon = getMuiFileIcon(fileName);
-    else icon = getMUIDirIcon(fileName);
     if (iconDom) {
       if (isDir) {
         const [icon, expandedIcon] = [
@@ -133,7 +137,9 @@ const replaceGithubDiffIcon = ({
         iconDom.parentNode?.replaceChild(img, iconDom);
         img.parentNode?.appendChild(expandedImg);
       } else {
-        const icon = getMuiFileIcon(fileName);
+        const icon = isSubmodule
+          ? getMUISubmoduleIcon()
+          : getMuiFileIcon(fileName);
         if (icon) {
           const img = document.createElement('img');
           img.classList.add(muiIconDiffClass);
@@ -146,7 +152,6 @@ const replaceGithubDiffIcon = ({
   } else {
     const className: string | null = fileIcons.getClassWithColor(fileName);
     if (className && !isDir) {
-      console.log(className);
       const icon = document.createElement('span');
       icon.className = `icon octicon-file ${className}`;
       if (iconDom) {
@@ -199,7 +204,12 @@ const replaceOctotreeIcon = ({
           iconDom.parentNode?.appendChild(img);
           iconDom.parentNode?.appendChild(expandedImg);
         } else {
-          const icon = getMuiFileIcon(filename);
+          const isSubmodule = !Boolean(
+            iconDom.parentElement?.getAttribute('data-download-url')
+          );
+          const icon = isSubmodule
+            ? getMUISubmoduleIcon()
+            : getMuiFileIcon(filename);
           if (icon) {
             const img = document.createElement('img');
             img.classList.add(muiIconOctotreeClass);
@@ -242,11 +252,16 @@ const init = async () => {
           'svg[aria-label=File]',
           element
         ) as HTMLElement;
+        const submoduleIconDom = select(
+          'svg[aria-label=Submodule]',
+          element
+        ) as HTMLElement;
 
         replaceGithubIcon({
-          iconDom: dirIconDom || fileIconDom,
+          iconDom: dirIconDom || submoduleIconDom || fileIconDom,
           filenameDom,
           isDir: Boolean(dirIconDom),
+          isSubmodule: Boolean(submoduleIconDom),
         });
       },
     });
@@ -265,10 +280,16 @@ const init = async () => {
           'svg[aria-label=File]',
           element
         ) as HTMLElement;
+        const submoduleIconDom = select(
+          'svg[aria-label=Submodule]',
+          element
+        ) as HTMLElement;
+
         replaceGithubDiffIcon({
-          iconDom: dirIconDom || fileIconDom,
+          iconDom: dirIconDom || submoduleIconDom || fileIconDom,
           filenameDom,
           isDir: Boolean(dirIconDom),
+          isSubmodule: Boolean(submoduleIconDom),
         });
       },
     });
@@ -343,16 +364,14 @@ const applyColorTheme = async () => {
     },
   });
 
-  (browserName === 'chrome' ? chrome : browser).runtime.onMessage.addListener(
-    (request) => {
-      try {
-        const message = JSON.parse(request.message);
-        if (message.type === 'OT_CODE_COLOR_THEME') {
-          changeTheme(message.codeColorTheme);
-        }
-      } catch (e) {}
-    }
-  );
+  currentBrowser.runtime.onMessage.addListener((request) => {
+    try {
+      const message = JSON.parse(request.message);
+      if (message.type === 'OT_CODE_COLOR_THEME') {
+        changeTheme(message.codeColorTheme);
+      }
+    } catch (e) {}
+  });
 };
 
 get(
@@ -371,7 +390,7 @@ get(
     init();
     applyColorTheme();
 
-    chrome.runtime.onMessage.addListener(function (request) {
+    currentBrowser.runtime.onMessage.addListener(function (request) {
       if (request.message === Keys.OT_TAB_UPDATE) {
         applyColorTheme();
       }

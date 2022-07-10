@@ -20,9 +20,9 @@ const FeaturesPage: FC = () => {
   const featureContent = useAppSelector((state) => state.features.content);
 
   useEffect(() => {
-    const url = `/contents/features/${i18n.language}.md`;
+    const url = `/contents/features/${i18n.resolvedLanguage}.md`;
     dispatch(fetchMarkdownThunk(url));
-  }, [dispatch, i18n.language]);
+  }, [dispatch, i18n.resolvedLanguage]);
 
   return (
     <Page>

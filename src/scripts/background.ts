@@ -1,7 +1,8 @@
-import { set, get } from './utils/storage';
+import { get, set } from './utils/storage';
 import { Keys } from './constants/keys';
-import { detectBrowser } from './utils/detectBrowser';
+import { getBrowserAction, getCurrentBrowser } from './utils/detectBrowser';
 import { IconThemes } from './constants/iconThemes';
+
 const urlRegex = new RegExp(
   /^https:\/\/(gist.)?github.com\/[(a-z)(A-Z)(0-9)_-]+\/[(a-z)(A-Z)(0-9)_-]+(\/?)((\/.+)?)(\?(.+))?$/
 );
@@ -14,7 +15,6 @@ get(
     Keys.OT_GITHUB_DIFF,
   ],
   (result) => {
-    console.log(result);
     if (result[Keys.OT_GITHUB] === undefined) {
       set({ [Keys.OT_GITHUB]: true });
     }
@@ -33,12 +33,11 @@ get(
   }
 );
 
-const browserName = detectBrowser();
-const browserAction =
-  chrome[browserName === 'chrome' ? 'action' : 'browserAction'];
+const browserAction = getBrowserAction();
+const currentBrowser = getCurrentBrowser();
 
-chrome.tabs.onActivated.addListener(function (info) {
-  chrome.tabs.get(info.tabId, function (change) {
+currentBrowser.tabs.onActivated.addListener(function (info) {
+  currentBrowser.tabs.get(info.tabId, function (change) {
     if (change.url === undefined) {
       // Url is null
       browserAction.setPopup({
@@ -73,9 +72,9 @@ chrome.tabs.onActivated.addListener(function (info) {
   });
 });
 
-chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
+currentBrowser.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
   if (changeInfo.status === 'complete') {
-    chrome.tabs.sendMessage(tabId, {
+    currentBrowser.tabs.sendMessage(tabId, {
       message: Keys.OT_TAB_UPDATE,
     });
   }
@@ -101,4 +100,19 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
       tabId: tabId,
     });
   }
+});
+
+// Open website after install
+currentBrowser.runtime.onInstalled.addListener((details) => {
+  if (
+    // No need to show changelog if its was a browser update (and not extension update)
+    details.reason === 'browser_update' ||
+    // No need to show changelog if developer just reloaded the extension
+    details.reason === 'update'
+  )
+    return;
+  const manifestData = currentBrowser.runtime.getManifest();
+  currentBrowser.tabs.create({
+    url: `${manifestData.homepage_url}/features`,
+  });
 });

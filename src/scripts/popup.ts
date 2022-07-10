@@ -1,13 +1,14 @@
 import * as capitalize from 'capitalize';
 import { get, set } from './utils/storage';
-import { detectBrowser } from './utils/detectBrowser';
+import { detectBrowser, getCurrentBrowser } from './utils/detectBrowser';
 import { Keys } from './constants/keys';
 import { colorThemes } from './constants/colorThemes';
 import '../styles/popup.scss';
 import { IconThemes } from './constants/iconThemes';
 
-const manifestData = chrome.runtime.getManifest();
-const copyrightVerison = document.getElementById(
+const currentBrowser = getCurrentBrowser();
+const manifestData = currentBrowser.runtime.getManifest();
+const copyrightVersion = document.getElementById(
   Keys.OT_COPYRIGHT_VERSION
 ) as HTMLSpanElement;
 const copyrightYear = document.getElementById(
@@ -16,7 +17,7 @@ const copyrightYear = document.getElementById(
 const copyrightHolder = document.getElementById(
   Keys.OT_COPYRIGHT_HOLDER
 ) as HTMLLinkElement;
-copyrightVerison.innerText = `v${manifestData.version}`;
+copyrightVersion.innerText = `v${manifestData.version}`;
 copyrightYear.innerText = new Date().getFullYear().toString();
 copyrightHolder.href = manifestData.homepage_url as string;
 copyrightHolder.innerText = manifestData.author as string;
