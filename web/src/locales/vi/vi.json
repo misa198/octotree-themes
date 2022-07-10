@@ -2,5 +2,17 @@
   "index": {
     "name": "Octoree Theme",
     "description": "Một tiện ích mở rộng cho trình duyệt cung cấp các icon cho file, thư mục và code theme cho GitHub và Octotree miễn phí."
+  },
+  "layout": {
+    "navbar": {
+      "home": "Trang chủ",
+      "feature": "Tính năng",
+      "about": "Thông tin",
+      "support": "Hỗ trợ",
+      "install": "Cài đặt"
+    }
+  },
+  "home": {
+    "install": "Cài đặt"
   }
 }

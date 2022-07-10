@@ -8,18 +8,19 @@ export const lightPalette: PaletteOptions = {
     contrastText: '#fff',
   },
   background: {
-    default: '#151c32',
-    paper: '#fff',
+    default: '#01081f',
+    paper: '#151c32',
   },
   text: {
     primary: '#fff',
+    secondary: '#999999',
   },
 };
 
 export const darkPalette: PaletteOptions = {
   mode: 'light',
   primary: {
-    main: '#2f5bea',
+    main: '#0c1d57',
     dark: '#01081f',
     contrastText: '#fff',
   },

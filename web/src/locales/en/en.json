@@ -11,5 +11,8 @@
       "support": "Support",
       "install": "Install"
     }
+  },
+  "home": {
+    "install": "Install"
   }
 }
