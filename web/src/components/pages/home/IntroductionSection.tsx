@@ -1,8 +1,7 @@
 import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Container } from '@mui/material';
+import { Box, Button, Container } from '@mui/material';
 import {
-  GithubButton,
   IntroductionContainer,
   IntroductionDescription,
   IntroductionInstallBtn,
@@ -11,7 +10,7 @@ import {
   IntroductionTitle,
 } from './IntroductionSection.style';
 import logo from 'assets/images/logo.png';
-import { IconBrandTabler, IconBrandGithub } from '@tabler/icons';
+import { IconBrandGithub, IconBrandTabler } from '@tabler/icons';
 import { Link } from 'react-router-dom';
 import { GITHUB_REPO_URL } from 'constants/config';
 
@@ -35,11 +34,17 @@ const IntroductionSection: FC = () => {
               {t('home.install')}
             </IntroductionInstallBtn>
           </Link>
-          <a href={GITHUB_REPO_URL} target="_blank" rel="noreferrer">
-            <GithubButton>
-              <IconBrandGithub size="2rem" />
-            </GithubButton>
-          </a>
+          <Box sx={{ mt: 4 }}>
+            <a href={GITHUB_REPO_URL} target="_blank" rel="noreferrer">
+              <Button
+                variant="outlined"
+                color="inherit"
+                startIcon={<IconBrandGithub />}
+              >
+                {t('about.github')}
+              </Button>
+            </a>
+          </Box>
         </IntroductionContainer>
       </Container>
     </IntroductionSectionWrapper>

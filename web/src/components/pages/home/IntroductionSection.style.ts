@@ -1,4 +1,4 @@
-import { Box, Button, IconButton, Typography, styled } from '@mui/material';
+import { Box, Button, styled, Typography } from '@mui/material';
 import { experimental_sx as sx } from '@mui/system';
 import backgroundImg from 'assets/images/home-background.png';
 import Image from 'components/common/Image';
@@ -69,16 +69,5 @@ export const IntroductionInstallBtn = styled(Button)(({ theme }) =>
     px: 8,
     fontSize: '1.5rem',
     textTransform: 'uppercase',
-  })
-);
-
-export const GithubButton = styled(IconButton)(({ theme }) =>
-  sx({
-    mt: 4,
-    color: theme.palette.common.white,
-    mb: {
-      xs: 10,
-      md: 14,
-    },
   })
 );
