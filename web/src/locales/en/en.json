@@ -34,5 +34,10 @@
     "credits": "Credits",
     "license": "License",
     "for": "for"
+  },
+  "support": {
+    "title": "Support",
+    "headTitle": "Support",
+    "description": "You can support our efforts with a donation!"
   }
 }

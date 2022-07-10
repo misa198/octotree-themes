@@ -34,5 +34,10 @@
     "credits": "Ghi danh",
     "license": "Bản quyền",
     "for": "với"
+  },
+  "support": {
+    "title": "Hỗ trợ",
+    "headTitle": "Hỗ trợ",
+    "description": "Bạn có thể ủng hộ những nỗ lực của chúng tôi bằng một khoản đóng góp!"
   }
 }

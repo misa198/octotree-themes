@@ -1,7 +1,7 @@
-import { Box, Typography, styled } from '@mui/material';
+import { Box, styled, Typography } from '@mui/material';
 import { experimental_sx as sx } from '@mui/system';
 
-export const InstallWrapper = styled(Box)(() =>
+export const SupportWrapper = styled(Box)(() =>
   sx({
     display: 'flex',
     flexDirection: 'column',
@@ -10,7 +10,7 @@ export const InstallWrapper = styled(Box)(() =>
   })
 );
 
-export const InstallTitle = styled(Typography)(() =>
+export const SupportTitle = styled(Typography)(() =>
   sx({
     fontWeight: 'bold',
     fontSize: {
@@ -20,10 +20,10 @@ export const InstallTitle = styled(Typography)(() =>
   })
 );
 
-export const InstallDescription = styled(Typography)(({ theme }) =>
+export const SupportDescription = styled(Typography)(({ theme }) =>
   sx({
-    textAlign: 'center',
     color: theme.palette.text.secondary,
+    textAlign: 'center',
     fontSize: {
       xs: '0.9rem',
       md: '1rem',
@@ -31,11 +31,8 @@ export const InstallDescription = styled(Typography)(({ theme }) =>
   })
 );
 
-export const InstallPlatforms = styled(Box)(() =>
+export const SupportBuyMeACoffee = styled(Box)(() =>
   sx({
-    display: 'flex',
-    justifyContent: 'center',
-    flexWrap: 'wrap',
-    mt: 3,
+    mt: 4,
   })
 );

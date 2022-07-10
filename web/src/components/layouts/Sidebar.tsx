@@ -4,7 +4,7 @@ import {
   IconDashboard,
   IconHome,
   IconCompass,
-  IconBrandSketch,
+  IconDiamond,
   IconBrandTabler,
 } from '@tabler/icons';
 import { toggleDrawer } from 'app/store/features/layout/layoutSlice';
@@ -39,7 +39,7 @@ const Sidebar: FC = () => {
     },
     {
       label: t('layout.navbar.support'),
-      icon: IconBrandSketch,
+      icon: IconDiamond,
       to: '/support',
     },
     {

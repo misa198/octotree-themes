@@ -33,6 +33,7 @@ export const AboutSubTitle = styled(Typography)(() =>
 export const AboutDescription = styled(Typography)(({ theme }) =>
   sx({
     color: theme.palette.text.secondary,
+    textAlign: 'center',
     fontSize: {
       xs: '0.9rem',
       md: '1rem',
