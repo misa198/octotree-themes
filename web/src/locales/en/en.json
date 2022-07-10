@@ -24,5 +24,15 @@
   "features": {
     "title": "Features",
     "headTitle": "Features"
+  },
+  "about": {
+    "title": "About",
+    "headTitle": "About",
+    "subtitle": "Links to the project and its developers",
+    "github": "Github repository",
+    "contact": "Contact me",
+    "credits": "Credits",
+    "license": "License",
+    "for": "for"
   }
 }

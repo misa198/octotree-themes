@@ -24,5 +24,15 @@
   "features": {
     "title": "Tính năng",
     "headTitle": "Tính năng"
+  },
+  "about": {
+    "title": "Thông tin",
+    "headTitle": "Thông tin",
+    "subtitle": "Đường dẫn tới project và nhà phát triển",
+    "github": "Kho lưu trữ Github",
+    "contact": "Liên hệ tôi",
+    "credits": "Ghi danh",
+    "license": "Bản quyền",
+    "for": "với"
   }
 }
