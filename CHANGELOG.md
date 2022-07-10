@@ -2,6 +2,13 @@
 
 ==================
 
+### v1.4.1
+
+- Add new website
+- Refactor code
+- Support sub-module
+- Lowercase file name
+
 ### v1.4.0
 
 - Detect extension more than 1 dot

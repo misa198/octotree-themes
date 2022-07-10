@@ -1,6 +1,6 @@
-import { detectBrowser } from './detectBrowser';
+import { getCurrentBrowser } from './detectBrowser';
 
 export const getResourceURL = (path: string) => {
-  const browserName = detectBrowser();
-  return (browserName === 'chrome' ? chrome : browser).runtime.getURL(path);
+  const currentBrowser = getCurrentBrowser();
+  return currentBrowser.runtime.getURL(path);
 };

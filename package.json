@@ -3,7 +3,7 @@
   "description": "A Browser Extension which gives different filetypes different icons, and code color theme to GitHub and Octotree for free.",
   "license": "BSD-2-Clause Simplified License",
   "author": "Thanh Vu",
-  "homepage": "https://github.com/misa198/octotree-theme#readme",
+  "homepage": "https://octotree-theme.web.app",
   "repository": {
     "type": "git",
     "url": "https://github.com/misa198/octotree-theme/tree/master"
@@ -11,7 +11,7 @@
   "bugs": {
     "url": "https://github.com/misa198/octotree-theme/issues"
   },
-  "version": "1.4.0",
+  "version": "1.4.1",
   "scripts": {
     "pre-commit": "lint-staged",
     "build:chromium-v3": "rm -rf build/chromium-v3 && cross-env PLATFORM=chromium-v3 webpack --config webpack.config.js",
@@ -30,6 +30,7 @@
     "adm-zip": "^0.5.9",
     "capitalize": "^2.0.4",
     "dom-loaded": "^2.0.0",
+    "fancy-log": "^2.0.0",
     "file-icons-js": "^1.1.0",
     "is-mobile": "^3.0.0",
     "select-dom": "^7.1.1",
@@ -62,7 +63,6 @@
     "html-minimizer-webpack-plugin": "^3.5.0",
     "husky": "^6.0.0",
     "lint-staged": "^10.5.4",
-    "log4js": "^6.5.2",
     "mini-css-extract-plugin": "^2.6.0",
     "path": "^0.12.7",
     "prettier": "^2.2.1",

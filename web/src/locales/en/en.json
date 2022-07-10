@@ -1,0 +1,43 @@
+{
+  "index": {
+    "name": "Octoree Theme",
+    "description": "A Browser Extension which gives different filetypes different icons, and code color theme to GitHub and Octotree for free"
+  },
+  "layout": {
+    "navbar": {
+      "home": "Home",
+      "features": "Features",
+      "about": "About",
+      "support": "Support",
+      "install": "Install"
+    }
+  },
+  "home": {
+    "title": "Home",
+    "install": "Install"
+  },
+  "install": {
+    "title": "Install",
+    "headTitle": "Select Your Platform",
+    "headSubtitle": "Available for Firefox and all Chromium browsers"
+  },
+  "features": {
+    "title": "Features",
+    "headTitle": "Features"
+  },
+  "about": {
+    "title": "About",
+    "headTitle": "About",
+    "subtitle": "Links to the project and its developers",
+    "github": "Github repository",
+    "contact": "Contact me",
+    "credits": "Credits",
+    "license": "License",
+    "for": "for"
+  },
+  "support": {
+    "title": "Support",
+    "headTitle": "Support",
+    "description": "You can support our efforts with a donation!"
+  }
+}

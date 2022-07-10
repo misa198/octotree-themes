@@ -17,3 +17,17 @@ export const detectBrowser = () => {
   }
   return browserName;
 };
+
+export const getBrowserAction = () => {
+  const browserName = detectBrowser();
+  return browserName === 'chrome'
+    ? chrome.action
+      ? chrome.action
+      : chrome.browserAction
+    : browser.browserAction;
+};
+
+export const getCurrentBrowser = () => {
+  const browserName = detectBrowser();
+  return browserName === 'chrome' ? chrome : browser;
+};
