@@ -144,7 +144,6 @@ const replaceGithubDiffIcon = ({
   } else {
     const className: string | null = fileIcons.getClassWithColor(fileName);
     if (className && !isDir) {
-      console.log(className);
       const icon = document.createElement('span');
       icon.className = `icon octicon-file ${className}`;
       if (iconDom) {

@@ -16,7 +16,6 @@ export const getMuiFileIcon = (fileName: string) => {
     splitedName.forEach((path, index) => {
       if (index === 0) currentPath = path;
       else currentPath = `${path}.${currentPath}`;
-      console.log(currentPath);
       if (extentions[currentPath]) iconName = extentions[currentPath];
     });
   }
@@ -24,12 +23,25 @@ export const getMuiFileIcon = (fileName: string) => {
   return getResourceURL(`assets/mui/${icons[iconName]}`);
 };
 
+const getMUIDirQuery = (dirName: string) => {
+  const paths = dirName.split('/');
+  let query = '';
+  if (paths.length === 1) query = paths[0];
+  query = paths[paths.length - 1];
+  return query;
+};
+
 export const getMUIDirIcon = (dirName: string) => {
-  const dirIcon = folders[dirName] || 'folder';
+  const query = getMUIDirQuery(dirName);
+  const dirIcon = folders[query] || folders[query.toLowerCase()] || 'folder';
   return getResourceURL(`assets/mui/${icons[dirIcon]}`);
 };
 
 export const getMuiDirExpandedIcon = (dirName: string) => {
-  const dirIcon = foldersExpanded[dirName] || 'folder-open';
+  const query = getMUIDirQuery(dirName);
+  const dirIcon =
+    foldersExpanded[query] ||
+    foldersExpanded[query.toLowerCase()] ||
+    'folder-open';
   return getResourceURL(`assets/mui/${icons[dirIcon]}`);
 };
