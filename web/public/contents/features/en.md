@@ -36,7 +36,7 @@ Theme Icons are displayed at:
 
 <br />
 <details>
-  <summary> View  </summary>
+  <summary> View details </summary>
   <br />
 
 ![image alt ><](/images/mui-file-icons.png)
