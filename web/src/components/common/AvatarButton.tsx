@@ -1,6 +1,6 @@
 import { Avatar, ButtonBase, styled } from '@mui/material';
 import { experimental_sx as sx } from '@mui/system';
-import { FC } from 'react';
+import { FC, MouseEvent } from 'react';
 import { AvatarProps } from '@mui/material/Avatar/Avatar';
 
 const Btn = styled(Avatar)(({ theme }) =>
@@ -15,8 +15,8 @@ const Btn = styled(Avatar)(({ theme }) =>
   })
 );
 
-type AvatarButtonProps = AvatarProps & {
-  onClick?: () => void;
+type AvatarButtonProps = Omit<AvatarProps, 'onClick'> & {
+  onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
 };
 
 const AvatarButton: FC<AvatarButtonProps> = ({

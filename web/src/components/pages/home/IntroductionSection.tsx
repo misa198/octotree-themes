@@ -35,7 +35,7 @@ const IntroductionSection: FC = () => {
               {t('home.install')}
             </IntroductionInstallBtn>
           </Link>
-          <a href={GITHUB_REPO_URL} target="_blank">
+          <a href={GITHUB_REPO_URL} target="_blank" rel="noreferrer">
             <GithubButton>
               <IconBrandGithub size="2rem" />
             </GithubButton>

@@ -16,7 +16,7 @@ const Page: FC<PropsWithChildren> = ({ children }) => {
       }
     });
     return res;
-  }, [excludedPaddingRoutes, location.pathname]);
+  }, [location.pathname]);
 
   return (
     <Fade in={true} unmountOnExit>
