@@ -4,6 +4,9 @@ import { files } from './files';
 import { folders, foldersExpanded } from './folders';
 import { icons } from './icons';
 
+export const getMUISubmoduleIcon = () =>
+  getResourceURL(`assets/mui/${icons[folders['submodules']]}`);
+
 export const getMuiFileIcon = (fileName: string) => {
   let iconName = 'file';
   const lowerCaseFileName = fileName.toLowerCase();

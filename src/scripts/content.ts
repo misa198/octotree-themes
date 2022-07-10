@@ -9,6 +9,7 @@ import {
   getMuiDirExpandedIcon,
   getMUIDirIcon,
   getMuiFileIcon,
+  getMUISubmoduleIcon,
 } from './libs/mui';
 import { getCurrentBrowser } from './utils/detectBrowser';
 import { get, set } from './utils/storage';
@@ -70,17 +71,20 @@ const replaceGithubIcon = ({
   iconDom,
   filenameDom,
   isDir,
+  isSubmodule,
 }: {
   iconDom: HTMLElement | null;
   filenameDom: HTMLElement;
   isDir: boolean;
+  isSubmodule: boolean;
 }) => {
   const fileName = isMobile
     ? getGitHubMobileFilename(filenameDom)
     : filenameDom.innerText.trim();
   if (iconTheme === IconThemes.MUI) {
     let icon;
-    if (!isDir) icon = getMuiFileIcon(fileName);
+    if (!isDir)
+      icon = isSubmodule ? getMUISubmoduleIcon() : getMuiFileIcon(fileName);
     else icon = getMUIDirIcon(fileName);
     if (iconDom) {
       const img = document.createElement('img');
@@ -104,10 +108,12 @@ const replaceGithubDiffIcon = ({
   iconDom,
   filenameDom,
   isDir,
+  isSubmodule,
 }: {
   iconDom: HTMLElement | null;
   filenameDom: HTMLElement;
   isDir: boolean;
+  isSubmodule: boolean;
 }) => {
   const fileName = isMobile
     ? getGitHubMobileFilename(filenameDom)
@@ -131,7 +137,9 @@ const replaceGithubDiffIcon = ({
         iconDom.parentNode?.replaceChild(img, iconDom);
         img.parentNode?.appendChild(expandedImg);
       } else {
-        const icon = getMuiFileIcon(fileName);
+        const icon = isSubmodule
+          ? getMUISubmoduleIcon()
+          : getMuiFileIcon(fileName);
         if (icon) {
           const img = document.createElement('img');
           img.classList.add(muiIconDiffClass);
@@ -196,7 +204,12 @@ const replaceOctotreeIcon = ({
           iconDom.parentNode?.appendChild(img);
           iconDom.parentNode?.appendChild(expandedImg);
         } else {
-          const icon = getMuiFileIcon(filename);
+          const isSubmodule = !Boolean(
+            iconDom.parentElement?.getAttribute('data-download-url')
+          );
+          const icon = isSubmodule
+            ? getMUISubmoduleIcon()
+            : getMuiFileIcon(filename);
           if (icon) {
             const img = document.createElement('img');
             img.classList.add(muiIconOctotreeClass);
@@ -239,11 +252,16 @@ const init = async () => {
           'svg[aria-label=File]',
           element
         ) as HTMLElement;
+        const submoduleIconDom = select(
+          'svg[aria-label=Submodule]',
+          element
+        ) as HTMLElement;
 
         replaceGithubIcon({
-          iconDom: dirIconDom || fileIconDom,
+          iconDom: dirIconDom || submoduleIconDom || fileIconDom,
           filenameDom,
           isDir: Boolean(dirIconDom),
+          isSubmodule: Boolean(submoduleIconDom),
         });
       },
     });
@@ -262,10 +280,16 @@ const init = async () => {
           'svg[aria-label=File]',
           element
         ) as HTMLElement;
+        const submoduleIconDom = select(
+          'svg[aria-label=Submodule]',
+          element
+        ) as HTMLElement;
+
         replaceGithubDiffIcon({
-          iconDom: dirIconDom || fileIconDom,
+          iconDom: dirIconDom || submoduleIconDom || fileIconDom,
           filenameDom,
           isDir: Boolean(dirIconDom),
+          isSubmodule: Boolean(submoduleIconDom),
         });
       },
     });
