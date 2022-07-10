@@ -10,7 +10,7 @@ import {
   getMUIDirIcon,
   getMuiFileIcon,
 } from './libs/mui';
-import { detectBrowser } from './utils/detectBrowser';
+import { getCurrentBrowser } from './utils/detectBrowser';
 import { get, set } from './utils/storage';
 // Content css
 import '../styles/icons/icons.scss';
@@ -20,6 +20,8 @@ import '../styles/themes/gist.scss';
 import './constants/colorThemesScss';
 import { getResourceURL } from './utils/getResourceURL';
 import { IconThemes } from './constants/iconThemes';
+
+const currentBrowser = getCurrentBrowser();
 
 // ============ Icon theme ===================
 
@@ -36,7 +38,6 @@ let octotree = false;
 let github = false;
 let githubDiff = false;
 let iconTheme = IconThemes.MUI;
-const browserName = detectBrowser();
 const githubMuiIconClass = 'github-mui-icon';
 const muiIconOctotreeClass = 'mui-icon-octotree';
 const muiDirClass = 'mui-icon-dir';
@@ -112,9 +113,6 @@ const replaceGithubDiffIcon = ({
     ? getGitHubMobileFilename(filenameDom)
     : filenameDom.innerText.trim();
   if (iconTheme === IconThemes.MUI) {
-    let icon;
-    if (!isDir) icon = getMuiFileIcon(fileName);
-    else icon = getMUIDirIcon(fileName);
     if (iconDom) {
       if (isDir) {
         const [icon, expandedIcon] = [
@@ -343,16 +341,14 @@ const applyColorTheme = async () => {
     },
   });
 
-  (browserName === 'chrome' ? chrome : browser).runtime.onMessage.addListener(
-    (request) => {
-      try {
-        const message = JSON.parse(request.message);
-        if (message.type === 'OT_CODE_COLOR_THEME') {
-          changeTheme(message.codeColorTheme);
-        }
-      } catch (e) {}
-    }
-  );
+  currentBrowser.runtime.onMessage.addListener((request) => {
+    try {
+      const message = JSON.parse(request.message);
+      if (message.type === 'OT_CODE_COLOR_THEME') {
+        changeTheme(message.codeColorTheme);
+      }
+    } catch (e) {}
+  });
 };
 
 get(
@@ -371,7 +367,7 @@ get(
     init();
     applyColorTheme();
 
-    chrome.runtime.onMessage.addListener(function (request) {
+    currentBrowser.runtime.onMessage.addListener(function (request) {
       if (request.message === Keys.OT_TAB_UPDATE) {
         applyColorTheme();
       }

@@ -11,7 +11,7 @@
   "bugs": {
     "url": "https://github.com/misa198/octotree-theme/issues"
   },
-  "version": "1.4.0",
+  "version": "1.4.1",
   "scripts": {
     "pre-commit": "lint-staged",
     "build:chromium-v3": "rm -rf build/chromium-v3 && cross-env PLATFORM=chromium-v3 webpack --config webpack.config.js",
