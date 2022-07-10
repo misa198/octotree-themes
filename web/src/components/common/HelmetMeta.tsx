@@ -16,7 +16,7 @@ const HelmetMeta: FC<Props> = ({ title, description }) => {
         lang: i18n.language,
       }}
     >
-      <title>{title || t('index.name')}</title>
+      <title>{title ? `${title} | ${t('index.name')}` : t('index.name')}</title>
       <meta
         name="description"
         content={description || t('index.description')}

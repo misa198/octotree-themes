@@ -28,7 +28,7 @@ const Sidebar: FC = () => {
       to: '/',
     },
     {
-      label: t('layout.navbar.feature'),
+      label: t('layout.navbar.features'),
       icon: IconDashboard,
       to: '/features',
     },

@@ -50,6 +50,7 @@ export const IntroductionTitle = styled(Typography)(() =>
 export const IntroductionDescription = styled(Typography)(({ theme }) =>
   sx({
     mt: 2,
+    mb: 4,
     textAlign: 'center',
     color: theme.palette.text.secondary,
     maxWidth: {
@@ -65,7 +66,6 @@ export const IntroductionDescription = styled(Typography)(({ theme }) =>
 
 export const IntroductionInstallBtn = styled(Button)(({ theme }) =>
   sx({
-    mt: 4,
     px: 8,
     fontSize: '1.5rem',
     textTransform: 'uppercase',
@@ -76,5 +76,9 @@ export const GithubButton = styled(IconButton)(({ theme }) =>
   sx({
     mt: 4,
     color: theme.palette.common.white,
+    mb: {
+      xs: 10,
+      md: 14,
+    },
   })
 );

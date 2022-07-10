@@ -35,7 +35,7 @@ const Navbar: FC = () => {
     },
     {
       path: '/feature',
-      label: t('layout.navbar.feature'),
+      label: t('layout.navbar.features'),
     },
     {
       path: '/about',
@@ -48,7 +48,7 @@ const Navbar: FC = () => {
   ];
 
   const changeBackground = () => {
-    if (window.scrollY >= 64) {
+    if (window.scrollY >= 14) {
       setIsTransparent(false);
     } else {
       setIsTransparent(true);
