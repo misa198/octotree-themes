@@ -1,0 +1,56 @@
+.react-markdown {
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.react-markdown * {
+  font-family: 'Raleway', -apple-system, 'Segoe UI', 'Ubuntu', 'Cantarell',
+    sans-serif;
+  line-height: 1.5;
+}
+
+.react-markdown p {
+  font-size: 1rem;
+  text-align: justify-all;
+}
+
+.react-markdown h1,
+.react-markdown h2,
+.react-markdown h3,
+.react-markdown h4,
+.react-markdown h5,
+.react-markdown h6 {
+  margin: 1em 0 0.5em;
+}
+
+.react-markdown img {
+  border-radius: 16px;
+  margin-top: 1em;
+  max-width: 100%;
+}
+
+.react-markdown img[alt$='>'] {
+  float: right;
+}
+
+.react-markdown img[alt$='<'] {
+  float: left;
+}
+
+.react-markdown img[alt$='><'] {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  float: none !important;
+}
+
+.react-markdown ul {
+  margin-left: 1rem;
+}
+
+.react-markdown summary {
+  cursor: pointer;
+  user-select: none;
+}
