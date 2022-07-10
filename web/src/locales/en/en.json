@@ -20,5 +20,9 @@
     "title": "Install",
     "headTitle": "Select Your Platform",
     "headSubtitle": "Available for Firefox and all Chromium browsers"
+  },
+  "features": {
+    "title": "Features",
+    "headTitle": "Features"
   }
 }

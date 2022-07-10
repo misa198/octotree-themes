@@ -34,7 +34,7 @@ const Navbar: FC = () => {
       label: t('layout.navbar.home'),
     },
     {
-      path: '/feature',
+      path: '/features',
       label: t('layout.navbar.features'),
     },
     {

@@ -20,5 +20,9 @@
     "title": "Cài đặt",
     "headTitle": "Chọn trình duyệt của bạn",
     "headSubtitle": "Khả dụng cho Firefox và tất cả trình duyệt Chromium"
+  },
+  "features": {
+    "title": "Tính năng",
+    "headTitle": "Tính năng"
   }
 }
