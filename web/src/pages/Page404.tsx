@@ -1,15 +1,6 @@
-import { Typography } from '@mui/material';
-import HelmetMeta from 'components/common/HelmetMeta';
-import Page from 'components/common/Page';
 import { FC } from 'react';
+import { Navigate } from 'react-router-dom';
 
-const Page404: FC = () => (
-  <Page>
-    <HelmetMeta title="404" />
-    <Typography variant="h4" sx={{ mt: 4 }}>
-      404
-    </Typography>
-  </Page>
-);
+const Page404: FC = () => <Navigate to="/" />;
 
 export default Page404;
