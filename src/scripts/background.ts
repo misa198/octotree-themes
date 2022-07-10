@@ -101,3 +101,18 @@ currentBrowser.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
     });
   }
 });
+
+// Open website after install
+currentBrowser.runtime.onInstalled.addListener((details) => {
+  if (
+    // No need to show changelog if its was a browser update (and not extension update)
+    details.reason === 'browser_update' ||
+    // No need to show changelog if developer just reloaded the extension
+    details.reason === 'update'
+  )
+    return;
+  const manifestData = currentBrowser.runtime.getManifest();
+  currentBrowser.tabs.create({
+    url: `${manifestData.homepage_url}/features`,
+  });
+});
