@@ -2,5 +2,14 @@
   "index": {
     "name": "Octoree Theme",
     "description": "A Browser Extension which gives different filetypes different icons, and code color theme to GitHub and Octotree for free."
+  },
+  "layout": {
+    "navbar": {
+      "home": "Home",
+      "feature": "Feature",
+      "about": "About",
+      "support": "Support",
+      "install": "Install"
+    }
   }
 }

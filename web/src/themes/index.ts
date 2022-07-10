@@ -6,7 +6,7 @@ import { typography } from './typography';
 
 const theme = (mode: ThemeMode) =>
   createTheme({
-    palette: mode === ThemeMode.Dark ? darkPalette : lightPalette,
+    palette: mode === ThemeMode.Light ? darkPalette : lightPalette,
     components,
     typography,
     shape: {

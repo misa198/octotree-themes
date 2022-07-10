@@ -18,14 +18,13 @@ export const MenuListItemButton = styled(ListItemButton, {
     backgroundColor: isActive ? theme.palette.primary.light : 'transparent',
     '&, svg': {
       color: isActive
-        ? theme.palette.primary.main
-        : theme.palette.text.secondary,
+        ? theme.palette.text.primary
+        : theme.palette.text.primary,
     },
 
     '&:hover': {
       '&, svg': {
         backgroundColor: theme.palette.primary.light,
-        color: theme.palette.primary.main,
       },
     },
     transition: 'none',

@@ -4,10 +4,12 @@ import { getThemeMode, saveThemeMode } from 'utils/theme';
 
 interface State {
   themeMode: ThemeMode;
+  isOpenDrawer: boolean;
 }
 
 const initialState: State = {
   themeMode: getThemeMode(),
+  isOpenDrawer: false,
 };
 
 export const layoutSlice = createSlice({
@@ -18,8 +20,11 @@ export const layoutSlice = createSlice({
       state.themeMode = action.payload;
       saveThemeMode(action.payload);
     },
+    toggleDrawer: (state) => {
+      state.isOpenDrawer = !state.isOpenDrawer;
+    },
   },
 });
 
 export default layoutSlice.reducer;
-export const { setThemeMode } = layoutSlice.actions;
+export const { setThemeMode, toggleDrawer } = layoutSlice.actions;

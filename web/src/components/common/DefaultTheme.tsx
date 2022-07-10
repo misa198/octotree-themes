@@ -12,10 +12,10 @@ const DefaultTheme: FC<PropsWithChildren> = ({ children }) => {
   }, [themeMode]);
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <CssBaseline />
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
-    </>
+      {children}
+    </ThemeProvider>
   );
 };
 

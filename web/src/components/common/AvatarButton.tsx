@@ -6,13 +6,13 @@ import { AvatarProps } from '@mui/material/Avatar/Avatar';
 const Btn = styled(Avatar)(({ theme }) =>
   sx({
     transition: 'all .2s ease-in-out',
-    background: theme.palette.primary.light,
-    color: theme.palette.primary.main,
+    background: theme.palette.primary.main,
+    color: theme.palette.text.primary,
     '&:hover': {
       background: theme.palette.primary.main,
       color: theme.palette.common.white,
     },
-  }),
+  })
 );
 
 type AvatarButtonProps = AvatarProps & {
