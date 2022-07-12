@@ -12,12 +12,14 @@ import {
   IconBrandEdge,
   IconBrandFirefox,
   IconBrandTabler,
+  IconFileZip,
 } from '@tabler/icons';
 import { useTranslation } from 'react-i18next';
 import {
   CHROME_ADDON_URL,
   EDGE_ADDON_URL,
   FIREFOX_ADDON_URL,
+  GITHUB_RELEASE_URL,
 } from 'constants/config';
 import PlatformButton from 'components/pages/install/PlatformButton';
 import HelmetMeta from 'components/common/HelmetMeta';
@@ -37,6 +39,11 @@ const platforms = [
     name: 'Edge',
     icon: IconBrandEdge,
     url: EDGE_ADDON_URL,
+  },
+  {
+    name: 'ZIP',
+    icon: IconFileZip,
+    url: GITHUB_RELEASE_URL,
   },
 ];
 
