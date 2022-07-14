@@ -38,7 +38,3 @@ a {
 ::-webkit-scrollbar-thumb {
   background: rgb(65, 65, 65);
 }
-
-::-webkit-scrollbar-thumb:hover {
-  background: #b30000;
-}
