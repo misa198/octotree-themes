@@ -52,3 +52,7 @@
   > .github-code-view-icon-dir-collapse {
   display: inline-block;
 }
+
+section[aria-labelledby='file-name-id'] {
+  background: var(--ghd-code-background) !important;
+}

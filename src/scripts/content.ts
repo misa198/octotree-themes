@@ -302,7 +302,6 @@ const init = async () => {
               const className: string | null =
                 fileIcons.getClassWithColor(name);
               if (className) {
-                console.log(className);
                 const spanIcon = document.createElement('span');
                 spanIcon.className = `icon octicon-file ${className}`;
                 icon?.parentNode?.replaceChild(spanIcon, icon);
@@ -346,7 +345,6 @@ const init = async () => {
           const name =
             element.querySelector('.PRIVATE_TreeView-item-content-text')
               ?.textContent || '';
-          console.log(name);
           const iconParent = icon?.parentElement;
           let type = '';
           if (
