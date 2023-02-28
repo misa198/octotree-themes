@@ -37,6 +37,9 @@ Support Chromium Browsers and Firefox.
 <p align="center">
   <img src="./docs/screenshot-2.png" />
 </p>
+<p align="center">
+  <img src="./docs/screenshot-3.png" />
+</p>
 
 ## Themes
 

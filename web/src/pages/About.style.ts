@@ -59,13 +59,19 @@ export const AboutContactCredits = styled(Box)(() =>
     mt: 2,
     maxWidth: '400px',
 
-    li: {
+    ul: {
       display: 'flex',
-      lineHeight: 1.5,
+      flexDirection: 'column',
+      alignItems: 'center',
 
-      a: {
-        '*': {
-          fontWeight: 'bold',
+      li: {
+        display: 'flex',
+        lineHeight: 1.5,
+
+        a: {
+          '*': {
+            fontWeight: 'bold',
+          },
         },
       },
     },

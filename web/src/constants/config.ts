@@ -5,6 +5,7 @@ export const CHROME_ADDON_URL =
   'https://chrome.google.com/webstore/detail/meagmbmaaljhgdcglcmflnnglpokldcj';
 export const EDGE_ADDON_URL =
   'https://microsoftedge.microsoft.com/addons/detail/cajppifioefokdcmnbehbkiddjnpmadb';
+export const GITHUB_RELEASE_URL = 'https://github.com/misa198/octotree-theme/releases';
 export const MY_GITHUB_URL = 'https://github.com/misa198';
 export const MY_TWITTER_URL = 'https://twitter.com/misa19820';
 export const MY_WEBSITE_URL = 'https://misa198.vercel.app';

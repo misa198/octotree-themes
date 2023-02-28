@@ -12,3 +12,47 @@
 .ot-octotree-icon {
   margin-right: 3px;
 }
+
+.github-code-view-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.octicon-file-directory-fill-parent > svg {
+  color: #6cb5fe !important;
+}
+
+.github-code-view-parent-dir-icon {
+  margin-right: 10px;
+}
+
+.github-tree-icon-hidden svg.octicon {
+  display: none !important;
+}
+
+.github-code-view-icon-dir-collapse,
+.github-code-view-icon-dir-expand {
+  display: none;
+}
+
+.PRIVATE_TreeView-item[aria-expanded='true']
+  > .PRIVATE_TreeView-item-container
+  > .PRIVATE_TreeView-item-content
+  > .PRIVATE_TreeView-item-visual
+  > .PRIVATE_TreeView-directory-icon
+  > .github-code-view-icon-dir-expand {
+  display: inline-block;
+}
+
+.PRIVATE_TreeView-item[aria-expanded='false']
+  > .PRIVATE_TreeView-item-container
+  > .PRIVATE_TreeView-item-content
+  > .PRIVATE_TreeView-item-visual
+  > .PRIVATE_TreeView-directory-icon
+  > .github-code-view-icon-dir-collapse {
+  display: inline-block;
+}
+
+section[aria-labelledby='file-name-id'] {
+  background: var(--ghd-code-background) !important;
+}
