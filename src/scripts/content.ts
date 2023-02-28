@@ -325,12 +325,83 @@ const init = async () => {
           if (iconTheme === IconThemes.MUI) {
             const replaceIcon = getMUIDirIcon('..');
             const img = document.createElement('img');
-            img.className = 'github-code-view-icon';
+            img.className =
+              'github-code-view-icon github-code-view-parent-dir-icon';
             img.src = replaceIcon;
             icon?.parentNode?.replaceChild(img, icon);
           } else {
             icon?.classList.add('octicon');
             icon?.classList.add('octicon-file-directory-fill');
+          }
+        },
+      }
+    );
+
+    // Tree
+    observe(
+      'div[data-testid=repos-file-tree-container] .PRIVATE_TreeView-item-content',
+      {
+        add(element) {
+          const icon = element.querySelector('svg[role="img"]');
+          const name =
+            element.querySelector('.PRIVATE_TreeView-item-content-text')
+              ?.textContent || '';
+          console.log(name);
+          const iconParent = icon?.parentElement;
+          let type = '';
+          if (
+            iconParent?.classList.contains('PRIVATE_TreeView-directory-icon')
+          ) {
+            type = '(Directory)';
+          } else {
+            type = '(File)';
+          }
+
+          if (iconTheme === IconThemes.MUI) {
+            switch (type) {
+              case '(Directory)':
+                const replaceIconDir = getMUIDirIcon(name);
+                const replaceExpandIconDir = getMuiDirExpandedIcon(name);
+                const imgDir = document.createElement('img');
+                imgDir.className =
+                  'github-code-view-icon github-code-view-icon-dir-collapse';
+                imgDir.src = replaceIconDir;
+                icon?.parentNode?.appendChild(imgDir);
+
+                const expandImg = document.createElement('img');
+                expandImg.className =
+                  'github-code-view-icon github-code-view-icon-dir-expand';
+                expandImg.src = replaceExpandIconDir;
+                icon?.parentElement?.appendChild(expandImg);
+
+                break;
+              case '(File)':
+                const replaceIcon = getMuiFileIcon(name);
+                const img = document.createElement('img');
+                img.className = 'github-code-view-icon';
+                img.src = replaceIcon;
+                icon?.parentNode?.replaceChild(img, icon);
+
+                break;
+            }
+            icon?.parentElement?.classList.add('github-tree-icon-hidden');
+          } else {
+            switch (type) {
+              case '(File)':
+                const className: string | null =
+                  fileIcons.getClassWithColor(name);
+                if (className) {
+                  const spanIcon = document.createElement('span');
+                  spanIcon.className = `icon octicon-file ${className}`;
+                  icon?.parentNode?.replaceChild(spanIcon, icon);
+                }
+                break;
+              case '(Directory)':
+                icon?.parentElement?.classList.add(
+                  'octicon-file-directory-fill-parent'
+                );
+                break;
+            }
           }
         },
       }
