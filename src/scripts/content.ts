@@ -265,6 +265,76 @@ const init = async () => {
         });
       },
     });
+
+    // Github code view
+    // Main
+    observe('table[aria-labelledby=folders-and-files] .react-directory-row', {
+      add(element) {
+        const _element = element as HTMLElement;
+        const name =
+          _element
+            .querySelector('.react-directory-truncate')
+            ?.getAttribute('title') || '';
+        const type = _element.querySelector('.sr-only')?.innerHTML;
+        const icon = _element.querySelector('svg[role="img"]');
+        if (iconTheme === IconThemes.MUI) {
+          let replaceIcon = '';
+          switch (type) {
+            case '(Directory)':
+              replaceIcon = getMUIDirIcon(name);
+              break;
+            case '(Submodule)':
+              replaceIcon = getMUISubmoduleIcon();
+              break;
+            case '(File)':
+              replaceIcon = getMuiFileIcon(name);
+              break;
+          }
+          if (replaceIcon) {
+            const img = document.createElement('img');
+            img.className = 'github-code-view-icon';
+            img.src = replaceIcon;
+            icon?.parentNode?.replaceChild(img, icon);
+          }
+        } else {
+          switch (type) {
+            case '(File)':
+              const className: string | null =
+                fileIcons.getClassWithColor(name);
+              if (className) {
+                console.log(className);
+                const spanIcon = document.createElement('span');
+                spanIcon.className = `icon octicon-file ${className}`;
+                icon?.parentNode?.replaceChild(spanIcon, icon);
+              }
+              break;
+            case '(Directory)':
+              icon?.classList.add('octicon');
+              icon?.classList.add('octicon-file-directory-fill');
+              break;
+          }
+        }
+      },
+    });
+
+    observe(
+      'table[aria-labelledby=folders-and-files] a[aria-label="Parent directory"]',
+      {
+        add(element) {
+          const icon = element.querySelector('svg[role="img"]');
+          if (iconTheme === IconThemes.MUI) {
+            const replaceIcon = getMUIDirIcon('..');
+            const img = document.createElement('img');
+            img.className = 'github-code-view-icon';
+            img.src = replaceIcon;
+            icon?.parentNode?.replaceChild(img, icon);
+          } else {
+            icon?.classList.add('octicon');
+            icon?.classList.add('octicon-file-directory-fill');
+          }
+        },
+      }
+    );
   }
 
   if (githubDiff) {
